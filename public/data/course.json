@@ -1,0 +1,1935 @@
+{
+  "meta": {
+    "titleZh": "Basic English 850 零基础课程地图",
+    "version": "1.0.0",
+    "source": "850 Basic Words: Grouped and Listed by C. K. Ogden",
+    "sequencing": "17 个主题单元；先操作词与可见事物，后关系、判断与抽象概念；非字母序、非原表列序。",
+    "unitCount": 17,
+    "lessonCount": 85,
+    "wordsPerLesson": 10,
+    "totalWordIds": 850
+  },
+  "units": [
+    {
+      "id": "unit-01",
+      "order": 1,
+      "titleZh": "开口：我、你与身边的东西",
+      "goal": "先用最小句子指认自己、他人和随身物品。",
+      "lessons": [
+        {
+          "id": "lesson-01-01",
+          "order": 1,
+          "globalOrder": 1,
+          "titleZh": "你好，我是……",
+          "goal": "会介绍自己并指认一个人。",
+          "pronunciationFocus": "/iː/ 与 /ɪ/：拉长和短促",
+          "sentenceFrame": "I am ___. This is a ___.",
+          "wordIds": [
+            "operations-057",
+            "operations-059",
+            "operations-011",
+            "operations-056",
+            "operations-055",
+            "operations-100",
+            "things_general-216",
+            "things_general-241",
+            "things_picturable-027",
+            "things_picturable-082"
+          ]
+        },
+        {
+          "id": "lesson-01-02",
+          "order": 2,
+          "globalOrder": 2,
+          "titleZh": "一本书、一些东西",
+          "goal": "会用冠词和数量词说出拥有的物品。",
+          "pronunciationFocus": "/æ/ 与 /e/：张口大小",
+          "sentenceFrame": "I have a ___. I have some ___.",
+          "wordIds": [
+            "operations-044",
+            "operations-045",
+            "operations-013",
+            "operations-053",
+            "operations-047",
+            "operations-051",
+            "things_picturable-023",
+            "things_picturable-127",
+            "things_picturable-128",
+            "things_picturable-008"
+          ]
+        },
+        {
+          "id": "lesson-01-03",
+          "order": 3,
+          "globalOrder": 3,
+          "titleZh": "看见并说出来",
+          "goal": "会看、说并礼貌提出简单请求。",
+          "pronunciationFocus": "/s/ 与 /z/：清浊摩擦",
+          "sentenceFrame": "He sees ___. Please say ___.",
+          "wordIds": [
+            "operations-058",
+            "operations-060",
+            "operations-015",
+            "operations-014",
+            "operations-012",
+            "operations-099",
+            "things_picturable-068",
+            "things_picturable-069",
+            "things_picturable-088",
+            "things_picturable-090"
+          ]
+        },
+        {
+          "id": "lesson-01-04",
+          "order": 4,
+          "globalOrder": 4,
+          "titleZh": "来、去、拿、给",
+          "goal": "会用六个核心动词表达身边动作。",
+          "pronunciationFocus": "/k/ 与 /g/：后舌爆破",
+          "sentenceFrame": "Come to the ___. Give me the ___.",
+          "wordIds": [
+            "operations-001",
+            "operations-004",
+            "operations-002",
+            "operations-003",
+            "operations-010",
+            "operations-007",
+            "things_picturable-096",
+            "things_picturable-060",
+            "things_general-286",
+            "things_picturable-186"
+          ]
+        },
+        {
+          "id": "lesson-01-05",
+          "order": 5,
+          "globalOrder": 5,
+          "titleZh": "把东西放好",
+          "goal": "会表达放置、保留、允许和将要做的事。",
+          "pronunciationFocus": "/p/ 与 /b/：送气和浊音",
+          "sentenceFrame": "Put the ___ here. I will ___.",
+          "wordIds": [
+            "operations-008",
+            "operations-005",
+            "operations-006",
+            "operations-016",
+            "operations-018",
+            "operations-017",
+            "things_picturable-056",
+            "things_general-383",
+            "things_general-126",
+            "things_general-033"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-02",
+      "order": 2,
+      "titleZh": "看见空间：这里到那里",
+      "goal": "借助真实物品理解位置、方向和时间关系。",
+      "lessons": [
+        {
+          "id": "lesson-02-01",
+          "order": 1,
+          "globalOrder": 6,
+          "titleZh": "桌上、盒里、墙边",
+          "goal": "会说物品在什么位置。",
+          "pronunciationFocus": "/t/ 与 /d/：舌尖爆破",
+          "sentenceFrame": "The ___ is in/on/under the ___.",
+          "wordIds": [
+            "operations-024",
+            "operations-030",
+            "operations-032",
+            "operations-036",
+            "operations-033",
+            "operations-027",
+            "things_picturable-177",
+            "things_picturable-026",
+            "things_picturable-075",
+            "things_picturable-192"
+          ]
+        },
+        {
+          "id": "lesson-02-02",
+          "order": 2,
+          "globalOrder": 7,
+          "titleZh": "从学校到家",
+          "goal": "会表达起点、终点、陪同和用途。",
+          "pronunciationFocus": "/f/ 与 /v/：唇齿摩擦",
+          "sentenceFrame": "I go from ___ to ___ with ___.",
+          "wordIds": [
+            "operations-029",
+            "operations-035",
+            "operations-038",
+            "operations-040",
+            "operations-041",
+            "operations-019",
+            "things_picturable-149",
+            "things_general-129",
+            "things_general-114",
+            "things_general-397"
+          ]
+        },
+        {
+          "id": "lesson-02-03",
+          "order": 3,
+          "globalOrder": 8,
+          "titleZh": "上、下、穿过",
+          "goal": "会描述移动的路径。",
+          "pronunciationFocus": "/θ/ 与 /ð/：舌尖轻触齿间",
+          "sentenceFrame": "Go through/across the ___.",
+          "wordIds": [
+            "operations-037",
+            "operations-028",
+            "operations-031",
+            "operations-079",
+            "operations-034",
+            "operations-020",
+            "things_picturable-032",
+            "things_general-285",
+            "things_picturable-175",
+            "things_picturable-187"
+          ]
+        },
+        {
+          "id": "lesson-02-04",
+          "order": 4,
+          "globalOrder": 9,
+          "titleZh": "之前、之后、之间",
+          "goal": "会按先后和相对位置组织信息。",
+          "pronunciationFocus": "/b/ 与 /p/ 词尾辨听",
+          "sentenceFrame": "___ comes before/after ___.",
+          "wordIds": [
+            "operations-025",
+            "operations-021",
+            "operations-026",
+            "operations-023",
+            "operations-022",
+            "operations-042",
+            "things_general-076",
+            "things_general-220",
+            "things_general-210",
+            "things_general-150"
+          ]
+        },
+        {
+          "id": "lesson-02-05",
+          "order": 5,
+          "globalOrder": 10,
+          "titleZh": "这里、那里与方向",
+          "goal": "会用近远和方位词找地点。",
+          "pronunciationFocus": "/h/：自然呼气起音",
+          "sentenceFrame": "The ___ is near/far from here.",
+          "wordIds": [
+            "operations-076",
+            "operations-082",
+            "operations-077",
+            "operations-074",
+            "operations-095",
+            "operations-096",
+            "things_picturable-110",
+            "things_picturable-097",
+            "things_general-296",
+            "things_general-172"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-03",
+      "order": 3,
+      "titleZh": "连接意思：时间、数量与提问",
+      "goal": "把短词连成有时间、原因、比较和数量的完整意思。",
+      "lessons": [
+        {
+          "id": "lesson-03-01",
+          "order": 1,
+          "globalOrder": 11,
+          "titleZh": "昨天、现在、明天",
+          "goal": "会说事情发生的时间并询问什么时候。",
+          "pronunciationFocus": "/n/ 与 /ŋ/：鼻音位置",
+          "sentenceFrame": "When? Now/then/tomorrow.",
+          "wordIds": [
+            "operations-078",
+            "operations-081",
+            "operations-094",
+            "operations-093",
+            "operations-069",
+            "operations-072",
+            "operations-073",
+            "operations-080",
+            "things_general-388",
+            "things_general-400"
+          ]
+        },
+        {
+          "id": "lesson-03-02",
+          "order": 2,
+          "globalOrder": 12,
+          "titleZh": "因为、但是、如果",
+          "goal": "会连接两个简单分句。",
+          "pronunciationFocus": "/r/ 与 /l/：舌位对比",
+          "sentenceFrame": "___, but ___. ___ because ___.",
+          "wordIds": [
+            "operations-061",
+            "operations-063",
+            "operations-064",
+            "operations-062",
+            "operations-065",
+            "operations-066",
+            "operations-067",
+            "operations-091",
+            "things_general-266",
+            "things_general-011"
+          ]
+        },
+        {
+          "id": "lesson-03-03",
+          "order": 3,
+          "globalOrder": 13,
+          "titleZh": "怎么、哪里、为什么",
+          "goal": "会提出三类基础问题并作比较。",
+          "pronunciationFocus": "/w/ 与 /j/：滑音",
+          "sentenceFrame": "How/Where/Why is ___?",
+          "wordIds": [
+            "operations-068",
+            "operations-070",
+            "operations-071",
+            "operations-039",
+            "operations-043",
+            "operations-054",
+            "operations-052",
+            "operations-048",
+            "things_general-106",
+            "things_general-273"
+          ]
+        },
+        {
+          "id": "lesson-03-04",
+          "order": 4,
+          "globalOrder": 14,
+          "titleZh": "一点、很多、足够",
+          "goal": "会表达大致数量和程度。",
+          "pronunciationFocus": "/m/：双唇鼻音",
+          "sentenceFrame": "There is a little/much ___.",
+          "wordIds": [
+            "operations-049",
+            "operations-050",
+            "operations-046",
+            "operations-086",
+            "operations-085",
+            "operations-090",
+            "operations-092",
+            "operations-089",
+            "things_general-008",
+            "things_general-223"
+          ]
+        },
+        {
+          "id": "lesson-03-05",
+          "order": 5,
+          "globalOrder": 15,
+          "titleZh": "不，但仍向前",
+          "goal": "会否定、评价状态并说方向。",
+          "pronunciationFocus": "句子重音：重读信息词",
+          "sentenceFrame": "It does not seem ___. Go forward ___.",
+          "wordIds": [
+            "operations-088",
+            "operations-087",
+            "operations-083",
+            "operations-084",
+            "operations-075",
+            "operations-009",
+            "operations-097",
+            "operations-098",
+            "things_general-087",
+            "things_general-386"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-04",
+      "order": 4,
+      "titleZh": "认识身体：感受与健康",
+      "goal": "从身体部位进入感官、健康和求医表达。",
+      "lessons": [
+        {
+          "id": "lesson-04-01",
+          "order": 1,
+          "globalOrder": 16,
+          "titleZh": "四肢与关节",
+          "goal": "会指出常见外部身体部位。",
+          "pronunciationFocus": "/ɑː/ 与 /ʌ/：后元音开口",
+          "sentenceFrame": "This is my ___. My ___ is here.",
+          "wordIds": [
+            "things_picturable-005",
+            "things_picturable-045",
+            "things_picturable-046",
+            "things_picturable-065",
+            "things_picturable-072",
+            "things_picturable-077",
+            "things_picturable-086",
+            "things_picturable-101",
+            "things_picturable-105",
+            "things_picturable-117"
+          ]
+        },
+        {
+          "id": "lesson-04-02",
+          "order": 2,
+          "globalOrder": 17,
+          "titleZh": "头部与身体内部",
+          "goal": "会说重要器官和面部部位。",
+          "pronunciationFocus": "/ɜː/ 与 /ə/：重读与弱读",
+          "sentenceFrame": "The ___ is in the body.",
+          "wordIds": [
+            "things_picturable-007",
+            "things_picturable-022",
+            "things_picturable-028",
+            "things_picturable-091",
+            "things_picturable-108",
+            "things_picturable-114",
+            "things_picturable-115",
+            "things_picturable-119",
+            "things_picturable-121",
+            "things_picturable-185"
+          ]
+        },
+        {
+          "id": "lesson-04-03",
+          "order": 3,
+          "globalOrder": 18,
+          "titleZh": "身体、呼吸与感觉",
+          "goal": "会描述触觉和身体基本状态。",
+          "pronunciationFocus": "/θ/ 词首与词尾",
+          "sentenceFrame": "I feel it with my ___.",
+          "wordIds": [
+            "things_picturable-158",
+            "things_picturable-173",
+            "things_picturable-180",
+            "things_picturable-181",
+            "things_picturable-183",
+            "things_picturable-184",
+            "things_general-031",
+            "things_general-029",
+            "things_general-034",
+            "things_general-301"
+          ]
+        },
+        {
+          "id": "lesson-04-04",
+          "order": 4,
+          "globalOrder": 19,
+          "titleZh": "症状与就医",
+          "goal": "会说常见症状、疼痛和医院。",
+          "pronunciationFocus": "/k/ 词尾：清晰收音",
+          "sentenceFrame": "I have a ___. My ___ hurts.",
+          "wordIds": [
+            "things_picturable-095",
+            "things_general-026",
+            "things_general-063",
+            "things_general-090",
+            "things_general-086",
+            "things_general-144",
+            "things_general-234",
+            "things_general-322",
+            "things_general-365",
+            "things_general-398"
+          ]
+        },
+        {
+          "id": "lesson-04-05",
+          "order": 5,
+          "globalOrder": 20,
+          "titleZh": "健康还是不舒服",
+          "goal": "会用状态词说明清醒、疲劳和健康。",
+          "pronunciationFocus": "多音节词重音",
+          "sentenceFrame": "I am awake/tired. I feel ___.",
+          "wordIds": [
+            "things_general-315",
+            "qualities_opposites-001",
+            "qualities_general-018",
+            "qualities_general-041",
+            "qualities_opposites-023",
+            "qualities_general-047",
+            "qualities_general-052",
+            "qualities_general-091",
+            "qualities_opposites-011",
+            "qualities_general-061"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-05",
+      "order": 5,
+      "titleZh": "走进家里：房间与日常用品",
+      "goal": "在卧室、厨房和清洁场景中练习可执行指令。",
+      "lessons": [
+        {
+          "id": "lesson-05-01",
+          "order": 1,
+          "globalOrder": 21,
+          "titleZh": "卧室与浴室",
+          "goal": "会说房间中的家具和舒适感。",
+          "pronunciationFocus": "/ʃ/ 与 /tʃ/：摩擦和塞擦",
+          "sentenceFrame": "The ___ is by the ___.",
+          "wordIds": [
+            "things_picturable-014",
+            "things_picturable-013",
+            "things_picturable-011",
+            "things_picturable-057",
+            "things_picturable-058",
+            "things_picturable-062",
+            "things_picturable-154",
+            "things_picturable-197",
+            "things_general-288",
+            "things_general-050"
+          ]
+        },
+        {
+          "id": "lesson-05-02",
+          "order": 2,
+          "globalOrder": 22,
+          "titleZh": "厨房里的十样东西",
+          "goal": "会辨认并请求常用厨具。",
+          "pronunciationFocus": "/ʊ/ 与 /uː/：圆唇长短",
+          "sentenceFrame": "Please give me the ___.",
+          "wordIds": [
+            "things_picturable-025",
+            "things_picturable-034",
+            "things_picturable-078",
+            "things_picturable-099",
+            "things_picturable-102",
+            "things_picturable-125",
+            "things_picturable-134",
+            "things_picturable-137",
+            "things_picturable-164",
+            "things_picturable-188"
+          ]
+        },
+        {
+          "id": "lesson-05-03",
+          "order": 3,
+          "globalOrder": 23,
+          "titleZh": "门锁、灯和屋顶",
+          "goal": "会说明家庭装置的位置和用途。",
+          "pronunciationFocus": "/eɪ/：字母名中的双元音",
+          "sentenceFrame": "The ___ is for the ___.",
+          "wordIds": [
+            "things_picturable-012",
+            "things_picturable-016",
+            "things_picturable-033",
+            "things_picturable-035",
+            "things_picturable-061",
+            "things_picturable-080",
+            "things_picturable-100",
+            "things_picturable-109",
+            "things_picturable-140",
+            "things_picturable-146"
+          ]
+        },
+        {
+          "id": "lesson-05-04",
+          "order": 4,
+          "globalOrder": 24,
+          "titleZh": "火、光、空气与清洁",
+          "goal": "会描述家中环境并给出简单安全提醒。",
+          "pronunciationFocus": "/aɪ/：滑向高前元音",
+          "sentenceFrame": "Keep the ___ clean. There is ___.",
+          "wordIds": [
+            "things_picturable-163",
+            "things_picturable-111",
+            "things_general-007",
+            "things_general-036",
+            "things_general-065",
+            "things_general-098",
+            "things_general-121",
+            "things_general-145",
+            "things_general-182",
+            "things_general-321"
+          ]
+        },
+        {
+          "id": "lesson-05-05",
+          "order": 5,
+          "globalOrder": 25,
+          "titleZh": "开着还是关着",
+          "goal": "会用成对性质词描述家庭状态。",
+          "pronunciationFocus": "对比重音：clean, not dirty",
+          "sentenceFrame": "The ___ is open/shut and warm/cold.",
+          "wordIds": [
+            "things_general-324",
+            "things_general-381",
+            "qualities_general-014",
+            "qualities_opposites-015",
+            "qualities_general-058",
+            "qualities_opposites-040",
+            "qualities_general-095",
+            "qualities_opposites-007",
+            "qualities_general-033",
+            "qualities_general-043"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-06",
+      "order": 6,
+      "titleZh": "穿戴与外观：颜色、材料和形状",
+      "goal": "学会说穿什么、由什么制成以及看起来怎样。",
+      "lessons": [
+        {
+          "id": "lesson-06-01",
+          "order": 1,
+          "globalOrder": 26,
+          "titleZh": "从靴子到裤子",
+          "goal": "会说十种基础衣物。",
+          "pronunciationFocus": "/s/ 后的辅音连缀",
+          "sentenceFrame": "I have a ___ and a ___.",
+          "wordIds": [
+            "things_picturable-024",
+            "things_picturable-051",
+            "things_picturable-052",
+            "things_picturable-063",
+            "things_picturable-156",
+            "things_picturable-157",
+            "things_picturable-159",
+            "things_picturable-161",
+            "things_picturable-172",
+            "things_picturable-190"
+          ]
+        },
+        {
+          "id": "lesson-06-02",
+          "order": 2,
+          "globalOrder": 27,
+          "titleZh": "配件与随身物",
+          "goal": "会说配件并描述它们放在哪里。",
+          "pronunciationFocus": "/ŋ/：-ing 与单词词尾",
+          "sentenceFrame": "My ___ is in the pocket.",
+          "wordIds": [
+            "things_picturable-036",
+            "things_picturable-053",
+            "things_picturable-083",
+            "things_picturable-089",
+            "things_picturable-098",
+            "things_picturable-136",
+            "things_picturable-144",
+            "things_picturable-179",
+            "things_picturable-191",
+            "things_picturable-193"
+          ]
+        },
+        {
+          "id": "lesson-06-03",
+          "order": 3,
+          "globalOrder": 28,
+          "titleZh": "布料从哪里来",
+          "goal": "会说常见材料与制成形式。",
+          "pronunciationFocus": "/l/ 的清晰音与暗音",
+          "sentenceFrame": "It is made of ___.",
+          "wordIds": [
+            "things_general-041",
+            "things_general-047",
+            "things_general-062",
+            "things_general-163",
+            "things_general-178",
+            "things_general-184",
+            "things_general-310",
+            "things_general-395",
+            "things_general-081",
+            "things_general-128"
+          ]
+        },
+        {
+          "id": "lesson-06-04",
+          "order": 4,
+          "globalOrder": 29,
+          "titleZh": "看外观、做细节",
+          "goal": "会描述大小、标记、装饰和做工。",
+          "pronunciationFocus": "/ɔː/ 与 /ɒ/：圆唇开口",
+          "sentenceFrame": "Look at the colour/size of ___.",
+          "wordIds": [
+            "things_general-049",
+            "things_general-125",
+            "things_general-187",
+            "things_general-193",
+            "things_general-231",
+            "things_general-248",
+            "things_general-313",
+            "things_general-338",
+            "things_general-237",
+            "things_general-265"
+          ]
+        },
+        {
+          "id": "lesson-06-05",
+          "order": 5,
+          "globalOrder": 30,
+          "titleZh": "颜色与好看",
+          "goal": "会用颜色和亮度描述物品。",
+          "pronunciationFocus": "形容词重音与并列节奏",
+          "sentenceFrame": "It is bright ___ and ___.",
+          "wordIds": [
+            "qualities_general-005",
+            "qualities_general-006",
+            "qualities_opposites-005",
+            "qualities_general-010",
+            "qualities_general-008",
+            "qualities_opposites-022",
+            "qualities_general-037",
+            "qualities_general-071",
+            "qualities_opposites-049",
+            "qualities_general-099"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-07",
+      "order": 7,
+      "titleZh": "吃饭与农场：食物从哪里来",
+      "goal": "从动物、作物到餐桌，完成点餐和口味表达。",
+      "lessons": [
+        {
+          "id": "lesson-07-01",
+          "order": 1,
+          "globalOrder": 31,
+          "titleZh": "农场里的动物",
+          "goal": "会辨认农场和身边常见动物。",
+          "pronunciationFocus": "/æ/：动物词中的短元音",
+          "sentenceFrame": "There is a ___ on the farm.",
+          "wordIds": [
+            "things_picturable-070",
+            "things_picturable-055",
+            "things_picturable-084",
+            "things_picturable-094",
+            "things_picturable-130",
+            "things_picturable-153",
+            "things_picturable-042",
+            "things_picturable-059",
+            "things_picturable-142",
+            "things_picturable-112"
+          ]
+        },
+        {
+          "id": "lesson-07-02",
+          "order": 2,
+          "globalOrder": 32,
+          "titleZh": "水果、蛋与主食",
+          "goal": "会辨认十种可见食物。",
+          "pronunciationFocus": "/ɒ/ 与 /ɔː/：英式圆唇音",
+          "sentenceFrame": "I would like some ___.",
+          "wordIds": [
+            "things_picturable-003",
+            "things_picturable-017",
+            "things_picturable-037",
+            "things_picturable-044",
+            "things_picturable-066",
+            "things_picturable-073",
+            "things_picturable-079",
+            "things_picturable-122",
+            "things_picturable-124",
+            "things_picturable-138"
+          ]
+        },
+        {
+          "id": "lesson-07-03",
+          "order": 3,
+          "globalOrder": 33,
+          "titleZh": "一顿饭的基本食材",
+          "goal": "会说吃喝和一餐中的基本食物。",
+          "pronunciationFocus": "/iː/ 与 /ɪ/ 复习",
+          "sentenceFrame": "We eat/drink ___ at the meal.",
+          "wordIds": [
+            "things_general-256",
+            "things_general-040",
+            "things_general-096",
+            "things_general-226",
+            "things_general-131",
+            "things_general-135",
+            "things_general-196",
+            "things_general-198",
+            "things_general-203",
+            "things_general-284"
+          ]
+        },
+        {
+          "id": "lesson-07-04",
+          "order": 4,
+          "globalOrder": 34,
+          "titleZh": "烹饪、味道与生长",
+          "goal": "会说烹饪动作、味道和植物。",
+          "pronunciationFocus": "/s/ 与 /z/ 词尾复数",
+          "sentenceFrame": "Cook the ___. It tastes ___.",
+          "wordIds": [
+            "things_general-010",
+            "things_general-028",
+            "things_general-058",
+            "things_general-136",
+            "things_general-164",
+            "things_general-243",
+            "things_general-292",
+            "things_general-330",
+            "things_general-345",
+            "things_general-353"
+          ]
+        },
+        {
+          "id": "lesson-07-05",
+          "order": 5,
+          "globalOrder": 35,
+          "titleZh": "冷热、酸甜与干湿",
+          "goal": "会用性质词说明食物口感和生长条件。",
+          "pronunciationFocus": "并列词组的节奏",
+          "sentenceFrame": "The ___ is sweet/bitter and hot/cold.",
+          "wordIds": [
+            "things_general-185",
+            "things_general-391",
+            "qualities_general-002",
+            "qualities_opposites-004",
+            "qualities_general-007",
+            "qualities_opposites-016",
+            "qualities_general-026",
+            "qualities_general-027",
+            "qualities_general-054",
+            "qualities_general-087"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-08",
+      "order": 8,
+      "titleZh": "观察自然：天地、天气与生命",
+      "goal": "用可见景物连接天气、季节和生命变化。",
+      "lessons": [
+        {
+          "id": "lesson-08-01",
+          "order": 1,
+          "globalOrder": 36,
+          "titleZh": "天空与天气",
+          "goal": "会描述天空中的物体和基本天气。",
+          "pronunciationFocus": "/aʊ/：cloud 的双元音",
+          "sentenceFrame": "There is ___ in the sky.",
+          "wordIds": [
+            "things_picturable-050",
+            "things_picturable-113",
+            "things_picturable-168",
+            "things_picturable-176",
+            "things_general-314",
+            "things_general-387",
+            "things_general-390",
+            "things_general-267",
+            "things_general-323",
+            "things_general-361"
+          ]
+        },
+        {
+          "id": "lesson-08-02",
+          "order": 2,
+          "globalOrder": 37,
+          "titleZh": "一棵植物的各部分",
+          "goal": "会从根到枝描述植物。",
+          "pronunciationFocus": "/iː/：tree, seed, leaf",
+          "sentenceFrame": "The ___ grows from the ___.",
+          "wordIds": [
+            "things_picturable-030",
+            "things_picturable-081",
+            "things_picturable-104",
+            "things_picturable-147",
+            "things_picturable-152",
+            "things_picturable-170",
+            "things_picturable-189",
+            "things_general-124",
+            "things_general-139",
+            "things_general-394"
+          ]
+        },
+        {
+          "id": "lesson-08-03",
+          "order": 3,
+          "globalOrder": 38,
+          "titleZh": "小动物怎样生活",
+          "goal": "会描述昆虫、鸟和小动物的身体。",
+          "pronunciationFocus": "/b/ 与 /v/：bee 与 vee",
+          "sentenceFrame": "The ___ has a wing/tail.",
+          "wordIds": [
+            "things_picturable-002",
+            "things_picturable-015",
+            "things_picturable-018",
+            "things_picturable-071",
+            "things_picturable-076",
+            "things_picturable-160",
+            "things_picturable-178",
+            "things_picturable-198",
+            "things_picturable-200",
+            "things_general-119"
+          ]
+        },
+        {
+          "id": "lesson-08-04",
+          "order": 4,
+          "globalOrder": 39,
+          "titleZh": "大地、山与季节",
+          "goal": "会描述土地、水汽、岩石和夏季。",
+          "pronunciationFocus": "/aɪ/：ice 与 high",
+          "sentenceFrame": "There is ___ on the mountain.",
+          "wordIds": [
+            "things_picturable-064",
+            "things_general-099",
+            "things_general-122",
+            "things_general-152",
+            "things_general-207",
+            "things_general-213",
+            "things_general-293",
+            "things_general-304",
+            "things_general-339",
+            "things_general-347"
+          ]
+        },
+        {
+          "id": "lesson-08-05",
+          "order": 5,
+          "globalOrder": 40,
+          "titleZh": "高低、深浅与动静",
+          "goal": "会用对比性质词描述自然。",
+          "pronunciationFocus": "对比语调与词尾清晰度",
+          "sentenceFrame": "It is high/low, quiet/violent.",
+          "wordIds": [
+            "things_general-392",
+            "qualities_general-020",
+            "qualities_general-042",
+            "qualities_opposites-029",
+            "qualities_general-096",
+            "qualities_general-100",
+            "qualities_opposites-032",
+            "qualities_general-069",
+            "qualities_general-093",
+            "qualities_general-030"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-09",
+      "order": 9,
+      "titleZh": "动手制作：工具、材料与形状",
+      "goal": "认识形状、连接件、工具和基础制作动作。",
+      "lessons": [
+        {
+          "id": "lesson-09-01",
+          "order": 1,
+          "globalOrder": 41,
+          "titleZh": "线、圆与方",
+          "goal": "会辨认基础形状和构件。",
+          "pronunciationFocus": "/eə/ 与 /ɑː/：square, arch",
+          "sentenceFrame": "Make a line/circle/square on the ___.",
+          "wordIds": [
+            "things_picturable-001",
+            "things_picturable-004",
+            "things_picturable-009",
+            "things_picturable-010",
+            "things_picturable-048",
+            "things_picturable-107",
+            "things_picturable-166",
+            "things_picturable-020",
+            "things_picturable-031",
+            "things_picturable-171"
+          ]
+        },
+        {
+          "id": "lesson-09-02",
+          "order": 2,
+          "globalOrder": 42,
+          "titleZh": "切开并连接",
+          "goal": "会说连接和固定小零件。",
+          "pronunciationFocus": "/aɪ/：wire, line",
+          "sentenceFrame": "Join the ___ with a ___.",
+          "wordIds": [
+            "things_picturable-019",
+            "things_picturable-043",
+            "things_picturable-054",
+            "things_picturable-092",
+            "things_picturable-103",
+            "things_picturable-116",
+            "things_picturable-118",
+            "things_picturable-131",
+            "things_picturable-151",
+            "things_picturable-199"
+          ]
+        },
+        {
+          "id": "lesson-09-03",
+          "order": 3,
+          "globalOrder": 43,
+          "titleZh": "手工具",
+          "goal": "会辨认常见工具并说简单用途。",
+          "pronunciationFocus": "辅音连缀：sp-, sk-, pl-",
+          "sentenceFrame": "Use the ___ to ___.",
+          "wordIds": [
+            "things_picturable-087",
+            "things_picturable-093",
+            "things_picturable-120",
+            "things_picturable-132",
+            "things_picturable-135",
+            "things_picturable-145",
+            "things_picturable-150",
+            "things_picturable-162",
+            "things_picturable-195",
+            "things_picturable-196"
+          ]
+        },
+        {
+          "id": "lesson-09-04",
+          "order": 4,
+          "globalOrder": 44,
+          "titleZh": "机器如何运动",
+          "goal": "会描述抬、拉、推和机械部件。",
+          "pronunciationFocus": "/br/ 与 /spr/ 辅音群",
+          "sentenceFrame": "Push/pull the ___. The ___ turns.",
+          "wordIds": [
+            "things_picturable-029",
+            "things_picturable-165",
+            "things_picturable-194",
+            "things_general-032",
+            "things_general-059",
+            "things_general-137",
+            "things_general-165",
+            "things_general-181",
+            "things_general-261",
+            "things_general-264"
+          ]
+        },
+        {
+          "id": "lesson-09-05",
+          "order": 5,
+          "globalOrder": 45,
+          "titleZh": "材料的硬、直与弯",
+          "goal": "会比较金属和物体的物理状态。",
+          "pronunciationFocus": "词尾 /t/ 与 /d/",
+          "sentenceFrame": "The metal is hard, bent and solid.",
+          "wordIds": [
+            "things_general-066",
+            "things_general-201",
+            "things_general-336",
+            "things_general-363",
+            "qualities_opposites-003",
+            "qualities_general-019",
+            "qualities_general-040",
+            "qualities_general-080",
+            "qualities_opposites-045",
+            "qualities_general-085"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-10",
+      "order": 10,
+      "titleZh": "走进城镇：出行、地点与公共生活",
+      "goal": "能问路、乘车、找公共地点并说明行程。",
+      "lessons": [
+        {
+          "id": "lesson-10-01",
+          "order": 1,
+          "globalOrder": 46,
+          "titleZh": "从小船到车站",
+          "goal": "会说交通工具、线路和票。",
+          "pronunciationFocus": "/eɪ/：train, plane, station",
+          "sentenceFrame": "I go by ___. My ticket is for ___.",
+          "wordIds": [
+            "things_picturable-021",
+            "things_picturable-040",
+            "things_picturable-041",
+            "things_picturable-067",
+            "things_picturable-133",
+            "things_picturable-141",
+            "things_picturable-148",
+            "things_picturable-155",
+            "things_picturable-169",
+            "things_picturable-182"
+          ]
+        },
+        {
+          "id": "lesson-10-02",
+          "order": 2,
+          "globalOrder": 47,
+          "titleZh": "城镇里的公共地点",
+          "goal": "会问公共地点在哪里。",
+          "pronunciationFocus": "/ə/：多音节词的弱读",
+          "sentenceFrame": "Where is the ___? It is in the ___.",
+          "wordIds": [
+            "things_picturable-047",
+            "things_picturable-106",
+            "things_picturable-123",
+            "things_picturable-139",
+            "things_picturable-174",
+            "things_general-242",
+            "things_general-064",
+            "things_general-141",
+            "things_general-194",
+            "things_general-249"
+          ]
+        },
+        {
+          "id": "lesson-10-03",
+          "order": 3,
+          "globalOrder": 48,
+          "titleZh": "公共信息与记录",
+          "goal": "会辨认标志、证件和图像记录。",
+          "pronunciationFocus": "/ɑː/：card, army",
+          "sentenceFrame": "Show me the ___.",
+          "wordIds": [
+            "things_picturable-006",
+            "things_picturable-038",
+            "things_picturable-039",
+            "things_picturable-049",
+            "things_picturable-074",
+            "things_picturable-085",
+            "things_picturable-126",
+            "things_picturable-129",
+            "things_picturable-143",
+            "things_picturable-167"
+          ]
+        },
+        {
+          "id": "lesson-10-04",
+          "order": 4,
+          "globalOrder": 49,
+          "titleZh": "旅途中的位置与视角",
+          "goal": "会描述旅途、方向和座位位置。",
+          "pronunciationFocus": "复合句中的信息重音",
+          "sentenceFrame": "My seat is at the front/back.",
+          "wordIds": [
+            "things_general-021",
+            "things_general-097",
+            "things_general-123",
+            "things_general-130",
+            "things_general-140",
+            "things_general-166",
+            "things_general-202",
+            "things_general-250",
+            "things_general-297",
+            "things_general-308"
+          ]
+        },
+        {
+          "id": "lesson-10-05",
+          "order": 5,
+          "globalOrder": 50,
+          "titleZh": "安全、时间与左右",
+          "goal": "会给出时间、方向和安全提醒。",
+          "pronunciationFocus": "升降调：确认与提醒",
+          "sentenceFrame": "Turn left/right. Be ready and safe.",
+          "wordIds": [
+            "things_general-364",
+            "things_general-367",
+            "things_general-377",
+            "qualities_general-022",
+            "qualities_opposites-025",
+            "qualities_opposites-026",
+            "qualities_general-074",
+            "qualities_opposites-037",
+            "qualities_general-094",
+            "qualities_opposites-034"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-11",
+      "order": 11,
+      "titleZh": "家庭与关系：人与情感",
+      "goal": "从家庭成员进入感受、关系、照顾和相互尊重。",
+      "lessons": [
+        {
+          "id": "lesson-11-01",
+          "order": 1,
+          "globalOrder": 51,
+          "titleZh": "我的家人",
+          "goal": "会介绍核心家庭成员并说性别。",
+          "pronunciationFocus": "/ð/：mother, brother 的齿间音",
+          "sentenceFrame": "This is my mother/brother/sister.",
+          "wordIds": [
+            "things_general-035",
+            "things_general-075",
+            "things_general-115",
+            "things_general-211",
+            "things_general-312",
+            "things_general-326",
+            "things_general-191",
+            "things_general-393",
+            "qualities_general-049",
+            "qualities_opposites-019"
+          ]
+        },
+        {
+          "id": "lesson-11-02",
+          "order": 2,
+          "globalOrder": 52,
+          "titleZh": "关心与支持",
+          "goal": "会说关系、爱、帮助和责任。",
+          "pronunciationFocus": "/ʌ/：love 与 support",
+          "sentenceFrame": "I care for ___. We help/support ___.",
+          "wordIds": [
+            "things_general-276",
+            "things_general-189",
+            "things_general-042",
+            "things_general-146",
+            "things_general-348",
+            "things_general-280",
+            "things_general-170",
+            "qualities_general-050",
+            "qualities_general-045",
+            "qualities_general-073"
+          ]
+        },
+        {
+          "id": "lesson-11-03",
+          "order": 3,
+          "globalOrder": 53,
+          "titleZh": "喜欢、害怕与希望",
+          "goal": "会表达八种常见情绪和态度。",
+          "pronunciationFocus": "情感词的句子重音",
+          "sentenceFrame": "I feel ___. I hope/desire ___.",
+          "wordIds": [
+            "things_general-116",
+            "things_general-143",
+            "things_general-149",
+            "things_general-082",
+            "things_general-117",
+            "things_general-245",
+            "things_general-275",
+            "things_general-349",
+            "qualities_general-039",
+            "qualities_opposites-036"
+          ]
+        },
+        {
+          "id": "lesson-11-04",
+          "order": 4,
+          "globalOrder": 54,
+          "titleZh": "表情与内心",
+          "goal": "会通过行为、笑哭和信念描述一个人。",
+          "pronunciationFocus": "/h/：hate, hope, harmony",
+          "sentenceFrame": "The person laughs/cries because ___.",
+          "wordIds": [
+            "things_general-024",
+            "things_general-025",
+            "things_general-070",
+            "things_general-091",
+            "things_general-142",
+            "things_general-151",
+            "things_general-174",
+            "things_general-306",
+            "things_general-320",
+            "things_general-300"
+          ]
+        },
+        {
+          "id": "lesson-11-05",
+          "order": 5,
+          "globalOrder": 55,
+          "titleZh": "相处中的边界",
+          "goal": "会说依赖、平等、好坏和私人边界。",
+          "pronunciationFocus": "对比语调：good or bad",
+          "sentenceFrame": "Be kind, not cruel. This is private.",
+          "wordIds": [
+            "things_general-303",
+            "things_general-369",
+            "qualities_general-003",
+            "qualities_general-021",
+            "qualities_general-025",
+            "qualities_general-035",
+            "qualities_general-046",
+            "qualities_general-066",
+            "qualities_opposites-002",
+            "qualities_opposites-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-12",
+      "order": 12,
+      "titleZh": "每日生活：动作、休息与娱乐",
+      "goal": "用动作链描述一天中开始、进行、意外和结束。",
+      "lessons": [
+        {
+          "id": "lesson-12-01",
+          "order": 1,
+          "globalOrder": 56,
+          "titleZh": "开始移动",
+          "goal": "会按顺序说开始、走、跑和转向。",
+          "pronunciationFocus": "/kw/：quick 的辅音群",
+          "sentenceFrame": "Start here, then move/turn/walk ___.",
+          "wordIds": [
+            "things_general-002",
+            "things_general-017",
+            "things_general-333",
+            "things_general-337",
+            "things_general-214",
+            "things_general-212",
+            "things_general-370",
+            "things_general-379",
+            "things_general-291",
+            "qualities_general-068"
+          ]
+        },
+        {
+          "id": "lesson-12-02",
+          "order": 2,
+          "globalOrder": 57,
+          "titleZh": "跳、踢、滚、游",
+          "goal": "会描述九种身体动作并说明能力。",
+          "pronunciationFocus": "动词词尾清晰收音",
+          "sentenceFrame": "I am able to jump/swim ___.",
+          "wordIds": [
+            "things_general-168",
+            "things_general-169",
+            "things_general-287",
+            "things_general-289",
+            "things_general-305",
+            "things_general-342",
+            "things_general-350",
+            "things_general-030",
+            "things_general-113",
+            "qualities_general-001"
+          ]
+        },
+        {
+          "id": "lesson-12-03",
+          "order": 3,
+          "globalOrder": 58,
+          "titleZh": "意外发生了",
+          "goal": "会描述破损、摔滑和突然停止。",
+          "pronunciationFocus": "/br/：broken, burst",
+          "sentenceFrame": "The stop is sudden. The ___ is broken.",
+          "wordIds": [
+            "things_general-037",
+            "things_general-038",
+            "things_general-069",
+            "things_general-120",
+            "things_general-316",
+            "things_general-318",
+            "things_general-340",
+            "qualities_general-009",
+            "qualities_general-086",
+            "qualities_general-070"
+          ]
+        },
+        {
+          "id": "lesson-12-04",
+          "order": 4,
+          "globalOrder": 59,
+          "titleZh": "玩耍、休息和时间",
+          "goal": "会说娱乐、声音、节奏和时间单位。",
+          "pronunciationFocus": "列举时的节奏与停顿",
+          "sentenceFrame": "We play/rest for a minute.",
+          "wordIds": [
+            "things_general-009",
+            "things_general-244",
+            "things_general-281",
+            "things_general-283",
+            "things_general-329",
+            "things_general-221",
+            "things_general-368",
+            "things_general-105",
+            "things_general-206",
+            "things_general-209"
+          ]
+        },
+        {
+          "id": "lesson-12-05",
+          "order": 5,
+          "globalOrder": 60,
+          "titleZh": "动作的状态",
+          "goal": "会说明动作是否完整、规律、松紧和快慢。",
+          "pronunciationFocus": "句尾降调：陈述完成",
+          "sentenceFrame": "It is complete, but a little slow.",
+          "wordIds": [
+            "things_general-027",
+            "things_general-371",
+            "qualities_general-031",
+            "qualities_general-032",
+            "qualities_general-038",
+            "qualities_general-072",
+            "qualities_opposites-042",
+            "qualities_opposites-027",
+            "qualities_general-090",
+            "qualities_opposites-008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-13",
+      "order": 13,
+      "titleZh": "学习与表达：语言、阅读与艺术",
+      "goal": "把听说读写、记忆、故事和艺术连成学习闭环。",
+      "lessons": [
+        {
+          "id": "lesson-13-01",
+          "order": 1,
+          "globalOrder": 61,
+          "titleZh": "课堂与语言",
+          "goal": "会说课堂行为和学习目标。",
+          "pronunciationFocus": "/dʒ/：education, language",
+          "sentenceFrame": "Pay attention. Learn the word ___.",
+          "wordIds": [
+            "things_general-018",
+            "things_general-044",
+            "things_general-101",
+            "things_general-177",
+            "things_general-355",
+            "things_general-171",
+            "things_general-173",
+            "things_general-396",
+            "qualities_general-015",
+            "qualities_general-044"
+          ]
+        },
+        {
+          "id": "lesson-13-02",
+          "order": 2,
+          "globalOrder": 62,
+          "titleZh": "读与写",
+          "goal": "会说阅读、书写和页面记录。",
+          "pronunciationFocus": "/r/：read, write 的起音",
+          "sentenceFrame": "Read the page and write a note.",
+          "wordIds": [
+            "things_general-179",
+            "things_general-186",
+            "things_general-222",
+            "things_general-233",
+            "things_general-236",
+            "things_general-254",
+            "things_general-272",
+            "things_general-399",
+            "qualities_opposites-041",
+            "qualities_general-016"
+          ]
+        },
+        {
+          "id": "lesson-13-03",
+          "order": 3,
+          "globalOrder": 63,
+          "titleZh": "事实、历史与故事",
+          "goal": "会区分事实记录、历史和虚构故事。",
+          "pronunciationFocus": "/f/：fact, fiction, false",
+          "sentenceFrame": "The record is true/false. The story is ___.",
+          "wordIds": [
+            "things_general-118",
+            "things_general-147",
+            "things_general-259",
+            "things_general-341",
+            "things_general-375",
+            "things_general-219",
+            "things_general-274",
+            "things_general-088",
+            "qualities_general-092",
+            "qualities_opposites-017"
+          ]
+        },
+        {
+          "id": "lesson-13-04",
+          "order": 4,
+          "globalOrder": 64,
+          "titleZh": "画画、音乐与声音",
+          "goal": "会说八种艺术表达媒介。",
+          "pronunciationFocus": "/ɔɪ/ 与 /aɪ/：voice, write",
+          "sentenceFrame": "Make a special picture/song with ___.",
+          "wordIds": [
+            "things_general-015",
+            "things_general-157",
+            "things_general-159",
+            "things_general-215",
+            "things_general-235",
+            "things_general-327",
+            "things_general-378",
+            "things_general-060",
+            "qualities_opposites-046",
+            "qualities_opposites-047"
+          ]
+        },
+        {
+          "id": "lesson-13-05",
+          "order": 5,
+          "globalOrder": 65,
+          "titleZh": "想法与记忆",
+          "goal": "会表达经验、想法、记忆和判断。",
+          "pronunciationFocus": "意群：先想，再说",
+          "sentenceFrame": "I think/talk about ___.",
+          "wordIds": [
+            "things_general-110",
+            "things_general-153",
+            "things_general-200",
+            "things_general-204",
+            "things_general-352",
+            "things_general-360",
+            "qualities_general-056",
+            "qualities_general-057",
+            "qualities_general-098",
+            "qualities_opposites-020"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-14",
+      "order": 14,
+      "titleZh": "工作与交易：金钱、市场与组织",
+      "goal": "理解交易、企业、组织流程和不确定结果。",
+      "lessons": [
+        {
+          "id": "lesson-14-01",
+          "order": 1,
+          "globalOrder": 66,
+          "titleZh": "钱、价格与价值",
+          "goal": "会说账户、借贷、付款和价格。",
+          "pronunciationFocus": "/aɪ/：price 与 /ɔɪ/：coin 类比",
+          "sentenceFrame": "The price/payment is ___.",
+          "wordIds": [
+            "things_general-001",
+            "things_general-067",
+            "things_general-078",
+            "things_general-208",
+            "things_general-239",
+            "things_general-253",
+            "things_general-257",
+            "things_general-374",
+            "qualities_general-011",
+            "qualities_opposites-012"
+          ]
+        },
+        {
+          "id": "lesson-14-02",
+          "order": 2,
+          "globalOrder": 67,
+          "titleZh": "公司里的人",
+          "goal": "会说企业中的人、会议和委员会。",
+          "pronunciationFocus": "/ɜː/：work 词族的核心音",
+          "sentenceFrame": "The manager/owner meets the committee.",
+          "wordIds": [
+            "things_general-039",
+            "things_general-052",
+            "things_general-156",
+            "things_general-192",
+            "things_general-232",
+            "things_general-298",
+            "things_general-199",
+            "things_general-051",
+            "qualities_general-013",
+            "qualities_general-063"
+          ]
+        },
+        {
+          "id": "lesson-14-03",
+          "order": 3,
+          "globalOrder": 68,
+          "titleZh": "广告、竞争与协议",
+          "goal": "会描述提出交易、达成协议和可能结果。",
+          "pronunciationFocus": "多音节词主重音",
+          "sentenceFrame": "The offer is possible/probable.",
+          "wordIds": [
+            "things_general-005",
+            "things_general-054",
+            "things_general-107",
+            "things_general-225",
+            "things_general-366",
+            "things_general-006",
+            "things_general-013",
+            "things_general-282",
+            "qualities_general-064",
+            "qualities_general-067"
+          ]
+        },
+        {
+          "id": "lesson-14-04",
+          "order": 4,
+          "globalOrder": 69,
+          "titleZh": "组织如何运转",
+          "goal": "会按顺序说组织、分配、增长和流程。",
+          "pronunciationFocus": "/ʃ/：operation, organization",
+          "sentenceFrame": "First, the organization starts the process.",
+          "wordIds": [
+            "things_general-227",
+            "things_general-229",
+            "things_general-230",
+            "things_general-093",
+            "things_general-155",
+            "things_general-085",
+            "things_general-109",
+            "things_general-255",
+            "qualities_general-028",
+            "qualities_opposites-024"
+          ]
+        },
+        {
+          "id": "lesson-14-05",
+          "order": 5,
+          "globalOrder": 70,
+          "titleZh": "专业、财产与差异",
+          "goal": "会说专业服务、保险、财产和限制。",
+          "pronunciationFocus": "对比重音：same or different",
+          "sentenceFrame": "The two things are the same/different.",
+          "wordIds": [
+            "things_general-111",
+            "things_general-160",
+            "things_general-161",
+            "things_general-258",
+            "things_general-183",
+            "things_general-190",
+            "qualities_opposites-006",
+            "qualities_general-077",
+            "qualities_opposites-014",
+            "qualities_general-076"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-15",
+      "order": 15,
+      "titleZh": "规则与社会：法律、政府与冲突",
+      "goal": "理解公共规则、决策、风险以及战争与和平。",
+      "lessons": [
+        {
+          "id": "lesson-15-01",
+          "order": 1,
+          "globalOrder": 71,
+          "titleZh": "政府与规则",
+          "goal": "会说国家、政府、法律和代表。",
+          "pronunciationFocus": "/ɡ/：government, general",
+          "sentenceFrame": "The government makes a law/rule.",
+          "wordIds": [
+            "things_general-134",
+            "things_general-217",
+            "things_general-325",
+            "things_general-020",
+            "things_general-278",
+            "things_general-354",
+            "things_general-175",
+            "things_general-290",
+            "qualities_general-062",
+            "qualities_general-034"
+          ]
+        },
+        {
+          "id": "lesson-15-02",
+          "order": 2,
+          "globalOrder": 72,
+          "titleZh": "讨论与决定",
+          "goal": "会提出请求、参与讨论并说明决定。",
+          "pronunciationFocus": "/ʒ/ 与 /ʃ/：decision, discussion",
+          "sentenceFrame": "The group discusses the request and makes a decision.",
+          "wordIds": [
+            "things_general-138",
+            "things_general-089",
+            "things_general-014",
+            "things_general-079",
+            "things_general-279",
+            "things_general-334",
+            "things_general-309",
+            "things_general-057",
+            "qualities_general-055",
+            "qualities_general-079"
+          ]
+        },
+        {
+          "id": "lesson-15-03",
+          "order": 3,
+          "globalOrder": 73,
+          "titleZh": "犯罪、危险与后果",
+          "goal": "会说危险、损害、惩罚和损失。",
+          "pronunciationFocus": "/dʒ/：judge, danger",
+          "sentenceFrame": "The crime causes damage/loss.",
+          "wordIds": [
+            "things_general-068",
+            "things_general-167",
+            "things_general-262",
+            "things_general-302",
+            "things_general-247",
+            "things_general-074",
+            "things_general-073",
+            "things_general-188",
+            "qualities_opposites-050",
+            "qualities_opposites-010"
+          ]
+        },
+        {
+          "id": "lesson-15-04",
+          "order": 4,
+          "globalOrder": 74,
+          "titleZh": "战争与和平",
+          "goal": "会描述攻击、力量、抗议以及和平。",
+          "pronunciationFocus": "/p/ 与 /f/：peace, force",
+          "sentenceFrame": "The protest is against war and for peace.",
+          "wordIds": [
+            "things_general-016",
+            "things_general-083",
+            "things_general-127",
+            "things_general-252",
+            "things_general-176",
+            "things_general-260",
+            "things_general-380",
+            "things_general-240",
+            "qualities_general-053",
+            "qualities_general-036"
+          ]
+        },
+        {
+          "id": "lesson-15-05",
+          "order": 5,
+          "globalOrder": 75,
+          "titleZh": "历史、信仰与未来",
+          "goal": "会把过去、现在、未来与社会状态连接起来。",
+          "pronunciationFocus": "时间对比中的重音",
+          "sentenceFrame": "In the past/present/future, ___.",
+          "wordIds": [
+            "things_general-077",
+            "things_general-277",
+            "things_general-055",
+            "things_general-307",
+            "qualities_general-060",
+            "qualities_general-065",
+            "qualities_opposites-021",
+            "qualities_opposites-038",
+            "qualities_opposites-018",
+            "qualities_opposites-028"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-16",
+      "order": 16,
+      "titleZh": "思考与判断：事实、原因与测量",
+      "goal": "用比较、证据、测量和分类做出清楚判断。",
+      "lessons": [
+        {
+          "id": "lesson-16-01",
+          "order": 1,
+          "globalOrder": 76,
+          "titleZh": "数与量",
+          "goal": "会说加法、单位、重量和测量尺度。",
+          "pronunciationFocus": "/ʒ/：measure 的中间音",
+          "sentenceFrame": "Measure the mass/weight in this unit.",
+          "wordIds": [
+            "things_general-003",
+            "things_general-022",
+            "things_general-080",
+            "things_general-180",
+            "things_general-195",
+            "things_general-197",
+            "things_general-269",
+            "things_general-294",
+            "things_general-372",
+            "things_general-389"
+          ]
+        },
+        {
+          "id": "lesson-16-02",
+          "order": 2,
+          "globalOrder": 77,
+          "titleZh": "范围与形状",
+          "goal": "会描述底边、距离、边缘、长宽和高低。",
+          "pronunciationFocus": "/aʊ/：round 与 /aɪ/：wide",
+          "sentenceFrame": "The distance is long/short; the range is wide/narrow.",
+          "wordIds": [
+            "things_general-023",
+            "things_general-092",
+            "things_general-100",
+            "things_general-246",
+            "things_general-268",
+            "qualities_general-048",
+            "qualities_general-075",
+            "qualities_general-088",
+            "qualities_general-097",
+            "qualities_opposites-031"
+          ]
+        },
+        {
+          "id": "lesson-16-03",
+          "order": 3,
+          "globalOrder": 78,
+          "titleZh": "比较与分类",
+          "goal": "会按类别比较、分开和选择。",
+          "pronunciationFocus": "形容词对比重音",
+          "sentenceFrame": "Compare, divide, sort and select the things.",
+          "wordIds": [
+            "things_general-053",
+            "things_general-094",
+            "things_general-299",
+            "things_general-328",
+            "things_general-359",
+            "qualities_general-078",
+            "qualities_opposites-033",
+            "qualities_opposites-043",
+            "qualities_opposites-039",
+            "qualities_opposites-048"
+          ]
+        },
+        {
+          "id": "lesson-16-04",
+          "order": 4,
+          "globalOrder": 79,
+          "titleZh": "原因、结果与证据",
+          "goal": "会用观察和测试检查一个说法。",
+          "pronunciationFocus": "/ɔː/：cause 与 /æ/：fact",
+          "sentenceFrame": "The test/observation shows the cause and effect.",
+          "wordIds": [
+            "things_general-043",
+            "things_general-102",
+            "things_general-112",
+            "things_general-224",
+            "things_general-357",
+            "things_general-095",
+            "things_general-104",
+            "things_general-045",
+            "qualities_general-084",
+            "qualities_opposites-035"
+          ]
+        },
+        {
+          "id": "lesson-16-05",
+          "order": 5,
+          "globalOrder": 80,
+          "titleZh": "观点与目的",
+          "goal": "会说明调整、细节、观点、目的和趋势。",
+          "pronunciationFocus": "长句意群与停顿",
+          "sentenceFrame": "In my opinion, the purpose is ___.",
+          "wordIds": [
+            "things_general-004",
+            "things_general-019",
+            "things_general-084",
+            "things_general-103",
+            "things_general-228",
+            "things_general-263",
+            "things_general-356",
+            "things_general-056",
+            "qualities_general-081",
+            "qualities_general-089"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unit-17",
+      "order": 17,
+      "titleZh": "变化与系统：科学、材料与未来",
+      "goal": "用科学语言描述材料、能量、系统和随时间发生的变化。",
+      "lessons": [
+        {
+          "id": "lesson-17-01",
+          "order": 1,
+          "globalOrder": 81,
+          "titleZh": "身边的材料",
+          "goal": "会辨认八种材料并说物质与化学性质。",
+          "pronunciationFocus": "/k/：coal, cork, chemical",
+          "sentenceFrame": "The material/substance is made of ___.",
+          "wordIds": [
+            "things_general-048",
+            "things_general-061",
+            "things_general-132",
+            "things_general-133",
+            "things_general-311",
+            "things_general-385",
+            "things_general-251",
+            "things_general-344",
+            "qualities_general-051",
+            "qualities_general-012"
+          ]
+        },
+        {
+          "id": "lesson-17-02",
+          "order": 2,
+          "globalOrder": 82,
+          "titleZh": "电流、光线与波",
+          "goal": "会描述曲线、斜坡、蒸汽和波的运动。",
+          "pronunciationFocus": "/eɪ/：wave, ray, space",
+          "sentenceFrame": "The electric current/wave moves in a curve.",
+          "wordIds": [
+            "things_general-071",
+            "things_general-072",
+            "things_general-148",
+            "things_general-270",
+            "things_general-317",
+            "things_general-335",
+            "things_general-384",
+            "things_general-331",
+            "qualities_general-024",
+            "qualities_general-059"
+          ]
+        },
+        {
+          "id": "lesson-17-03",
+          "order": 3,
+          "globalOrder": 83,
+          "titleZh": "装置、发明与理论",
+          "goal": "会把装置、反应、用途与科学理论连接起来。",
+          "pronunciationFocus": "多音节科学词重音",
+          "sentenceFrame": "The automatic apparatus has a use in science.",
+          "wordIds": [
+            "things_general-012",
+            "things_general-162",
+            "things_general-295",
+            "things_general-358",
+            "things_general-271",
+            "things_general-154",
+            "things_general-376",
+            "things_general-373",
+            "qualities_general-004",
+            "qualities_general-017"
+          ]
+        },
+        {
+          "id": "lesson-17-04",
+          "order": 4,
+          "globalOrder": 84,
+          "titleZh": "系统怎样变化",
+          "goal": "会按时间和阶段描述结构、系统与变化。",
+          "pronunciationFocus": "/tʃ/：change, structure",
+          "sentenceFrame": "The system changes with time at each stage.",
+          "wordIds": [
+            "things_general-046",
+            "things_general-108",
+            "things_general-332",
+            "things_general-343",
+            "things_general-346",
+            "things_general-351",
+            "things_general-362",
+            "qualities_general-029",
+            "qualities_general-023",
+            "qualities_opposites-030"
+          ]
+        },
+        {
+          "id": "lesson-17-05",
+          "order": 5,
+          "globalOrder": 85,
+          "titleZh": "观察细小差异",
+          "goal": "会说材料、环境和生命中的细微性质与需求。",
+          "pronunciationFocus": "词尾辅音群：-st, -ft",
+          "sentenceFrame": "The soft/delicate thing is sticky, but we need ___.",
+          "wordIds": [
+            "things_general-158",
+            "things_general-205",
+            "things_general-218",
+            "things_general-238",
+            "things_general-319",
+            "things_general-382",
+            "qualities_general-082",
+            "qualities_general-083",
+            "qualities_opposites-013",
+            "qualities_opposites-044"
+          ]
+        }
+      ]
+    }
+  ]
+}

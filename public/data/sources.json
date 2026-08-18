@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-08-18T11:46:47.487790+00:00",
+  "sources": [
+    {
+      "id": "ogden_pdf_snapshot",
+      "title": "850 Basic Words: Grouped and Listed by C. K. Ogden",
+      "role": "Canonical membership, source order, category and spelling",
+      "local_file": "pdfcoffee.com-850-basic-words-grouped-and-listed-by-c-k-ogden.pdf",
+      "sha256": "ed4e0e7551f49dbb133a6446018dfaf787a8fb2b4cf1f9cea71e1889c7b80cc7",
+      "note": "Two-page browser-generated snapshot; not represented as an original Ogden book scan."
+    },
+    {
+      "id": "free_dictionary_api",
+      "title": "Free Dictionary API (English entries derived from Wiktionary)",
+      "url": "https://dictionaryapi.dev/",
+      "data_url_template": "https://api.dictionaryapi.dev/api/v2/entries/en/{word}",
+      "license": "Entry responses declare CC BY-SA 3.0; individual audio files may use their own declared licence.",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "role": "English part of speech, definitions, synonyms and IPA candidates"
+    },
+    {
+      "id": "ecdict",
+      "title": "ECDICT free English-Chinese dictionary database",
+      "url": "https://github.com/skywind3000/ECDICT",
+      "data_url": "https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv",
+      "license": "MIT",
+      "license_url": "https://github.com/skywind3000/ECDICT/blob/master/LICENSE",
+      "role": "Concise Chinese meanings, POS evidence and UK-oriented IPA candidates"
+    },
+    {
+      "id": "cmudict",
+      "title": "CMU Pronouncing Dictionary",
+      "url": "https://github.com/cmusphinx/cmudict",
+      "data_url": "https://raw.githubusercontent.com/cmusphinx/cmudict/master/cmudict.dict",
+      "license": "BSD-style CMUdict licence",
+      "license_url": "https://github.com/cmusphinx/cmudict/blob/master/LICENSE",
+      "role": "North American pronunciation fallback, converted deterministically from ARPAbet to IPA"
+    },
+    {
+      "id": "tatoeba",
+      "title": "Tatoeba sentence and translation corpus",
+      "url": "https://tatoeba.org/",
+      "data_url": "https://api.tatoeba.org/v1/sentences",
+      "license": "Per-sentence licence and owner are retained; selected records currently use CC BY 2.0 FR or CC0 1.0.",
+      "license_url": "https://tatoeba.org/en/terms_of_use",
+      "role": "Short English examples with directly linked Mandarin Chinese translations"
+    },
+    {
+      "id": "editorial_fallback",
+      "title": "Project-authored deterministic fallback text",
+      "role": "Fills required fields only when an open lexical source has no usable value",
+      "license": "Project content",
+      "note": "Fallbacks are never represented as sourced dictionary facts and force editorial_status=draft."
+    }
+  ],
+  "attribution_note": "For Tatoeba-backed examples, tokens in each word's sources.lexical identify both the English sentence and Mandarin translation. Full owner/licence fields are retained in the local source cache.",
+  "excluded_reference": {
+    "url": "https://github.com/HANXU2018/BASIC-ENGLISH-VOCABULARY",
+    "reason": "Reference repository had no detected licence, so its vocabulary-table content was not copied into this dataset."
+  }
+}

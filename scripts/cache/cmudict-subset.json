@@ -1,0 +1,5349 @@
+{
+  "a": [
+    "AH0"
+  ],
+  "able": [
+    "EY1",
+    "B",
+    "AH0",
+    "L"
+  ],
+  "about": [
+    "AH0",
+    "B",
+    "AW1",
+    "T"
+  ],
+  "account": [
+    "AH0",
+    "K",
+    "AW1",
+    "N",
+    "T"
+  ],
+  "acid": [
+    "AE1",
+    "S",
+    "AH0",
+    "D"
+  ],
+  "across": [
+    "AH0",
+    "K",
+    "R",
+    "AO1",
+    "S"
+  ],
+  "act": [
+    "AE1",
+    "K",
+    "T"
+  ],
+  "addition": [
+    "AH0",
+    "D",
+    "IH1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "adjustment": [
+    "AH0",
+    "JH",
+    "AH1",
+    "S",
+    "T",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "advertisement": [
+    "AE0",
+    "D",
+    "V",
+    "ER1",
+    "T",
+    "AH0",
+    "Z",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "after": [
+    "AE1",
+    "F",
+    "T",
+    "ER0"
+  ],
+  "again": [
+    "AH0",
+    "G",
+    "EH1",
+    "N"
+  ],
+  "against": [
+    "AH0",
+    "G",
+    "EH1",
+    "N",
+    "S",
+    "T"
+  ],
+  "agreement": [
+    "AH0",
+    "G",
+    "R",
+    "IY1",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "air": [
+    "EH1",
+    "R"
+  ],
+  "all": [
+    "AO1",
+    "L"
+  ],
+  "almost": [
+    "AO1",
+    "L",
+    "M",
+    "OW2",
+    "S",
+    "T"
+  ],
+  "among": [
+    "AH0",
+    "M",
+    "AH1",
+    "NG"
+  ],
+  "amount": [
+    "AH0",
+    "M",
+    "AW1",
+    "N",
+    "T"
+  ],
+  "amusement": [
+    "AH0",
+    "M",
+    "Y",
+    "UW1",
+    "Z",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "and": [
+    "AH0",
+    "N",
+    "D"
+  ],
+  "angle": [
+    "AE1",
+    "NG",
+    "G",
+    "AH0",
+    "L"
+  ],
+  "angry": [
+    "AE1",
+    "NG",
+    "G",
+    "R",
+    "IY0"
+  ],
+  "animal": [
+    "AE1",
+    "N",
+    "AH0",
+    "M",
+    "AH0",
+    "L"
+  ],
+  "answer": [
+    "AE1",
+    "N",
+    "S",
+    "ER0"
+  ],
+  "ant": [
+    "AE1",
+    "N",
+    "T"
+  ],
+  "any": [
+    "EH1",
+    "N",
+    "IY0"
+  ],
+  "apparatus": [
+    "AE2",
+    "P",
+    "ER0",
+    "AE1",
+    "T",
+    "AH0",
+    "S"
+  ],
+  "apple": [
+    "AE1",
+    "P",
+    "AH0",
+    "L"
+  ],
+  "approval": [
+    "AH0",
+    "P",
+    "R",
+    "UW1",
+    "V",
+    "AH0",
+    "L"
+  ],
+  "arch": [
+    "AA1",
+    "R",
+    "CH"
+  ],
+  "argument": [
+    "AA1",
+    "R",
+    "G",
+    "Y",
+    "AH0",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "arm": [
+    "AA1",
+    "R",
+    "M"
+  ],
+  "army": [
+    "AA1",
+    "R",
+    "M",
+    "IY0"
+  ],
+  "art": [
+    "AA1",
+    "R",
+    "T"
+  ],
+  "as": [
+    "AE1",
+    "Z"
+  ],
+  "at": [
+    "AE1",
+    "T"
+  ],
+  "attack": [
+    "AH0",
+    "T",
+    "AE1",
+    "K"
+  ],
+  "attempt": [
+    "AH0",
+    "T",
+    "EH1",
+    "M",
+    "P",
+    "T"
+  ],
+  "attention": [
+    "AH0",
+    "T",
+    "EH1",
+    "N",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "attraction": [
+    "AH0",
+    "T",
+    "R",
+    "AE1",
+    "K",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "authority": [
+    "AH0",
+    "TH",
+    "AO1",
+    "R",
+    "AH0",
+    "T",
+    "IY0"
+  ],
+  "automatic": [
+    "AO2",
+    "T",
+    "AH0",
+    "M",
+    "AE1",
+    "T",
+    "IH0",
+    "K"
+  ],
+  "awake": [
+    "AH0",
+    "W",
+    "EY1",
+    "K"
+  ],
+  "baby": [
+    "B",
+    "EY1",
+    "B",
+    "IY0"
+  ],
+  "back": [
+    "B",
+    "AE1",
+    "K"
+  ],
+  "bad": [
+    "B",
+    "AE1",
+    "D"
+  ],
+  "bag": [
+    "B",
+    "AE1",
+    "G"
+  ],
+  "balance": [
+    "B",
+    "AE1",
+    "L",
+    "AH0",
+    "N",
+    "S"
+  ],
+  "ball": [
+    "B",
+    "AO1",
+    "L"
+  ],
+  "band": [
+    "B",
+    "AE1",
+    "N",
+    "D"
+  ],
+  "base": [
+    "B",
+    "EY1",
+    "S"
+  ],
+  "basin": [
+    "B",
+    "EY1",
+    "S",
+    "AH0",
+    "N"
+  ],
+  "basket": [
+    "B",
+    "AE1",
+    "S",
+    "K",
+    "AH0",
+    "T"
+  ],
+  "bath": [
+    "B",
+    "AE1",
+    "TH"
+  ],
+  "be": [
+    "B",
+    "IY1"
+  ],
+  "beautiful": [
+    "B",
+    "Y",
+    "UW1",
+    "T",
+    "AH0",
+    "F",
+    "AH0",
+    "L"
+  ],
+  "because": [
+    "B",
+    "IH0",
+    "K",
+    "AO1",
+    "Z"
+  ],
+  "bed": [
+    "B",
+    "EH1",
+    "D"
+  ],
+  "bee": [
+    "B",
+    "IY1"
+  ],
+  "before": [
+    "B",
+    "IH0",
+    "F",
+    "AO1",
+    "R"
+  ],
+  "behaviour": [
+    "B",
+    "IH0",
+    "HH",
+    "EY1",
+    "V",
+    "Y",
+    "ER0"
+  ],
+  "belief": [
+    "B",
+    "IH0",
+    "L",
+    "IY1",
+    "F"
+  ],
+  "bell": [
+    "B",
+    "EH1",
+    "L"
+  ],
+  "bent": [
+    "B",
+    "EH1",
+    "N",
+    "T"
+  ],
+  "berry": [
+    "B",
+    "EH1",
+    "R",
+    "IY0"
+  ],
+  "between": [
+    "B",
+    "IH0",
+    "T",
+    "W",
+    "IY1",
+    "N"
+  ],
+  "bird": [
+    "B",
+    "ER1",
+    "D"
+  ],
+  "birth": [
+    "B",
+    "ER1",
+    "TH"
+  ],
+  "bit": [
+    "B",
+    "IH1",
+    "T"
+  ],
+  "bite": [
+    "B",
+    "AY1",
+    "T"
+  ],
+  "bitter": [
+    "B",
+    "IH1",
+    "T",
+    "ER0"
+  ],
+  "black": [
+    "B",
+    "L",
+    "AE1",
+    "K"
+  ],
+  "blade": [
+    "B",
+    "L",
+    "EY1",
+    "D"
+  ],
+  "blood": [
+    "B",
+    "L",
+    "AH1",
+    "D"
+  ],
+  "blow": [
+    "B",
+    "L",
+    "OW1"
+  ],
+  "blue": [
+    "B",
+    "L",
+    "UW1"
+  ],
+  "board": [
+    "B",
+    "AO1",
+    "R",
+    "D"
+  ],
+  "boat": [
+    "B",
+    "OW1",
+    "T"
+  ],
+  "body": [
+    "B",
+    "AA1",
+    "D",
+    "IY0"
+  ],
+  "boiling": [
+    "B",
+    "OY1",
+    "L",
+    "IH0",
+    "NG"
+  ],
+  "bone": [
+    "B",
+    "OW1",
+    "N"
+  ],
+  "book": [
+    "B",
+    "UH1",
+    "K"
+  ],
+  "boot": [
+    "B",
+    "UW1",
+    "T"
+  ],
+  "bottle": [
+    "B",
+    "AA1",
+    "T",
+    "AH0",
+    "L"
+  ],
+  "box": [
+    "B",
+    "AA1",
+    "K",
+    "S"
+  ],
+  "boy": [
+    "B",
+    "OY1"
+  ],
+  "brain": [
+    "B",
+    "R",
+    "EY1",
+    "N"
+  ],
+  "brake": [
+    "B",
+    "R",
+    "EY1",
+    "K"
+  ],
+  "branch": [
+    "B",
+    "R",
+    "AE1",
+    "N",
+    "CH"
+  ],
+  "brass": [
+    "B",
+    "R",
+    "AE1",
+    "S"
+  ],
+  "bread": [
+    "B",
+    "R",
+    "EH1",
+    "D"
+  ],
+  "breath": [
+    "B",
+    "R",
+    "EH1",
+    "TH"
+  ],
+  "brick": [
+    "B",
+    "R",
+    "IH1",
+    "K"
+  ],
+  "bridge": [
+    "B",
+    "R",
+    "IH1",
+    "JH"
+  ],
+  "bright": [
+    "B",
+    "R",
+    "AY1",
+    "T"
+  ],
+  "broken": [
+    "B",
+    "R",
+    "OW1",
+    "K",
+    "AH0",
+    "N"
+  ],
+  "brother": [
+    "B",
+    "R",
+    "AH1",
+    "DH",
+    "ER0"
+  ],
+  "brown": [
+    "B",
+    "R",
+    "AW1",
+    "N"
+  ],
+  "brush": [
+    "B",
+    "R",
+    "AH1",
+    "SH"
+  ],
+  "bucket": [
+    "B",
+    "AH1",
+    "K",
+    "AH0",
+    "T"
+  ],
+  "building": [
+    "B",
+    "IH1",
+    "L",
+    "D",
+    "IH0",
+    "NG"
+  ],
+  "bulb": [
+    "B",
+    "AH1",
+    "L",
+    "B"
+  ],
+  "burn": [
+    "B",
+    "ER1",
+    "N"
+  ],
+  "burst": [
+    "B",
+    "ER1",
+    "S",
+    "T"
+  ],
+  "business": [
+    "B",
+    "IH1",
+    "Z",
+    "N",
+    "AH0",
+    "S"
+  ],
+  "but": [
+    "B",
+    "AH1",
+    "T"
+  ],
+  "butter": [
+    "B",
+    "AH1",
+    "T",
+    "ER0"
+  ],
+  "button": [
+    "B",
+    "AH1",
+    "T",
+    "AH0",
+    "N"
+  ],
+  "by": [
+    "B",
+    "AY1"
+  ],
+  "cake": [
+    "K",
+    "EY1",
+    "K"
+  ],
+  "camera": [
+    "K",
+    "AE1",
+    "M",
+    "ER0",
+    "AH0"
+  ],
+  "canvas": [
+    "K",
+    "AE1",
+    "N",
+    "V",
+    "AH0",
+    "S"
+  ],
+  "card": [
+    "K",
+    "AA1",
+    "R",
+    "D"
+  ],
+  "care": [
+    "K",
+    "EH1",
+    "R"
+  ],
+  "carriage": [
+    "K",
+    "AE1",
+    "R",
+    "IH0",
+    "JH"
+  ],
+  "cart": [
+    "K",
+    "AA1",
+    "R",
+    "T"
+  ],
+  "cat": [
+    "K",
+    "AE1",
+    "T"
+  ],
+  "cause": [
+    "K",
+    "AA1",
+    "Z"
+  ],
+  "certain": [
+    "S",
+    "ER1",
+    "T",
+    "AH0",
+    "N"
+  ],
+  "chain": [
+    "CH",
+    "EY1",
+    "N"
+  ],
+  "chalk": [
+    "CH",
+    "AA1",
+    "K"
+  ],
+  "chance": [
+    "CH",
+    "AE1",
+    "N",
+    "S"
+  ],
+  "change": [
+    "CH",
+    "EY1",
+    "N",
+    "JH"
+  ],
+  "cheap": [
+    "CH",
+    "IY1",
+    "P"
+  ],
+  "cheese": [
+    "CH",
+    "IY1",
+    "Z"
+  ],
+  "chemical": [
+    "K",
+    "EH1",
+    "M",
+    "AH0",
+    "K",
+    "AH0",
+    "L"
+  ],
+  "chest": [
+    "CH",
+    "EH1",
+    "S",
+    "T"
+  ],
+  "chief": [
+    "CH",
+    "IY1",
+    "F"
+  ],
+  "chin": [
+    "CH",
+    "IH1",
+    "N"
+  ],
+  "church": [
+    "CH",
+    "ER1",
+    "CH"
+  ],
+  "circle": [
+    "S",
+    "ER1",
+    "K",
+    "AH0",
+    "L"
+  ],
+  "clean": [
+    "K",
+    "L",
+    "IY1",
+    "N"
+  ],
+  "clear": [
+    "K",
+    "L",
+    "IH1",
+    "R"
+  ],
+  "clock": [
+    "K",
+    "L",
+    "AA1",
+    "K"
+  ],
+  "cloth": [
+    "K",
+    "L",
+    "AO1",
+    "TH"
+  ],
+  "cloud": [
+    "K",
+    "L",
+    "AW1",
+    "D"
+  ],
+  "coal": [
+    "K",
+    "OW1",
+    "L"
+  ],
+  "coat": [
+    "K",
+    "OW1",
+    "T"
+  ],
+  "cold": [
+    "K",
+    "OW1",
+    "L",
+    "D"
+  ],
+  "collar": [
+    "K",
+    "AA1",
+    "L",
+    "ER0"
+  ],
+  "colour": [
+    "K",
+    "AH1",
+    "L",
+    "ER0"
+  ],
+  "comb": [
+    "K",
+    "OW1",
+    "M"
+  ],
+  "come": [
+    "K",
+    "AH1",
+    "M"
+  ],
+  "comfort": [
+    "K",
+    "AH1",
+    "M",
+    "F",
+    "ER0",
+    "T"
+  ],
+  "committee": [
+    "K",
+    "AH0",
+    "M",
+    "IH1",
+    "T",
+    "IY0"
+  ],
+  "common": [
+    "K",
+    "AA1",
+    "M",
+    "AH0",
+    "N"
+  ],
+  "company": [
+    "K",
+    "AH1",
+    "M",
+    "P",
+    "AH0",
+    "N",
+    "IY2"
+  ],
+  "comparison": [
+    "K",
+    "AH0",
+    "M",
+    "P",
+    "EH1",
+    "R",
+    "AH0",
+    "S",
+    "AH0",
+    "N"
+  ],
+  "competition": [
+    "K",
+    "AA2",
+    "M",
+    "P",
+    "AH0",
+    "T",
+    "IH1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "complete": [
+    "K",
+    "AH0",
+    "M",
+    "P",
+    "L",
+    "IY1",
+    "T"
+  ],
+  "complex": [
+    "K",
+    "AA1",
+    "M",
+    "P",
+    "L",
+    "EH0",
+    "K",
+    "S"
+  ],
+  "condition": [
+    "K",
+    "AH0",
+    "N",
+    "D",
+    "IH1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "connection": [
+    "K",
+    "AH0",
+    "N",
+    "EH1",
+    "K",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "conscious": [
+    "K",
+    "AA1",
+    "N",
+    "SH",
+    "AH0",
+    "S"
+  ],
+  "control": [
+    "K",
+    "AH0",
+    "N",
+    "T",
+    "R",
+    "OW1",
+    "L"
+  ],
+  "cook": [
+    "K",
+    "UH1",
+    "K"
+  ],
+  "copper": [
+    "K",
+    "AA1",
+    "P",
+    "ER0"
+  ],
+  "copy": [
+    "K",
+    "AA1",
+    "P",
+    "IY0"
+  ],
+  "cord": [
+    "K",
+    "AO1",
+    "R",
+    "D"
+  ],
+  "cork": [
+    "K",
+    "AO1",
+    "R",
+    "K"
+  ],
+  "cotton": [
+    "K",
+    "AA1",
+    "T",
+    "AH0",
+    "N"
+  ],
+  "cough": [
+    "K",
+    "AA1",
+    "F"
+  ],
+  "country": [
+    "K",
+    "AH1",
+    "N",
+    "T",
+    "R",
+    "IY0"
+  ],
+  "cover": [
+    "K",
+    "AH1",
+    "V",
+    "ER0"
+  ],
+  "cow": [
+    "K",
+    "AW1"
+  ],
+  "crack": [
+    "K",
+    "R",
+    "AE1",
+    "K"
+  ],
+  "credit": [
+    "K",
+    "R",
+    "EH1",
+    "D",
+    "AH0",
+    "T"
+  ],
+  "crime": [
+    "K",
+    "R",
+    "AY1",
+    "M"
+  ],
+  "cruel": [
+    "K",
+    "R",
+    "UW1",
+    "AH0",
+    "L"
+  ],
+  "crush": [
+    "K",
+    "R",
+    "AH1",
+    "SH"
+  ],
+  "cry": [
+    "K",
+    "R",
+    "AY1"
+  ],
+  "cup": [
+    "K",
+    "AH1",
+    "P"
+  ],
+  "current": [
+    "K",
+    "ER1",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "curtain": [
+    "K",
+    "ER1",
+    "T",
+    "AH0",
+    "N"
+  ],
+  "curve": [
+    "K",
+    "ER1",
+    "V"
+  ],
+  "cushion": [
+    "K",
+    "UH1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "cut": [
+    "K",
+    "AH1",
+    "T"
+  ],
+  "damage": [
+    "D",
+    "AE1",
+    "M",
+    "AH0",
+    "JH"
+  ],
+  "danger": [
+    "D",
+    "EY1",
+    "N",
+    "JH",
+    "ER0"
+  ],
+  "dark": [
+    "D",
+    "AA1",
+    "R",
+    "K"
+  ],
+  "daughter": [
+    "D",
+    "AO1",
+    "T",
+    "ER0"
+  ],
+  "day": [
+    "D",
+    "EY1"
+  ],
+  "dead": [
+    "D",
+    "EH1",
+    "D"
+  ],
+  "dear": [
+    "D",
+    "IH1",
+    "R"
+  ],
+  "death": [
+    "D",
+    "EH1",
+    "TH"
+  ],
+  "debt": [
+    "D",
+    "EH1",
+    "T"
+  ],
+  "decision": [
+    "D",
+    "IH0",
+    "S",
+    "IH1",
+    "ZH",
+    "AH0",
+    "N"
+  ],
+  "deep": [
+    "D",
+    "IY1",
+    "P"
+  ],
+  "degree": [
+    "D",
+    "IH0",
+    "G",
+    "R",
+    "IY1"
+  ],
+  "delicate": [
+    "D",
+    "EH1",
+    "L",
+    "AH0",
+    "K",
+    "AH0",
+    "T"
+  ],
+  "dependent": [
+    "D",
+    "IH0",
+    "P",
+    "EH1",
+    "N",
+    "D",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "design": [
+    "D",
+    "IH0",
+    "Z",
+    "AY1",
+    "N"
+  ],
+  "desire": [
+    "D",
+    "IH0",
+    "Z",
+    "AY1",
+    "ER0"
+  ],
+  "destruction": [
+    "D",
+    "IH0",
+    "S",
+    "T",
+    "R",
+    "AH1",
+    "K",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "detail": [
+    "D",
+    "IH0",
+    "T",
+    "EY1",
+    "L"
+  ],
+  "development": [
+    "D",
+    "IH0",
+    "V",
+    "EH1",
+    "L",
+    "AH0",
+    "P",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "different": [
+    "D",
+    "IH1",
+    "F",
+    "ER0",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "digestion": [
+    "D",
+    "AY0",
+    "JH",
+    "EH1",
+    "S",
+    "CH",
+    "AH0",
+    "N"
+  ],
+  "direction": [
+    "D",
+    "ER0",
+    "EH1",
+    "K",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "dirty": [
+    "D",
+    "ER1",
+    "T",
+    "IY0"
+  ],
+  "discovery": [
+    "D",
+    "IH0",
+    "S",
+    "K",
+    "AH1",
+    "V",
+    "ER0",
+    "IY0"
+  ],
+  "discussion": [
+    "D",
+    "IH0",
+    "S",
+    "K",
+    "AH1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "disease": [
+    "D",
+    "IH0",
+    "Z",
+    "IY1",
+    "Z"
+  ],
+  "disgust": [
+    "D",
+    "IH0",
+    "S",
+    "G",
+    "AH1",
+    "S",
+    "T"
+  ],
+  "distance": [
+    "D",
+    "IH1",
+    "S",
+    "T",
+    "AH0",
+    "N",
+    "S"
+  ],
+  "distribution": [
+    "D",
+    "IH2",
+    "S",
+    "T",
+    "R",
+    "AH0",
+    "B",
+    "Y",
+    "UW1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "division": [
+    "D",
+    "IH0",
+    "V",
+    "IH1",
+    "ZH",
+    "AH0",
+    "N"
+  ],
+  "do": [
+    "D",
+    "UW1"
+  ],
+  "dog": [
+    "D",
+    "AO1",
+    "G"
+  ],
+  "door": [
+    "D",
+    "AO1",
+    "R"
+  ],
+  "doubt": [
+    "D",
+    "AW1",
+    "T"
+  ],
+  "down": [
+    "D",
+    "AW1",
+    "N"
+  ],
+  "drain": [
+    "D",
+    "R",
+    "EY1",
+    "N"
+  ],
+  "drawer": [
+    "D",
+    "R",
+    "AO1",
+    "R"
+  ],
+  "dress": [
+    "D",
+    "R",
+    "EH1",
+    "S"
+  ],
+  "drink": [
+    "D",
+    "R",
+    "IH1",
+    "NG",
+    "K"
+  ],
+  "driving": [
+    "D",
+    "R",
+    "AY1",
+    "V",
+    "IH0",
+    "NG"
+  ],
+  "drop": [
+    "D",
+    "R",
+    "AA1",
+    "P"
+  ],
+  "dry": [
+    "D",
+    "R",
+    "AY1"
+  ],
+  "dust": [
+    "D",
+    "AH1",
+    "S",
+    "T"
+  ],
+  "ear": [
+    "IY1",
+    "R"
+  ],
+  "early": [
+    "ER1",
+    "L",
+    "IY0"
+  ],
+  "earth": [
+    "ER1",
+    "TH"
+  ],
+  "east": [
+    "IY1",
+    "S",
+    "T"
+  ],
+  "edge": [
+    "EH1",
+    "JH"
+  ],
+  "education": [
+    "EH2",
+    "JH",
+    "AH0",
+    "K",
+    "EY1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "effect": [
+    "IH0",
+    "F",
+    "EH1",
+    "K",
+    "T"
+  ],
+  "egg": [
+    "EH1",
+    "G"
+  ],
+  "elastic": [
+    "IH0",
+    "L",
+    "AE1",
+    "S",
+    "T",
+    "IH0",
+    "K"
+  ],
+  "electric": [
+    "IH0",
+    "L",
+    "EH1",
+    "K",
+    "T",
+    "R",
+    "IH0",
+    "K"
+  ],
+  "end": [
+    "EH1",
+    "N",
+    "D"
+  ],
+  "engine": [
+    "EH1",
+    "N",
+    "JH",
+    "AH0",
+    "N"
+  ],
+  "enough": [
+    "IH0",
+    "N",
+    "AH1",
+    "F"
+  ],
+  "equal": [
+    "IY1",
+    "K",
+    "W",
+    "AH0",
+    "L"
+  ],
+  "error": [
+    "EH1",
+    "R",
+    "ER0"
+  ],
+  "even": [
+    "IY1",
+    "V",
+    "IH0",
+    "N"
+  ],
+  "event": [
+    "IH0",
+    "V",
+    "EH1",
+    "N",
+    "T"
+  ],
+  "ever": [
+    "EH1",
+    "V",
+    "ER0"
+  ],
+  "every": [
+    "EH1",
+    "V",
+    "ER0",
+    "IY0"
+  ],
+  "example": [
+    "IH0",
+    "G",
+    "Z",
+    "AE1",
+    "M",
+    "P",
+    "AH0",
+    "L"
+  ],
+  "exchange": [
+    "IH0",
+    "K",
+    "S",
+    "CH",
+    "EY1",
+    "N",
+    "JH"
+  ],
+  "existence": [
+    "EH0",
+    "G",
+    "Z",
+    "IH1",
+    "S",
+    "T",
+    "AH0",
+    "N",
+    "S"
+  ],
+  "expansion": [
+    "IH0",
+    "K",
+    "S",
+    "P",
+    "AE1",
+    "N",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "experience": [
+    "IH0",
+    "K",
+    "S",
+    "P",
+    "IH1",
+    "R",
+    "IY0",
+    "AH0",
+    "N",
+    "S"
+  ],
+  "expert": [
+    "EH1",
+    "K",
+    "S",
+    "P",
+    "ER0",
+    "T"
+  ],
+  "eye": [
+    "AY1"
+  ],
+  "face": [
+    "F",
+    "EY1",
+    "S"
+  ],
+  "fact": [
+    "F",
+    "AE1",
+    "K",
+    "T"
+  ],
+  "fall": [
+    "F",
+    "AO1",
+    "L"
+  ],
+  "false": [
+    "F",
+    "AO1",
+    "L",
+    "S"
+  ],
+  "family": [
+    "F",
+    "AE1",
+    "M",
+    "AH0",
+    "L",
+    "IY0"
+  ],
+  "far": [
+    "F",
+    "AA1",
+    "R"
+  ],
+  "farm": [
+    "F",
+    "AA1",
+    "R",
+    "M"
+  ],
+  "fat": [
+    "F",
+    "AE1",
+    "T"
+  ],
+  "father": [
+    "F",
+    "AA1",
+    "DH",
+    "ER0"
+  ],
+  "fear": [
+    "F",
+    "IH1",
+    "R"
+  ],
+  "feather": [
+    "F",
+    "EH1",
+    "DH",
+    "ER0"
+  ],
+  "feeble": [
+    "F",
+    "IY1",
+    "B",
+    "AH0",
+    "L"
+  ],
+  "feeling": [
+    "F",
+    "IY1",
+    "L",
+    "IH0",
+    "NG"
+  ],
+  "female": [
+    "F",
+    "IY1",
+    "M",
+    "EY2",
+    "L"
+  ],
+  "fertile": [
+    "F",
+    "ER1",
+    "T",
+    "AH0",
+    "L"
+  ],
+  "fiction": [
+    "F",
+    "IH1",
+    "K",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "field": [
+    "F",
+    "IY1",
+    "L",
+    "D"
+  ],
+  "fight": [
+    "F",
+    "AY1",
+    "T"
+  ],
+  "finger": [
+    "F",
+    "IH1",
+    "NG",
+    "G",
+    "ER0"
+  ],
+  "fire": [
+    "F",
+    "AY1",
+    "ER0"
+  ],
+  "first": [
+    "F",
+    "ER1",
+    "S",
+    "T"
+  ],
+  "fish": [
+    "F",
+    "IH1",
+    "SH"
+  ],
+  "fixed": [
+    "F",
+    "IH1",
+    "K",
+    "S",
+    "T"
+  ],
+  "flag": [
+    "F",
+    "L",
+    "AE1",
+    "G"
+  ],
+  "flame": [
+    "F",
+    "L",
+    "EY1",
+    "M"
+  ],
+  "flat": [
+    "F",
+    "L",
+    "AE1",
+    "T"
+  ],
+  "flight": [
+    "F",
+    "L",
+    "AY1",
+    "T"
+  ],
+  "floor": [
+    "F",
+    "L",
+    "AO1",
+    "R"
+  ],
+  "flower": [
+    "F",
+    "L",
+    "AW1",
+    "ER0"
+  ],
+  "fly": [
+    "F",
+    "L",
+    "AY1"
+  ],
+  "fold": [
+    "F",
+    "OW1",
+    "L",
+    "D"
+  ],
+  "food": [
+    "F",
+    "UW1",
+    "D"
+  ],
+  "foolish": [
+    "F",
+    "UW1",
+    "L",
+    "IH0",
+    "SH"
+  ],
+  "foot": [
+    "F",
+    "UH1",
+    "T"
+  ],
+  "for": [
+    "F",
+    "AO1",
+    "R"
+  ],
+  "force": [
+    "F",
+    "AO1",
+    "R",
+    "S"
+  ],
+  "fork": [
+    "F",
+    "AO1",
+    "R",
+    "K"
+  ],
+  "form": [
+    "F",
+    "AO1",
+    "R",
+    "M"
+  ],
+  "forward": [
+    "F",
+    "AO1",
+    "R",
+    "W",
+    "ER0",
+    "D"
+  ],
+  "fowl": [
+    "F",
+    "AW1",
+    "L"
+  ],
+  "frame": [
+    "F",
+    "R",
+    "EY1",
+    "M"
+  ],
+  "free": [
+    "F",
+    "R",
+    "IY1"
+  ],
+  "frequent": [
+    "F",
+    "R",
+    "IY1",
+    "K",
+    "W",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "friend": [
+    "F",
+    "R",
+    "EH1",
+    "N",
+    "D"
+  ],
+  "from": [
+    "F",
+    "R",
+    "AH1",
+    "M"
+  ],
+  "front": [
+    "F",
+    "R",
+    "AH1",
+    "N",
+    "T"
+  ],
+  "fruit": [
+    "F",
+    "R",
+    "UW1",
+    "T"
+  ],
+  "full": [
+    "F",
+    "UH1",
+    "L"
+  ],
+  "future": [
+    "F",
+    "Y",
+    "UW1",
+    "CH",
+    "ER0"
+  ],
+  "garden": [
+    "G",
+    "AA1",
+    "R",
+    "D",
+    "AH0",
+    "N"
+  ],
+  "general": [
+    "JH",
+    "EH1",
+    "N",
+    "ER0",
+    "AH0",
+    "L"
+  ],
+  "get": [
+    "G",
+    "EH1",
+    "T"
+  ],
+  "girl": [
+    "G",
+    "ER1",
+    "L"
+  ],
+  "give": [
+    "G",
+    "IH1",
+    "V"
+  ],
+  "glass": [
+    "G",
+    "L",
+    "AE1",
+    "S"
+  ],
+  "glove": [
+    "G",
+    "L",
+    "AH1",
+    "V"
+  ],
+  "go": [
+    "G",
+    "OW1"
+  ],
+  "goat": [
+    "G",
+    "OW1",
+    "T"
+  ],
+  "gold": [
+    "G",
+    "OW1",
+    "L",
+    "D"
+  ],
+  "good": [
+    "G",
+    "UH1",
+    "D"
+  ],
+  "government": [
+    "G",
+    "AH1",
+    "V",
+    "ER0",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "grain": [
+    "G",
+    "R",
+    "EY1",
+    "N"
+  ],
+  "grass": [
+    "G",
+    "R",
+    "AE1",
+    "S"
+  ],
+  "great": [
+    "G",
+    "R",
+    "EY1",
+    "T"
+  ],
+  "green": [
+    "G",
+    "R",
+    "IY1",
+    "N"
+  ],
+  "grey": [
+    "G",
+    "R",
+    "EY1"
+  ],
+  "grip": [
+    "G",
+    "R",
+    "IH1",
+    "P"
+  ],
+  "group": [
+    "G",
+    "R",
+    "UW1",
+    "P"
+  ],
+  "growth": [
+    "G",
+    "R",
+    "OW1",
+    "TH"
+  ],
+  "guide": [
+    "G",
+    "AY1",
+    "D"
+  ],
+  "gun": [
+    "G",
+    "AH1",
+    "N"
+  ],
+  "hair": [
+    "HH",
+    "EH1",
+    "R"
+  ],
+  "hammer": [
+    "HH",
+    "AE1",
+    "M",
+    "ER0"
+  ],
+  "hand": [
+    "HH",
+    "AE1",
+    "N",
+    "D"
+  ],
+  "hanging": [
+    "HH",
+    "AE1",
+    "NG",
+    "IH0",
+    "NG"
+  ],
+  "happy": [
+    "HH",
+    "AE1",
+    "P",
+    "IY0"
+  ],
+  "harbour": [
+    "HH",
+    "AA1",
+    "R",
+    "B",
+    "ER0"
+  ],
+  "hard": [
+    "HH",
+    "AA1",
+    "R",
+    "D"
+  ],
+  "harmony": [
+    "HH",
+    "AA1",
+    "R",
+    "M",
+    "AH0",
+    "N",
+    "IY0"
+  ],
+  "hat": [
+    "HH",
+    "AE1",
+    "T"
+  ],
+  "hate": [
+    "HH",
+    "EY1",
+    "T"
+  ],
+  "have": [
+    "HH",
+    "AE1",
+    "V"
+  ],
+  "he": [
+    "HH",
+    "IY1"
+  ],
+  "head": [
+    "HH",
+    "EH1",
+    "D"
+  ],
+  "healthy": [
+    "HH",
+    "EH1",
+    "L",
+    "TH",
+    "IY0"
+  ],
+  "hearing": [
+    "HH",
+    "IY1",
+    "R",
+    "IH0",
+    "NG"
+  ],
+  "heart": [
+    "HH",
+    "AA1",
+    "R",
+    "T"
+  ],
+  "heat": [
+    "HH",
+    "IY1",
+    "T"
+  ],
+  "help": [
+    "HH",
+    "EH1",
+    "L",
+    "P"
+  ],
+  "here": [
+    "HH",
+    "IY1",
+    "R"
+  ],
+  "high": [
+    "HH",
+    "AY1"
+  ],
+  "history": [
+    "HH",
+    "IH1",
+    "S",
+    "T",
+    "ER0",
+    "IY0"
+  ],
+  "hole": [
+    "HH",
+    "OW1",
+    "L"
+  ],
+  "hollow": [
+    "HH",
+    "AA1",
+    "L",
+    "OW0"
+  ],
+  "hook": [
+    "HH",
+    "UH1",
+    "K"
+  ],
+  "hope": [
+    "HH",
+    "OW1",
+    "P"
+  ],
+  "horn": [
+    "HH",
+    "AO1",
+    "R",
+    "N"
+  ],
+  "horse": [
+    "HH",
+    "AO1",
+    "R",
+    "S"
+  ],
+  "hospital": [
+    "HH",
+    "AA1",
+    "S",
+    "P",
+    "IH2",
+    "T",
+    "AH0",
+    "L"
+  ],
+  "hour": [
+    "AW1",
+    "ER0"
+  ],
+  "house": [
+    "HH",
+    "AW1",
+    "S"
+  ],
+  "how": [
+    "HH",
+    "AW1"
+  ],
+  "humour": [
+    "HH",
+    "Y",
+    "UW1",
+    "M",
+    "ER0"
+  ],
+  "i": [
+    "AY1"
+  ],
+  "ice": [
+    "AY1",
+    "S"
+  ],
+  "idea": [
+    "AY0",
+    "D",
+    "IY1",
+    "AH0"
+  ],
+  "if": [
+    "IH1",
+    "F"
+  ],
+  "ill": [
+    "IH1",
+    "L"
+  ],
+  "important": [
+    "IH2",
+    "M",
+    "P",
+    "AO1",
+    "R",
+    "T",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "impulse": [
+    "IH1",
+    "M",
+    "P",
+    "AH0",
+    "L",
+    "S"
+  ],
+  "in": [
+    "IH0",
+    "N"
+  ],
+  "increase": [
+    "IH2",
+    "N",
+    "K",
+    "R",
+    "IY1",
+    "S"
+  ],
+  "industry": [
+    "IH1",
+    "N",
+    "D",
+    "AH0",
+    "S",
+    "T",
+    "R",
+    "IY0"
+  ],
+  "ink": [
+    "IH1",
+    "NG",
+    "K"
+  ],
+  "insect": [
+    "IH1",
+    "N",
+    "S",
+    "EH2",
+    "K",
+    "T"
+  ],
+  "instrument": [
+    "IH1",
+    "N",
+    "S",
+    "T",
+    "R",
+    "AH0",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "insurance": [
+    "IH2",
+    "N",
+    "SH",
+    "UH1",
+    "R",
+    "AH0",
+    "N",
+    "S"
+  ],
+  "interest": [
+    "IH1",
+    "N",
+    "T",
+    "R",
+    "AH0",
+    "S",
+    "T"
+  ],
+  "invention": [
+    "IH2",
+    "N",
+    "V",
+    "EH1",
+    "N",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "iron": [
+    "AY1",
+    "ER0",
+    "N"
+  ],
+  "island": [
+    "AY1",
+    "L",
+    "AH0",
+    "N",
+    "D"
+  ],
+  "jelly": [
+    "JH",
+    "EH1",
+    "L",
+    "IY0"
+  ],
+  "jewel": [
+    "JH",
+    "UW1",
+    "AH0",
+    "L"
+  ],
+  "join": [
+    "JH",
+    "OY1",
+    "N"
+  ],
+  "journey": [
+    "JH",
+    "ER1",
+    "N",
+    "IY0"
+  ],
+  "judge": [
+    "JH",
+    "AH1",
+    "JH"
+  ],
+  "jump": [
+    "JH",
+    "AH1",
+    "M",
+    "P"
+  ],
+  "keep": [
+    "K",
+    "IY1",
+    "P"
+  ],
+  "kettle": [
+    "K",
+    "EH1",
+    "T",
+    "AH0",
+    "L"
+  ],
+  "key": [
+    "K",
+    "IY1"
+  ],
+  "kick": [
+    "K",
+    "IH1",
+    "K"
+  ],
+  "kind": [
+    "K",
+    "AY1",
+    "N",
+    "D"
+  ],
+  "kiss": [
+    "K",
+    "IH1",
+    "S"
+  ],
+  "knee": [
+    "N",
+    "IY1"
+  ],
+  "knife": [
+    "N",
+    "AY1",
+    "F"
+  ],
+  "knot": [
+    "N",
+    "AA1",
+    "T"
+  ],
+  "knowledge": [
+    "N",
+    "AA1",
+    "L",
+    "AH0",
+    "JH"
+  ],
+  "land": [
+    "L",
+    "AE1",
+    "N",
+    "D"
+  ],
+  "language": [
+    "L",
+    "AE1",
+    "NG",
+    "G",
+    "W",
+    "AH0",
+    "JH"
+  ],
+  "last": [
+    "L",
+    "AE1",
+    "S",
+    "T"
+  ],
+  "late": [
+    "L",
+    "EY1",
+    "T"
+  ],
+  "laugh": [
+    "L",
+    "AE1",
+    "F"
+  ],
+  "law": [
+    "L",
+    "AO1"
+  ],
+  "lead": [
+    "L",
+    "EH1",
+    "D"
+  ],
+  "leaf": [
+    "L",
+    "IY1",
+    "F"
+  ],
+  "learning": [
+    "L",
+    "ER1",
+    "N",
+    "IH0",
+    "NG"
+  ],
+  "leather": [
+    "L",
+    "EH1",
+    "DH",
+    "ER0"
+  ],
+  "left": [
+    "L",
+    "EH1",
+    "F",
+    "T"
+  ],
+  "leg": [
+    "L",
+    "EH1",
+    "G"
+  ],
+  "let": [
+    "L",
+    "EH1",
+    "T"
+  ],
+  "letter": [
+    "L",
+    "EH1",
+    "T",
+    "ER0"
+  ],
+  "level": [
+    "L",
+    "EH1",
+    "V",
+    "AH0",
+    "L"
+  ],
+  "library": [
+    "L",
+    "AY1",
+    "B",
+    "R",
+    "EH0",
+    "R",
+    "IY2"
+  ],
+  "lift": [
+    "L",
+    "IH1",
+    "F",
+    "T"
+  ],
+  "light": [
+    "L",
+    "AY1",
+    "T"
+  ],
+  "like": [
+    "L",
+    "AY1",
+    "K"
+  ],
+  "limit": [
+    "L",
+    "IH1",
+    "M",
+    "AH0",
+    "T"
+  ],
+  "line": [
+    "L",
+    "AY1",
+    "N"
+  ],
+  "linen": [
+    "L",
+    "IH1",
+    "N",
+    "AH0",
+    "N"
+  ],
+  "lip": [
+    "L",
+    "IH1",
+    "P"
+  ],
+  "liquid": [
+    "L",
+    "IH1",
+    "K",
+    "W",
+    "AH0",
+    "D"
+  ],
+  "list": [
+    "L",
+    "IH1",
+    "S",
+    "T"
+  ],
+  "little": [
+    "L",
+    "IH1",
+    "T",
+    "AH0",
+    "L"
+  ],
+  "living": [
+    "L",
+    "IH1",
+    "V",
+    "IH0",
+    "NG"
+  ],
+  "lock": [
+    "L",
+    "AA1",
+    "K"
+  ],
+  "long": [
+    "L",
+    "AO1",
+    "NG"
+  ],
+  "look": [
+    "L",
+    "UH1",
+    "K"
+  ],
+  "loose": [
+    "L",
+    "UW1",
+    "S"
+  ],
+  "loss": [
+    "L",
+    "AO1",
+    "S"
+  ],
+  "loud": [
+    "L",
+    "AW1",
+    "D"
+  ],
+  "love": [
+    "L",
+    "AH1",
+    "V"
+  ],
+  "low": [
+    "L",
+    "OW1"
+  ],
+  "machine": [
+    "M",
+    "AH0",
+    "SH",
+    "IY1",
+    "N"
+  ],
+  "make": [
+    "M",
+    "EY1",
+    "K"
+  ],
+  "male": [
+    "M",
+    "EY1",
+    "L"
+  ],
+  "man": [
+    "M",
+    "AE1",
+    "N"
+  ],
+  "manager": [
+    "M",
+    "AE1",
+    "N",
+    "AH0",
+    "JH",
+    "ER0"
+  ],
+  "map": [
+    "M",
+    "AE1",
+    "P"
+  ],
+  "mark": [
+    "M",
+    "AA1",
+    "R",
+    "K"
+  ],
+  "market": [
+    "M",
+    "AA1",
+    "R",
+    "K",
+    "AH0",
+    "T"
+  ],
+  "married": [
+    "M",
+    "EH1",
+    "R",
+    "IY0",
+    "D"
+  ],
+  "mass": [
+    "M",
+    "AE1",
+    "S"
+  ],
+  "match": [
+    "M",
+    "AE1",
+    "CH"
+  ],
+  "material": [
+    "M",
+    "AH0",
+    "T",
+    "IH1",
+    "R",
+    "IY0",
+    "AH0",
+    "L"
+  ],
+  "may": [
+    "M",
+    "EY1"
+  ],
+  "meal": [
+    "M",
+    "IY1",
+    "L"
+  ],
+  "measure": [
+    "M",
+    "EH1",
+    "ZH",
+    "ER0"
+  ],
+  "meat": [
+    "M",
+    "IY1",
+    "T"
+  ],
+  "medical": [
+    "M",
+    "EH1",
+    "D",
+    "AH0",
+    "K",
+    "AH0",
+    "L"
+  ],
+  "meeting": [
+    "M",
+    "IY1",
+    "T",
+    "IH0",
+    "NG"
+  ],
+  "memory": [
+    "M",
+    "EH1",
+    "M",
+    "ER0",
+    "IY0"
+  ],
+  "metal": [
+    "M",
+    "EH1",
+    "T",
+    "AH0",
+    "L"
+  ],
+  "middle": [
+    "M",
+    "IH1",
+    "D",
+    "AH0",
+    "L"
+  ],
+  "military": [
+    "M",
+    "IH1",
+    "L",
+    "AH0",
+    "T",
+    "EH2",
+    "R",
+    "IY0"
+  ],
+  "milk": [
+    "M",
+    "IH1",
+    "L",
+    "K"
+  ],
+  "mind": [
+    "M",
+    "AY1",
+    "N",
+    "D"
+  ],
+  "mine": [
+    "M",
+    "AY1",
+    "N"
+  ],
+  "minute": [
+    "M",
+    "IH1",
+    "N",
+    "AH0",
+    "T"
+  ],
+  "mist": [
+    "M",
+    "IH1",
+    "S",
+    "T"
+  ],
+  "mixed": [
+    "M",
+    "IH1",
+    "K",
+    "S",
+    "T"
+  ],
+  "money": [
+    "M",
+    "AH1",
+    "N",
+    "IY0"
+  ],
+  "monkey": [
+    "M",
+    "AH1",
+    "NG",
+    "K",
+    "IY0"
+  ],
+  "month": [
+    "M",
+    "AH1",
+    "N",
+    "TH"
+  ],
+  "moon": [
+    "M",
+    "UW1",
+    "N"
+  ],
+  "morning": [
+    "M",
+    "AO1",
+    "R",
+    "N",
+    "IH0",
+    "NG"
+  ],
+  "mother": [
+    "M",
+    "AH1",
+    "DH",
+    "ER0"
+  ],
+  "motion": [
+    "M",
+    "OW1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "mountain": [
+    "M",
+    "AW1",
+    "N",
+    "T",
+    "AH0",
+    "N"
+  ],
+  "mouth": [
+    "M",
+    "AW1",
+    "TH"
+  ],
+  "move": [
+    "M",
+    "UW1",
+    "V"
+  ],
+  "much": [
+    "M",
+    "AH1",
+    "CH"
+  ],
+  "muscle": [
+    "M",
+    "AH1",
+    "S",
+    "AH0",
+    "L"
+  ],
+  "music": [
+    "M",
+    "Y",
+    "UW1",
+    "Z",
+    "IH0",
+    "K"
+  ],
+  "nail": [
+    "N",
+    "EY1",
+    "L"
+  ],
+  "name": [
+    "N",
+    "EY1",
+    "M"
+  ],
+  "narrow": [
+    "N",
+    "EH1",
+    "R",
+    "OW0"
+  ],
+  "nation": [
+    "N",
+    "EY1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "natural": [
+    "N",
+    "AE1",
+    "CH",
+    "ER0",
+    "AH0",
+    "L"
+  ],
+  "near": [
+    "N",
+    "IH1",
+    "R"
+  ],
+  "necessary": [
+    "N",
+    "EH1",
+    "S",
+    "AH0",
+    "S",
+    "EH2",
+    "R",
+    "IY0"
+  ],
+  "neck": [
+    "N",
+    "EH1",
+    "K"
+  ],
+  "need": [
+    "N",
+    "IY1",
+    "D"
+  ],
+  "needle": [
+    "N",
+    "IY1",
+    "D",
+    "AH0",
+    "L"
+  ],
+  "nerve": [
+    "N",
+    "ER1",
+    "V"
+  ],
+  "net": [
+    "N",
+    "EH1",
+    "T"
+  ],
+  "new": [
+    "N",
+    "UW1"
+  ],
+  "news": [
+    "N",
+    "UW1",
+    "Z"
+  ],
+  "night": [
+    "N",
+    "AY1",
+    "T"
+  ],
+  "no": [
+    "N",
+    "OW1"
+  ],
+  "noise": [
+    "N",
+    "OY1",
+    "Z"
+  ],
+  "normal": [
+    "N",
+    "AO1",
+    "R",
+    "M",
+    "AH0",
+    "L"
+  ],
+  "north": [
+    "N",
+    "AO1",
+    "R",
+    "TH"
+  ],
+  "nose": [
+    "N",
+    "OW1",
+    "Z"
+  ],
+  "not": [
+    "N",
+    "AA1",
+    "T"
+  ],
+  "note": [
+    "N",
+    "OW1",
+    "T"
+  ],
+  "now": [
+    "N",
+    "AW1"
+  ],
+  "number": [
+    "N",
+    "AH1",
+    "M",
+    "B",
+    "ER0"
+  ],
+  "nut": [
+    "N",
+    "AH1",
+    "T"
+  ],
+  "observation": [
+    "AA2",
+    "B",
+    "Z",
+    "ER0",
+    "V",
+    "EY1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "of": [
+    "AH1",
+    "V"
+  ],
+  "off": [
+    "AO1",
+    "F"
+  ],
+  "offer": [
+    "AO1",
+    "F",
+    "ER0"
+  ],
+  "office": [
+    "AO1",
+    "F",
+    "IH0",
+    "S"
+  ],
+  "oil": [
+    "OY1",
+    "L"
+  ],
+  "old": [
+    "OW1",
+    "L",
+    "D"
+  ],
+  "on": [
+    "AA1",
+    "N"
+  ],
+  "only": [
+    "OW1",
+    "N",
+    "L",
+    "IY0"
+  ],
+  "open": [
+    "OW1",
+    "P",
+    "AH0",
+    "N"
+  ],
+  "operation": [
+    "AA2",
+    "P",
+    "ER0",
+    "EY1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "opinion": [
+    "AH0",
+    "P",
+    "IH1",
+    "N",
+    "Y",
+    "AH0",
+    "N"
+  ],
+  "opposite": [
+    "AA1",
+    "P",
+    "AH0",
+    "Z",
+    "AH0",
+    "T"
+  ],
+  "or": [
+    "AO1",
+    "R"
+  ],
+  "orange": [
+    "AO1",
+    "R",
+    "AH0",
+    "N",
+    "JH"
+  ],
+  "order": [
+    "AO1",
+    "R",
+    "D",
+    "ER0"
+  ],
+  "organization": [
+    "AO2",
+    "R",
+    "G",
+    "AH0",
+    "N",
+    "AH0",
+    "Z",
+    "EY1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "ornament": [
+    "AO1",
+    "R",
+    "N",
+    "AH0",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "other": [
+    "AH1",
+    "DH",
+    "ER0"
+  ],
+  "out": [
+    "AW1",
+    "T"
+  ],
+  "oven": [
+    "AH1",
+    "V",
+    "AH0",
+    "N"
+  ],
+  "over": [
+    "OW1",
+    "V",
+    "ER0"
+  ],
+  "owner": [
+    "OW1",
+    "N",
+    "ER0"
+  ],
+  "page": [
+    "P",
+    "EY1",
+    "JH"
+  ],
+  "pain": [
+    "P",
+    "EY1",
+    "N"
+  ],
+  "paint": [
+    "P",
+    "EY1",
+    "N",
+    "T"
+  ],
+  "paper": [
+    "P",
+    "EY1",
+    "P",
+    "ER0"
+  ],
+  "parallel": [
+    "P",
+    "EH1",
+    "R",
+    "AH0",
+    "L",
+    "EH2",
+    "L"
+  ],
+  "parcel": [
+    "P",
+    "AA1",
+    "R",
+    "S",
+    "AH0",
+    "L"
+  ],
+  "part": [
+    "P",
+    "AA1",
+    "R",
+    "T"
+  ],
+  "past": [
+    "P",
+    "AE1",
+    "S",
+    "T"
+  ],
+  "paste": [
+    "P",
+    "EY1",
+    "S",
+    "T"
+  ],
+  "payment": [
+    "P",
+    "EY1",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "peace": [
+    "P",
+    "IY1",
+    "S"
+  ],
+  "pen": [
+    "P",
+    "EH1",
+    "N"
+  ],
+  "pencil": [
+    "P",
+    "EH1",
+    "N",
+    "S",
+    "AH0",
+    "L"
+  ],
+  "person": [
+    "P",
+    "ER1",
+    "S",
+    "AH0",
+    "N"
+  ],
+  "physical": [
+    "F",
+    "IH1",
+    "Z",
+    "IH0",
+    "K",
+    "AH0",
+    "L"
+  ],
+  "picture": [
+    "P",
+    "IH1",
+    "K",
+    "CH",
+    "ER0"
+  ],
+  "pig": [
+    "P",
+    "IH1",
+    "G"
+  ],
+  "pin": [
+    "P",
+    "IH1",
+    "N"
+  ],
+  "pipe": [
+    "P",
+    "AY1",
+    "P"
+  ],
+  "place": [
+    "P",
+    "L",
+    "EY1",
+    "S"
+  ],
+  "plane": [
+    "P",
+    "L",
+    "EY1",
+    "N"
+  ],
+  "plant": [
+    "P",
+    "L",
+    "AE1",
+    "N",
+    "T"
+  ],
+  "plate": [
+    "P",
+    "L",
+    "EY1",
+    "T"
+  ],
+  "play": [
+    "P",
+    "L",
+    "EY1"
+  ],
+  "please": [
+    "P",
+    "L",
+    "IY1",
+    "Z"
+  ],
+  "pleasure": [
+    "P",
+    "L",
+    "EH1",
+    "ZH",
+    "ER0"
+  ],
+  "plough": [
+    "P",
+    "L",
+    "AW1"
+  ],
+  "pocket": [
+    "P",
+    "AA1",
+    "K",
+    "AH0",
+    "T"
+  ],
+  "point": [
+    "P",
+    "OY1",
+    "N",
+    "T"
+  ],
+  "poison": [
+    "P",
+    "OY1",
+    "Z",
+    "AH0",
+    "N"
+  ],
+  "polish": [
+    "P",
+    "AA1",
+    "L",
+    "IH0",
+    "SH"
+  ],
+  "political": [
+    "P",
+    "AH0",
+    "L",
+    "IH1",
+    "T",
+    "AH0",
+    "K",
+    "AH0",
+    "L"
+  ],
+  "poor": [
+    "P",
+    "UW1",
+    "R"
+  ],
+  "porter": [
+    "P",
+    "AO1",
+    "R",
+    "T",
+    "ER0"
+  ],
+  "position": [
+    "P",
+    "AH0",
+    "Z",
+    "IH1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "possible": [
+    "P",
+    "AA1",
+    "S",
+    "AH0",
+    "B",
+    "AH0",
+    "L"
+  ],
+  "pot": [
+    "P",
+    "AA1",
+    "T"
+  ],
+  "potato": [
+    "P",
+    "AH0",
+    "T",
+    "EY1",
+    "T",
+    "OW2"
+  ],
+  "powder": [
+    "P",
+    "AW1",
+    "D",
+    "ER0"
+  ],
+  "power": [
+    "P",
+    "AW1",
+    "ER0"
+  ],
+  "present": [
+    "P",
+    "R",
+    "EH1",
+    "Z",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "price": [
+    "P",
+    "R",
+    "AY1",
+    "S"
+  ],
+  "print": [
+    "P",
+    "R",
+    "IH1",
+    "N",
+    "T"
+  ],
+  "prison": [
+    "P",
+    "R",
+    "IH1",
+    "Z",
+    "AH0",
+    "N"
+  ],
+  "private": [
+    "P",
+    "R",
+    "AY1",
+    "V",
+    "AH0",
+    "T"
+  ],
+  "probable": [
+    "P",
+    "R",
+    "AA1",
+    "B",
+    "AH0",
+    "B",
+    "AH0",
+    "L"
+  ],
+  "process": [
+    "P",
+    "R",
+    "AA1",
+    "S",
+    "EH2",
+    "S"
+  ],
+  "produce": [
+    "P",
+    "R",
+    "AH0",
+    "D",
+    "UW1",
+    "S"
+  ],
+  "profit": [
+    "P",
+    "R",
+    "AA1",
+    "F",
+    "AH0",
+    "T"
+  ],
+  "property": [
+    "P",
+    "R",
+    "AA1",
+    "P",
+    "ER0",
+    "T",
+    "IY0"
+  ],
+  "prose": [
+    "P",
+    "R",
+    "OW1",
+    "Z"
+  ],
+  "protest": [
+    "P",
+    "R",
+    "OW1",
+    "T",
+    "EH2",
+    "S",
+    "T"
+  ],
+  "public": [
+    "P",
+    "AH1",
+    "B",
+    "L",
+    "IH0",
+    "K"
+  ],
+  "pull": [
+    "P",
+    "UH1",
+    "L"
+  ],
+  "pump": [
+    "P",
+    "AH1",
+    "M",
+    "P"
+  ],
+  "punishment": [
+    "P",
+    "AH1",
+    "N",
+    "IH0",
+    "SH",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "purpose": [
+    "P",
+    "ER1",
+    "P",
+    "AH0",
+    "S"
+  ],
+  "push": [
+    "P",
+    "UH1",
+    "SH"
+  ],
+  "put": [
+    "P",
+    "UH1",
+    "T"
+  ],
+  "quality": [
+    "K",
+    "W",
+    "AA1",
+    "L",
+    "AH0",
+    "T",
+    "IY0"
+  ],
+  "question": [
+    "K",
+    "W",
+    "EH1",
+    "S",
+    "CH",
+    "AH0",
+    "N"
+  ],
+  "quick": [
+    "K",
+    "W",
+    "IH1",
+    "K"
+  ],
+  "quiet": [
+    "K",
+    "W",
+    "AY1",
+    "AH0",
+    "T"
+  ],
+  "quite": [
+    "K",
+    "W",
+    "AY1",
+    "T"
+  ],
+  "rail": [
+    "R",
+    "EY1",
+    "L"
+  ],
+  "rain": [
+    "R",
+    "EY1",
+    "N"
+  ],
+  "range": [
+    "R",
+    "EY1",
+    "N",
+    "JH"
+  ],
+  "rat": [
+    "R",
+    "AE1",
+    "T"
+  ],
+  "rate": [
+    "R",
+    "EY1",
+    "T"
+  ],
+  "ray": [
+    "R",
+    "EY1"
+  ],
+  "reaction": [
+    "R",
+    "IY0",
+    "AE1",
+    "K",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "reading": [
+    "R",
+    "IY1",
+    "D",
+    "IH0",
+    "NG"
+  ],
+  "ready": [
+    "R",
+    "EH1",
+    "D",
+    "IY0"
+  ],
+  "reason": [
+    "R",
+    "IY1",
+    "Z",
+    "AH0",
+    "N"
+  ],
+  "receipt": [
+    "R",
+    "IH0",
+    "S",
+    "IY1",
+    "T"
+  ],
+  "record": [
+    "R",
+    "AH0",
+    "K",
+    "AO1",
+    "R",
+    "D"
+  ],
+  "red": [
+    "R",
+    "EH1",
+    "D"
+  ],
+  "regret": [
+    "R",
+    "AH0",
+    "G",
+    "R",
+    "EH1",
+    "T"
+  ],
+  "regular": [
+    "R",
+    "EH1",
+    "G",
+    "Y",
+    "AH0",
+    "L",
+    "ER0"
+  ],
+  "relation": [
+    "R",
+    "IY0",
+    "L",
+    "EY1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "religion": [
+    "R",
+    "IH0",
+    "L",
+    "IH1",
+    "JH",
+    "AH0",
+    "N"
+  ],
+  "representative": [
+    "R",
+    "EH2",
+    "P",
+    "R",
+    "AH0",
+    "Z",
+    "EH1",
+    "N",
+    "T",
+    "AH0",
+    "T",
+    "IH0",
+    "V"
+  ],
+  "request": [
+    "R",
+    "IH0",
+    "K",
+    "W",
+    "EH1",
+    "S",
+    "T"
+  ],
+  "respect": [
+    "R",
+    "IH0",
+    "S",
+    "P",
+    "EH1",
+    "K",
+    "T"
+  ],
+  "responsible": [
+    "R",
+    "IY0",
+    "S",
+    "P",
+    "AA1",
+    "N",
+    "S",
+    "AH0",
+    "B",
+    "AH0",
+    "L"
+  ],
+  "rest": [
+    "R",
+    "EH1",
+    "S",
+    "T"
+  ],
+  "reward": [
+    "R",
+    "IH0",
+    "W",
+    "AO1",
+    "R",
+    "D"
+  ],
+  "rhythm": [
+    "R",
+    "IH1",
+    "DH",
+    "AH0",
+    "M"
+  ],
+  "rice": [
+    "R",
+    "AY1",
+    "S"
+  ],
+  "right": [
+    "R",
+    "AY1",
+    "T"
+  ],
+  "ring": [
+    "R",
+    "IH1",
+    "NG"
+  ],
+  "river": [
+    "R",
+    "IH1",
+    "V",
+    "ER0"
+  ],
+  "road": [
+    "R",
+    "OW1",
+    "D"
+  ],
+  "rod": [
+    "R",
+    "AA1",
+    "D"
+  ],
+  "roll": [
+    "R",
+    "OW1",
+    "L"
+  ],
+  "roof": [
+    "R",
+    "UW1",
+    "F"
+  ],
+  "room": [
+    "R",
+    "UW1",
+    "M"
+  ],
+  "root": [
+    "R",
+    "UW1",
+    "T"
+  ],
+  "rough": [
+    "R",
+    "AH1",
+    "F"
+  ],
+  "round": [
+    "R",
+    "AW1",
+    "N",
+    "D"
+  ],
+  "rub": [
+    "R",
+    "AH1",
+    "B"
+  ],
+  "rule": [
+    "R",
+    "UW1",
+    "L"
+  ],
+  "run": [
+    "R",
+    "AH1",
+    "N"
+  ],
+  "sad": [
+    "S",
+    "AE1",
+    "D"
+  ],
+  "safe": [
+    "S",
+    "EY1",
+    "F"
+  ],
+  "sail": [
+    "S",
+    "EY1",
+    "L"
+  ],
+  "salt": [
+    "S",
+    "AO1",
+    "L",
+    "T"
+  ],
+  "same": [
+    "S",
+    "EY1",
+    "M"
+  ],
+  "sand": [
+    "S",
+    "AE1",
+    "N",
+    "D"
+  ],
+  "say": [
+    "S",
+    "EY1"
+  ],
+  "scale": [
+    "S",
+    "K",
+    "EY1",
+    "L"
+  ],
+  "school": [
+    "S",
+    "K",
+    "UW1",
+    "L"
+  ],
+  "science": [
+    "S",
+    "AY1",
+    "AH0",
+    "N",
+    "S"
+  ],
+  "scissors": [
+    "S",
+    "IH1",
+    "Z",
+    "ER0",
+    "Z"
+  ],
+  "screw": [
+    "S",
+    "K",
+    "R",
+    "UW1"
+  ],
+  "sea": [
+    "S",
+    "IY1"
+  ],
+  "seat": [
+    "S",
+    "IY1",
+    "T"
+  ],
+  "second": [
+    "S",
+    "EH1",
+    "K",
+    "AH0",
+    "N",
+    "D"
+  ],
+  "secret": [
+    "S",
+    "IY1",
+    "K",
+    "R",
+    "AH0",
+    "T"
+  ],
+  "secretary": [
+    "S",
+    "EH1",
+    "K",
+    "R",
+    "AH0",
+    "T",
+    "EH2",
+    "R",
+    "IY0"
+  ],
+  "see": [
+    "S",
+    "IY1"
+  ],
+  "seed": [
+    "S",
+    "IY1",
+    "D"
+  ],
+  "seem": [
+    "S",
+    "IY1",
+    "M"
+  ],
+  "selection": [
+    "S",
+    "AH0",
+    "L",
+    "EH1",
+    "K",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "self": [
+    "S",
+    "EH1",
+    "L",
+    "F"
+  ],
+  "send": [
+    "S",
+    "EH1",
+    "N",
+    "D"
+  ],
+  "sense": [
+    "S",
+    "EH1",
+    "N",
+    "S"
+  ],
+  "separate": [
+    "S",
+    "EH1",
+    "P",
+    "ER0",
+    "EY2",
+    "T"
+  ],
+  "serious": [
+    "S",
+    "IH1",
+    "R",
+    "IY0",
+    "AH0",
+    "S"
+  ],
+  "servant": [
+    "S",
+    "ER1",
+    "V",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "sex": [
+    "S",
+    "EH1",
+    "K",
+    "S"
+  ],
+  "shade": [
+    "SH",
+    "EY1",
+    "D"
+  ],
+  "shake": [
+    "SH",
+    "EY1",
+    "K"
+  ],
+  "shame": [
+    "SH",
+    "EY1",
+    "M"
+  ],
+  "sharp": [
+    "SH",
+    "AA1",
+    "R",
+    "P"
+  ],
+  "sheep": [
+    "SH",
+    "IY1",
+    "P"
+  ],
+  "shelf": [
+    "SH",
+    "EH1",
+    "L",
+    "F"
+  ],
+  "ship": [
+    "SH",
+    "IH1",
+    "P"
+  ],
+  "shirt": [
+    "SH",
+    "ER1",
+    "T"
+  ],
+  "shock": [
+    "SH",
+    "AA1",
+    "K"
+  ],
+  "shoe": [
+    "SH",
+    "UW1"
+  ],
+  "short": [
+    "SH",
+    "AO1",
+    "R",
+    "T"
+  ],
+  "shut": [
+    "SH",
+    "AH1",
+    "T"
+  ],
+  "side": [
+    "S",
+    "AY1",
+    "D"
+  ],
+  "sign": [
+    "S",
+    "AY1",
+    "N"
+  ],
+  "silk": [
+    "S",
+    "IH1",
+    "L",
+    "K"
+  ],
+  "silver": [
+    "S",
+    "IH1",
+    "L",
+    "V",
+    "ER0"
+  ],
+  "simple": [
+    "S",
+    "IH1",
+    "M",
+    "P",
+    "AH0",
+    "L"
+  ],
+  "sister": [
+    "S",
+    "IH1",
+    "S",
+    "T",
+    "ER0"
+  ],
+  "size": [
+    "S",
+    "AY1",
+    "Z"
+  ],
+  "skin": [
+    "S",
+    "K",
+    "IH1",
+    "N"
+  ],
+  "skirt": [
+    "S",
+    "K",
+    "ER1",
+    "T"
+  ],
+  "sky": [
+    "S",
+    "K",
+    "AY1"
+  ],
+  "sleep": [
+    "S",
+    "L",
+    "IY1",
+    "P"
+  ],
+  "slip": [
+    "S",
+    "L",
+    "IH1",
+    "P"
+  ],
+  "slope": [
+    "S",
+    "L",
+    "OW1",
+    "P"
+  ],
+  "slow": [
+    "S",
+    "L",
+    "OW1"
+  ],
+  "small": [
+    "S",
+    "M",
+    "AO1",
+    "L"
+  ],
+  "smash": [
+    "S",
+    "M",
+    "AE1",
+    "SH"
+  ],
+  "smell": [
+    "S",
+    "M",
+    "EH1",
+    "L"
+  ],
+  "smile": [
+    "S",
+    "M",
+    "AY1",
+    "L"
+  ],
+  "smoke": [
+    "S",
+    "M",
+    "OW1",
+    "K"
+  ],
+  "smooth": [
+    "S",
+    "M",
+    "UW1",
+    "DH"
+  ],
+  "snake": [
+    "S",
+    "N",
+    "EY1",
+    "K"
+  ],
+  "sneeze": [
+    "S",
+    "N",
+    "IY1",
+    "Z"
+  ],
+  "snow": [
+    "S",
+    "N",
+    "OW1"
+  ],
+  "so": [
+    "S",
+    "OW1"
+  ],
+  "soap": [
+    "S",
+    "OW1",
+    "P"
+  ],
+  "society": [
+    "S",
+    "AH0",
+    "S",
+    "AY1",
+    "AH0",
+    "T",
+    "IY0"
+  ],
+  "sock": [
+    "S",
+    "AA1",
+    "K"
+  ],
+  "soft": [
+    "S",
+    "AA1",
+    "F",
+    "T"
+  ],
+  "solid": [
+    "S",
+    "AA1",
+    "L",
+    "AH0",
+    "D"
+  ],
+  "some": [
+    "S",
+    "AH1",
+    "M"
+  ],
+  "son": [
+    "S",
+    "AH1",
+    "N"
+  ],
+  "song": [
+    "S",
+    "AO1",
+    "NG"
+  ],
+  "sort": [
+    "S",
+    "AO1",
+    "R",
+    "T"
+  ],
+  "sound": [
+    "S",
+    "AW1",
+    "N",
+    "D"
+  ],
+  "soup": [
+    "S",
+    "UW1",
+    "P"
+  ],
+  "south": [
+    "S",
+    "AW1",
+    "TH"
+  ],
+  "space": [
+    "S",
+    "P",
+    "EY1",
+    "S"
+  ],
+  "spade": [
+    "S",
+    "P",
+    "EY1",
+    "D"
+  ],
+  "special": [
+    "S",
+    "P",
+    "EH1",
+    "SH",
+    "AH0",
+    "L"
+  ],
+  "sponge": [
+    "S",
+    "P",
+    "AH1",
+    "N",
+    "JH"
+  ],
+  "spoon": [
+    "S",
+    "P",
+    "UW1",
+    "N"
+  ],
+  "spring": [
+    "S",
+    "P",
+    "R",
+    "IH1",
+    "NG"
+  ],
+  "square": [
+    "S",
+    "K",
+    "W",
+    "EH1",
+    "R"
+  ],
+  "stage": [
+    "S",
+    "T",
+    "EY1",
+    "JH"
+  ],
+  "stamp": [
+    "S",
+    "T",
+    "AE1",
+    "M",
+    "P"
+  ],
+  "star": [
+    "S",
+    "T",
+    "AA1",
+    "R"
+  ],
+  "start": [
+    "S",
+    "T",
+    "AA1",
+    "R",
+    "T"
+  ],
+  "statement": [
+    "S",
+    "T",
+    "EY1",
+    "T",
+    "M",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "station": [
+    "S",
+    "T",
+    "EY1",
+    "SH",
+    "AH0",
+    "N"
+  ],
+  "steam": [
+    "S",
+    "T",
+    "IY1",
+    "M"
+  ],
+  "steel": [
+    "S",
+    "T",
+    "IY1",
+    "L"
+  ],
+  "stem": [
+    "S",
+    "T",
+    "EH1",
+    "M"
+  ],
+  "step": [
+    "S",
+    "T",
+    "EH1",
+    "P"
+  ],
+  "stick": [
+    "S",
+    "T",
+    "IH1",
+    "K"
+  ],
+  "sticky": [
+    "S",
+    "T",
+    "IH1",
+    "K",
+    "IY0"
+  ],
+  "stiff": [
+    "S",
+    "T",
+    "IH1",
+    "F"
+  ],
+  "still": [
+    "S",
+    "T",
+    "IH1",
+    "L"
+  ],
+  "stitch": [
+    "S",
+    "T",
+    "IH1",
+    "CH"
+  ],
+  "stocking": [
+    "S",
+    "T",
+    "AA1",
+    "K",
+    "IH0",
+    "NG"
+  ],
+  "stomach": [
+    "S",
+    "T",
+    "AH1",
+    "M",
+    "AH0",
+    "K"
+  ],
+  "stone": [
+    "S",
+    "T",
+    "OW1",
+    "N"
+  ],
+  "stop": [
+    "S",
+    "T",
+    "AA1",
+    "P"
+  ],
+  "store": [
+    "S",
+    "T",
+    "AO1",
+    "R"
+  ],
+  "story": [
+    "S",
+    "T",
+    "AO1",
+    "R",
+    "IY0"
+  ],
+  "straight": [
+    "S",
+    "T",
+    "R",
+    "EY1",
+    "T"
+  ],
+  "strange": [
+    "S",
+    "T",
+    "R",
+    "EY1",
+    "N",
+    "JH"
+  ],
+  "street": [
+    "S",
+    "T",
+    "R",
+    "IY1",
+    "T"
+  ],
+  "stretch": [
+    "S",
+    "T",
+    "R",
+    "EH1",
+    "CH"
+  ],
+  "strong": [
+    "S",
+    "T",
+    "R",
+    "AO1",
+    "NG"
+  ],
+  "structure": [
+    "S",
+    "T",
+    "R",
+    "AH1",
+    "K",
+    "CH",
+    "ER0"
+  ],
+  "substance": [
+    "S",
+    "AH1",
+    "B",
+    "S",
+    "T",
+    "AH0",
+    "N",
+    "S"
+  ],
+  "such": [
+    "S",
+    "AH1",
+    "CH"
+  ],
+  "sudden": [
+    "S",
+    "AH1",
+    "D",
+    "AH0",
+    "N"
+  ],
+  "sugar": [
+    "SH",
+    "UH1",
+    "G",
+    "ER0"
+  ],
+  "suggestion": [
+    "S",
+    "AH0",
+    "JH",
+    "EH1",
+    "S",
+    "CH",
+    "AH0",
+    "N"
+  ],
+  "summer": [
+    "S",
+    "AH1",
+    "M",
+    "ER0"
+  ],
+  "sun": [
+    "S",
+    "AH1",
+    "N"
+  ],
+  "support": [
+    "S",
+    "AH0",
+    "P",
+    "AO1",
+    "R",
+    "T"
+  ],
+  "surprise": [
+    "S",
+    "ER0",
+    "P",
+    "R",
+    "AY1",
+    "Z"
+  ],
+  "sweet": [
+    "S",
+    "W",
+    "IY1",
+    "T"
+  ],
+  "swim": [
+    "S",
+    "W",
+    "IH1",
+    "M"
+  ],
+  "system": [
+    "S",
+    "IH1",
+    "S",
+    "T",
+    "AH0",
+    "M"
+  ],
+  "table": [
+    "T",
+    "EY1",
+    "B",
+    "AH0",
+    "L"
+  ],
+  "tail": [
+    "T",
+    "EY1",
+    "L"
+  ],
+  "take": [
+    "T",
+    "EY1",
+    "K"
+  ],
+  "talk": [
+    "T",
+    "AO1",
+    "K"
+  ],
+  "tall": [
+    "T",
+    "AO1",
+    "L"
+  ],
+  "taste": [
+    "T",
+    "EY1",
+    "S",
+    "T"
+  ],
+  "tax": [
+    "T",
+    "AE1",
+    "K",
+    "S"
+  ],
+  "teaching": [
+    "T",
+    "IY1",
+    "CH",
+    "IH0",
+    "NG"
+  ],
+  "tendency": [
+    "T",
+    "EH1",
+    "N",
+    "D",
+    "AH0",
+    "N",
+    "S",
+    "IY0"
+  ],
+  "test": [
+    "T",
+    "EH1",
+    "S",
+    "T"
+  ],
+  "than": [
+    "DH",
+    "AE1",
+    "N"
+  ],
+  "that": [
+    "DH",
+    "AE1",
+    "T"
+  ],
+  "the": [
+    "DH",
+    "AH0"
+  ],
+  "then": [
+    "DH",
+    "EH1",
+    "N"
+  ],
+  "theory": [
+    "TH",
+    "IH1",
+    "R",
+    "IY0"
+  ],
+  "there": [
+    "DH",
+    "EH1",
+    "R"
+  ],
+  "thick": [
+    "TH",
+    "IH1",
+    "K"
+  ],
+  "thin": [
+    "TH",
+    "IH1",
+    "N"
+  ],
+  "thing": [
+    "TH",
+    "IH1",
+    "NG"
+  ],
+  "this": [
+    "DH",
+    "IH1",
+    "S"
+  ],
+  "though": [
+    "DH",
+    "OW1"
+  ],
+  "thought": [
+    "TH",
+    "AO1",
+    "T"
+  ],
+  "thread": [
+    "TH",
+    "R",
+    "EH1",
+    "D"
+  ],
+  "throat": [
+    "TH",
+    "R",
+    "OW1",
+    "T"
+  ],
+  "through": [
+    "TH",
+    "R",
+    "UW1"
+  ],
+  "thumb": [
+    "TH",
+    "AH1",
+    "M"
+  ],
+  "thunder": [
+    "TH",
+    "AH1",
+    "N",
+    "D",
+    "ER0"
+  ],
+  "ticket": [
+    "T",
+    "IH1",
+    "K",
+    "AH0",
+    "T"
+  ],
+  "tight": [
+    "T",
+    "AY1",
+    "T"
+  ],
+  "till": [
+    "T",
+    "IH1",
+    "L"
+  ],
+  "time": [
+    "T",
+    "AY1",
+    "M"
+  ],
+  "tin": [
+    "T",
+    "IH1",
+    "N"
+  ],
+  "tired": [
+    "T",
+    "AY1",
+    "ER0",
+    "D"
+  ],
+  "to": [
+    "T",
+    "UW1"
+  ],
+  "toe": [
+    "T",
+    "OW1"
+  ],
+  "together": [
+    "T",
+    "AH0",
+    "G",
+    "EH1",
+    "DH",
+    "ER0"
+  ],
+  "tomorrow": [
+    "T",
+    "AH0",
+    "M",
+    "AA1",
+    "R",
+    "OW2"
+  ],
+  "tongue": [
+    "T",
+    "AH1",
+    "NG"
+  ],
+  "tooth": [
+    "T",
+    "UW1",
+    "TH"
+  ],
+  "top": [
+    "T",
+    "AA1",
+    "P"
+  ],
+  "touch": [
+    "T",
+    "AH1",
+    "CH"
+  ],
+  "town": [
+    "T",
+    "AW1",
+    "N"
+  ],
+  "trade": [
+    "T",
+    "R",
+    "EY1",
+    "D"
+  ],
+  "train": [
+    "T",
+    "R",
+    "EY1",
+    "N"
+  ],
+  "transport": [
+    "T",
+    "R",
+    "AE0",
+    "N",
+    "S",
+    "P",
+    "AO1",
+    "R",
+    "T"
+  ],
+  "tray": [
+    "T",
+    "R",
+    "EY1"
+  ],
+  "tree": [
+    "T",
+    "R",
+    "IY1"
+  ],
+  "trick": [
+    "T",
+    "R",
+    "IH1",
+    "K"
+  ],
+  "trouble": [
+    "T",
+    "R",
+    "AH1",
+    "B",
+    "AH0",
+    "L"
+  ],
+  "trousers": [
+    "T",
+    "R",
+    "AW1",
+    "Z",
+    "ER0",
+    "Z"
+  ],
+  "true": [
+    "T",
+    "R",
+    "UW1"
+  ],
+  "turn": [
+    "T",
+    "ER1",
+    "N"
+  ],
+  "twist": [
+    "T",
+    "W",
+    "IH1",
+    "S",
+    "T"
+  ],
+  "umbrella": [
+    "AH0",
+    "M",
+    "B",
+    "R",
+    "EH1",
+    "L",
+    "AH0"
+  ],
+  "under": [
+    "AH1",
+    "N",
+    "D",
+    "ER0"
+  ],
+  "unit": [
+    "Y",
+    "UW1",
+    "N",
+    "AH0",
+    "T"
+  ],
+  "up": [
+    "AH1",
+    "P"
+  ],
+  "use": [
+    "Y",
+    "UW1",
+    "S"
+  ],
+  "value": [
+    "V",
+    "AE1",
+    "L",
+    "Y",
+    "UW0"
+  ],
+  "verse": [
+    "V",
+    "ER1",
+    "S"
+  ],
+  "very": [
+    "V",
+    "EH1",
+    "R",
+    "IY0"
+  ],
+  "vessel": [
+    "V",
+    "EH1",
+    "S",
+    "AH0",
+    "L"
+  ],
+  "view": [
+    "V",
+    "Y",
+    "UW1"
+  ],
+  "violent": [
+    "V",
+    "AY1",
+    "AH0",
+    "L",
+    "AH0",
+    "N",
+    "T"
+  ],
+  "voice": [
+    "V",
+    "OY1",
+    "S"
+  ],
+  "waiting": [
+    "W",
+    "EY1",
+    "T",
+    "IH0",
+    "NG"
+  ],
+  "walk": [
+    "W",
+    "AO1",
+    "K"
+  ],
+  "wall": [
+    "W",
+    "AO1",
+    "L"
+  ],
+  "war": [
+    "W",
+    "AO1",
+    "R"
+  ],
+  "warm": [
+    "W",
+    "AO1",
+    "R",
+    "M"
+  ],
+  "wash": [
+    "W",
+    "AA1",
+    "SH"
+  ],
+  "waste": [
+    "W",
+    "EY1",
+    "S",
+    "T"
+  ],
+  "watch": [
+    "W",
+    "AA1",
+    "CH"
+  ],
+  "water": [
+    "W",
+    "AO1",
+    "T",
+    "ER0"
+  ],
+  "wave": [
+    "W",
+    "EY1",
+    "V"
+  ],
+  "wax": [
+    "W",
+    "AE1",
+    "K",
+    "S"
+  ],
+  "way": [
+    "W",
+    "EY1"
+  ],
+  "weather": [
+    "W",
+    "EH1",
+    "DH",
+    "ER0"
+  ],
+  "week": [
+    "W",
+    "IY1",
+    "K"
+  ],
+  "weight": [
+    "W",
+    "EY1",
+    "T"
+  ],
+  "well": [
+    "W",
+    "EH1",
+    "L"
+  ],
+  "west": [
+    "W",
+    "EH1",
+    "S",
+    "T"
+  ],
+  "wet": [
+    "W",
+    "EH1",
+    "T"
+  ],
+  "wheel": [
+    "W",
+    "IY1",
+    "L"
+  ],
+  "when": [
+    "W",
+    "EH1",
+    "N"
+  ],
+  "where": [
+    "W",
+    "EH1",
+    "R"
+  ],
+  "while": [
+    "W",
+    "AY1",
+    "L"
+  ],
+  "whip": [
+    "W",
+    "IH1",
+    "P"
+  ],
+  "whistle": [
+    "W",
+    "IH1",
+    "S",
+    "AH0",
+    "L"
+  ],
+  "white": [
+    "W",
+    "AY1",
+    "T"
+  ],
+  "who": [
+    "HH",
+    "UW1"
+  ],
+  "why": [
+    "W",
+    "AY1"
+  ],
+  "wide": [
+    "W",
+    "AY1",
+    "D"
+  ],
+  "will": [
+    "W",
+    "IH1",
+    "L"
+  ],
+  "wind": [
+    "W",
+    "AY1",
+    "N",
+    "D"
+  ],
+  "window": [
+    "W",
+    "IH1",
+    "N",
+    "D",
+    "OW0"
+  ],
+  "wine": [
+    "W",
+    "AY1",
+    "N"
+  ],
+  "wing": [
+    "W",
+    "IH1",
+    "NG"
+  ],
+  "winter": [
+    "W",
+    "IH1",
+    "N",
+    "T",
+    "ER0"
+  ],
+  "wire": [
+    "W",
+    "AY1",
+    "ER0"
+  ],
+  "wise": [
+    "W",
+    "AY1",
+    "Z"
+  ],
+  "with": [
+    "W",
+    "IH1",
+    "DH"
+  ],
+  "woman": [
+    "W",
+    "UH1",
+    "M",
+    "AH0",
+    "N"
+  ],
+  "wood": [
+    "W",
+    "UH1",
+    "D"
+  ],
+  "wool": [
+    "W",
+    "UH1",
+    "L"
+  ],
+  "word": [
+    "W",
+    "ER1",
+    "D"
+  ],
+  "work": [
+    "W",
+    "ER1",
+    "K"
+  ],
+  "worm": [
+    "W",
+    "ER1",
+    "M"
+  ],
+  "wound": [
+    "W",
+    "AW1",
+    "N",
+    "D"
+  ],
+  "writing": [
+    "R",
+    "AY1",
+    "T",
+    "IH0",
+    "NG"
+  ],
+  "wrong": [
+    "R",
+    "AO1",
+    "NG"
+  ],
+  "year": [
+    "Y",
+    "IH1",
+    "R"
+  ],
+  "yellow": [
+    "Y",
+    "EH1",
+    "L",
+    "OW0"
+  ],
+  "yes": [
+    "Y",
+    "EH1",
+    "S"
+  ],
+  "yesterday": [
+    "Y",
+    "EH1",
+    "S",
+    "T",
+    "ER0",
+    "D",
+    "EY2"
+  ],
+  "you": [
+    "Y",
+    "UW1"
+  ],
+  "young": [
+    "Y",
+    "AH1",
+    "NG"
+  ]
+}

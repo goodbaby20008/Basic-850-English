@@ -252,6 +252,38 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .simple-definition p { margin: 5px 0 0; font-family: Georgia, serif; font-size: 14px; line-height: 1.45; }
 .text-link { margin-top: 18px; border: 0; padding: 0; background: transparent; color: var(--indigo); font-size: 11px; font-weight: 850; cursor: pointer; }
 
+.word-picture {
+  margin: 16px 0;
+  display: grid;
+  grid-template-columns: minmax(128px, 168px) 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(32,143,135,.2);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(220,242,235,.72), rgba(255,253,248,.92));
+  text-align: left;
+}
+.word-picture.approximate { border-style: dashed; border-color: rgba(217,154,50,.42); background: linear-gradient(135deg, rgba(250,235,195,.62), rgba(255,253,248,.94)); }
+.word-picture-media { position: relative; min-height: 156px; display: grid; place-items: center; background: radial-gradient(circle, rgba(255,255,255,.94) 0 42%, rgba(255,255,255,.16) 43% 100%); }
+.word-picture-media > span { font-size: 82px; line-height: 1; }
+.word-picture-media img { position: absolute; width: 76%; height: 76%; object-fit: contain; filter: drop-shadow(0 8px 8px rgba(23,43,53,.1)); }
+.word-picture figcaption { padding: 18px 18px 17px; display: flex; flex-direction: column; justify-content: center; gap: 7px; }
+.word-picture figcaption span { color: var(--teal); font-size: 10px; font-weight: 900; letter-spacing: .09em; }
+.word-picture.approximate figcaption span { color: #94600e; }
+.word-picture figcaption strong { color: var(--ink); font-size: 14px; line-height: 1.65; font-weight: 650; }
+.word-picture--compact { grid-template-columns: 102px 1fr; margin: 13px 0 17px; border-radius: 13px; }
+.word-picture--compact .word-picture-media { min-height: 104px; }
+.word-picture--compact .word-picture-media > span { font-size: 58px; }
+.word-picture--compact figcaption { padding: 12px 13px; gap: 4px; }
+.word-picture--compact figcaption strong { font-size: 12px; line-height: 1.5; }
+.word-picture--thumb { grid-template-columns: 76px 1fr; min-height: 82px; margin: 10px 0 2px; border-radius: 11px; }
+.word-picture--thumb .word-picture-media { min-height: 80px; }
+.word-picture--thumb .word-picture-media > span { font-size: 43px; }
+.word-picture--thumb figcaption { min-width: 0; padding: 8px 9px; gap: 3px; }
+.word-picture--thumb figcaption span { font-size: 8px; letter-spacing: .04em; }
+.word-picture--thumb figcaption strong { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; font-size: 10px; line-height: 1.42; }
+.answer-panel .word-picture { margin-top: 0; }
+.player-body > .word-picture { width: min(470px,100%); margin-inline: auto; }
+
 .category-overview { margin: 78px 0 90px; }
 .wide-heading { align-items: end; margin-bottom: 25px; }
 .wide-heading > div h2 { font-size: 31px; }
@@ -319,6 +351,112 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .evidence-note { margin-top: 18px; padding: 20px 22px; border-radius: 14px; background: var(--paper-strong); }
 .evidence-note strong { font-size: 12px; }
 .evidence-note p { margin: 7px 0 0; color: var(--muted); font-size: 11px; line-height: 1.65; }
+
+.learning-path { margin: -18px 0 42px; display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.learning-path button { min-height: 82px; display: grid; grid-template-columns: 42px 1fr auto; gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 15px; padding: 14px 16px; background: rgba(255,255,255,.4); color: var(--ink); text-align: left; cursor: pointer; }
+.learning-path button:hover { background: #fffdf8; }
+.learning-path button > span { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: white; font-family: Georgia, serif; font-size: 14px; }
+.learning-path strong, .learning-path small { display: block; }
+.learning-path strong { font-family: Georgia, serif; font-size: 18px; }
+.learning-path small { margin-top: 4px; color: var(--muted); font-size: 12px; }
+.learning-path i { color: var(--coral); font-size: 20px; font-style: normal; }
+
+.foundation-tabs { max-width: 760px; margin: 0 auto 48px; display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+.foundation-tabs button { min-height: 82px; display: grid; grid-template-columns: 42px 1fr auto; gap: 12px; align-items: center; border: 1px solid var(--line); border-radius: 15px; padding: 13px 16px; background: rgba(255,255,255,.42); color: var(--ink); text-align: left; cursor: pointer; }
+.foundation-tabs button.active { border-color: var(--ink); background: var(--ink); color: white; }
+.foundation-tabs button > span { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-family: Georgia, serif; font-size: 14px; }
+.foundation-tabs strong, .foundation-tabs small { display: block; }
+.foundation-tabs strong { font-family: Georgia, serif; font-size: 19px; }
+.foundation-tabs small { margin-top: 3px; color: var(--muted); font-size: 12px; }
+.foundation-tabs button.active small { color: #bec8cb; }
+.foundation-tabs i { min-width: 42px; color: var(--coral); font-size: 13px; font-style: normal; font-weight: 800; text-align: right; }
+
+.alphabet-story-art { margin: 0 0 22px; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: #fff8e8; }
+.alphabet-story-art img { display: block; width: 100%; aspect-ratio: 4/3; max-height: 360px; object-fit: cover; }
+.alphabet-story-art figcaption { display: flex; justify-content: space-between; gap: 15px; padding: 12px 15px; color: var(--muted); font-size: 13px; }
+.alphabet-story-art figcaption span { color: var(--coral); font-weight: 800; }
+.alphabet-story-art figcaption strong { font-family: Georgia, serif; font-weight: 500; }
+.letter-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(105px,1fr)); gap: 9px; }
+.letter-grid > button { min-height: 132px; display: grid; place-items: center; align-content: center; gap: 5px; border: 1px solid var(--line); border-radius: 14px; padding: 10px; background: rgba(245,242,233,.52); color: var(--ink); cursor: pointer; }
+.letter-grid > button.active { border-color: var(--indigo); background: rgba(86,103,216,.09); box-shadow: inset 0 0 0 2px rgba(86,103,216,.12); }
+.letter-picture { font-size: 27px; line-height: 1; }
+.letter-pair { display: flex; align-items: baseline; justify-content: center; gap: 4px; font-family: Georgia, serif; }
+.letter-pair strong { font-size: 37px; line-height: 1; }
+.letter-pair small { color: var(--muted); font-size: 23px; }
+.letter-name { color: var(--indigo); font-size: 14px; }
+.letter-detail { margin-top: 14px; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: #fffdf8; }
+.letter-detail-head { display: grid; grid-template-columns: 1fr 1fr auto; gap: 18px; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.letter-detail-head > div:first-child { display: flex; align-items: center; gap: 12px; }
+.letter-picture.large { font-size: 45px; }
+.letter-detail-head > div:first-child > strong { font-family: Georgia, serif; font-size: 58px; line-height: .9; font-weight: 500; }
+.letter-detail-head > div:first-child > strong small { color: var(--muted); font-size: 35px; }
+.letter-detail-head > div:nth-child(2) > span { color: var(--muted); font-size: 12px; }
+.letter-detail-head > div:nth-child(2) p { margin: 5px 0 0; color: var(--indigo); font-size: 23px; }
+.letter-detail-head > button { min-width: 106px; min-height: 48px; border: 0; border-radius: 999px; padding: 8px 14px; background: var(--ink); color: white; cursor: pointer; }
+.letter-detail-head > button span { margin-left: 5px; font-size: 13px; }
+.letter-sounds, .letter-examples { padding-top: 18px; }
+.letter-sounds > strong, .letter-examples > strong { display: block; margin-bottom: 9px; color: var(--plum); font-size: 14px; }
+.letter-sounds > div { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 8px; }
+.letter-sounds > div > span { padding: 11px 12px; border-radius: 10px; background: var(--paper); }
+.letter-sounds b, .letter-sounds small { display: block; }
+.letter-sounds b { color: var(--indigo); font-size: 19px; }
+.letter-sounds small { margin-top: 5px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.letter-examples > div { display: grid; grid-template-columns: repeat(auto-fit,minmax(170px,1fr)); gap: 8px; }
+.letter-examples button { position: relative; min-height: 66px; border: 1px solid var(--line); border-radius: 11px; padding: 10px 42px 10px 12px; background: white; color: var(--ink); text-align: left; cursor: pointer; }
+.letter-examples span, .letter-examples small { display: block; }
+.letter-examples span { font-family: Georgia, serif; font-size: 21px; }
+.letter-examples small { margin-top: 4px; color: var(--muted); font-size: 13px; }
+.letter-examples i { position: absolute; right: 12px; top: 50%; width: 28px; height: 28px; display: grid; place-items: center; transform: translateY(-50%); border-radius: 50%; background: var(--ink); color: white; font-size: 9px; font-style: normal; }
+.letter-tips { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 8px; margin-top: 18px; }
+.letter-tips p { margin: 0; padding: 12px; border-radius: 10px; background: rgba(217,154,50,.09); color: var(--muted); font-size: 14px; line-height: 1.65; }
+.letter-tips p strong { display: block; margin-bottom: 4px; color: #8b5b0d; }
+.alphabet-practice { margin-top: 18px; }
+.phoneme-play em { color: var(--coral); font-size: 11px; font-style: normal; font-weight: 850; }
+
+/* Readability baseline: learning content should stay comfortable on a phone. */
+.course-facts { font-size: 14px; }
+.progress-card > p, .next-lesson-card > p, .wide-heading > p { font-size: 14px; }
+.metric-row { font-size: 12px; }
+.lesson-word-strip span { font-size: 12px; }
+.frame-line { font-size: 14px; }
+.frame-line span, .category-tag, .featured-word-card > small { font-size: 11px; }
+.simple-definition span, .field-label { font-size: 10px; }
+.simple-definition p { font-size: 17px; }
+.text-link { font-size: 13px; }
+.category-tile p { font-size: 13px; }
+.category-tile small { font-size: 11px; }
+.lesson-rail strong { font-size: 15px; }
+.lesson-rail small { font-size: 12px; }
+.lesson-panel-head > div > span, .completion { font-size: 11px; }
+.lesson-panel-head p { font-size: 15px; line-height: 1.55; }
+.objective-box strong { font-size: 14px; }
+.objective-box ul, .warm-up { font-size: 15px; }
+.phoneme-card > div:first-child > small { font-size: 13px; }
+.phoneme-card > p { font-size: 14px; }
+.phoneme-card > div:first-child button { min-height: 44px; }
+.sound-examples button { min-height: 54px; }
+.sound-examples span { font-size: 16px; }
+.sound-examples small { font-size: 11px; }
+.practice-box > div span { font-size: 10px; }
+.practice-box ol, .practice-box > p, .evidence-note p { font-size: 14px; }
+.evidence-note strong { font-size: 15px; }
+.unit-index { font-size: 11px; }
+.unit-block summary p { font-size: 14px; }
+.lesson-row-copy p { font-size: 13px; line-height: 1.5; }
+.lesson-row-copy div small, .lesson-row-action small { font-size: 11px; }
+.lesson-row-action button { min-height: 44px; font-size: 13px; }
+.search-box span, .result-count { font-size: 12px; }
+.filter-tabs button { min-height: 44px; font-size: 13px; }
+.word-open small { font-size: 13px; }
+.word-open p { font-size: 15px; }
+.library-word footer { font-size: 11px; }
+.grade-row strong { font-size: 14px; }
+.grade-row span { font-size: 11px; }
+.review-stat, .review-sidebar > p, .review-sidebar > button { font-size: 13px; }
+.about-grid p { font-size: 15px; }
+.source-panel a { min-height: 44px; font-size: 14px; }
+.app-footer, .app-footer button { font-size: 12px; }
+.toast { font-size: 13px; }
 
 .unit-stack { display: grid; gap: 12px; }
 .unit-block { border: 1px solid var(--line); border-radius: 17px; background: rgba(255,255,255,.32); overflow: hidden; }
@@ -481,6 +619,66 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
 button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid rgba(86,103,216,.35); outline-offset: 2px; }
 
+/* Final type and touch baseline. Keep child-facing copy readable after all component rules. */
+.brand small, .app-nav button small { font-size: 11px; }
+.accent-switch button { min-width: 44px; min-height: 44px; font-size: 12px; }
+.metric-row, .lesson-word-strip span, .search-box span, .result-count { font-size: 12px; }
+.frame-line { font-size: 14px; }
+.frame-line span, .category-tag, .featured-word-card > small, .category-tile small { font-size: 11px; }
+.word-card-top button { min-height: 44px; font-size: 12px; }
+.simple-definition span, .field-label, .word-picture figcaption span { font-size: 11px; }
+.simple-definition p { font-size: 17px; }
+.text-link { min-height: 44px; font-size: 13px; }
+.word-picture figcaption strong { font-size: 14px; }
+.word-picture--compact figcaption strong { font-size: 13px; }
+.word-picture--thumb figcaption span { font-size: 11px; }
+.word-picture--thumb figcaption strong { font-size: 12px; line-height: 1.5; }
+.category-tile p { font-size: 13px; }
+.lesson-rail strong { font-size: 15px; }
+.lesson-rail small { font-size: 12px; }
+.lesson-panel-head > div > span, .completion, .unit-index, .unit-progress span { font-size: 11px; }
+.lesson-panel-head p { font-size: 15px; line-height: 1.55; }
+.objective-box strong, .phoneme-card > p, .practice-box ol, .practice-box > p, .evidence-note p { font-size: 14px; }
+.objective-box ul, .warm-up { font-size: 15px; }
+.phoneme-card > div:first-child > small { font-size: 13px; }
+.phoneme-card > div:first-child button { min-height: 44px; }
+.phoneme-card > div:first-child button span { font-size: 11px; }
+.sound-examples button { min-height: 54px; }
+.sound-examples span { font-size: 16px; }
+.sound-examples small, .practice-box > div span { font-size: 11px; }
+.evidence-note strong { font-size: 15px; }
+.unit-block summary p { font-size: 14px; }
+.lesson-row-copy p { font-size: 13px; line-height: 1.5; }
+.lesson-row-copy div small, .lesson-row-action small { font-size: 12px; }
+.lesson-row-action button, .filter-tabs button { min-height: 44px; font-size: 13px; }
+.library-word > div { font-size: 11px; }
+.library-word > div button { width: 44px; height: 44px; font-size: 12px; }
+.word-open small { font-size: 13px; }
+.word-open p { font-size: 15px; }
+.library-word footer { font-size: 12px; }
+.review-card-top { font-size: 12px; }
+.grade-row strong { font-size: 14px; }
+.grade-row span { font-size: 12px; }
+.review-stat, .review-sidebar > p, .review-sidebar > button { font-size: 13px; }
+.review-sidebar > button, .source-panel a { min-height: 44px; }
+.about-grid p { font-size: 15px; }
+.source-panel a { font-size: 14px; }
+.app-footer, .app-footer button { font-size: 12px; }
+.word-source { font-size: 11px; }
+.drawer-ipa small, .related-list small, .drawer-grades > span { font-size: 12px; }
+.field-label button { min-height: 44px; font-size: 12px; }
+.contrast-list article > div span { font-size: 11px; }
+.contrast-list p, .source-status p { font-size: 13px; }
+.source-status strong { font-size: 12px; }
+.drawer-grades button { min-height: 44px; font-size: 13px; }
+.lesson-player header span { font-size: 11px; }
+.lesson-player header button { min-width: 44px; min-height: 44px; font-size: 13px; }
+.player-category > small { font-size: 12px; }
+.player-audio small { font-size: 11px; }
+.player-answer > button { min-height: 44px; font-size: 12px; }
+.lesson-player > footer > button { min-height: 44px; font-size: 13px; }
+.toast { font-size: 13px; }
+
 @media (max-width: 1020px) {
   .app-header { grid-template-columns: 190px 1fr auto; }
   .app-nav button { min-width: 58px; padding-inline: 7px; }
@@ -505,6 +703,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   .lesson-rail { position: static; max-height: none; display: flex; overflow-x: auto; }
   .lesson-rail button { flex: 0 0 200px; }
   .phoneme-grid { grid-template-columns: 1fr; }
+  .alphabet-story-art img { max-height: none; }
   .word-library-grid { grid-template-columns: repeat(2,1fr); }
   .unit-block summary { grid-template-columns: 70px 1fr; }
   .unit-progress { grid-column: 2; }
@@ -514,8 +713,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   .mobile-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; height: calc(62px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); display: grid; grid-template-columns: repeat(5,1fr); border-top: 1px solid var(--line); background: rgba(255,253,248,.96); backdrop-filter: blur(15px); }
   .mobile-nav button { border: 0; background: transparent; color: var(--muted); cursor: pointer; }
   .mobile-nav span, .mobile-nav small { display: block; }
-  .mobile-nav span { font-size: 11px; font-weight: 750; }
-  .mobile-nav small { margin-top: 2px; font-family: Georgia, serif; font-size: 7px; }
+  .mobile-nav span { font-size: 13px; font-weight: 750; }
+  .mobile-nav small { margin-top: 2px; font-family: Georgia, serif; font-size: 10px; }
   .mobile-nav button.active { color: var(--coral); }
   .drawer-head > button { width: 44px; height: 44px; }
   .field-label button { min-height: 44px; padding-inline: 4px; }
@@ -528,6 +727,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   .dashboard-copy h1 { font-size: 46px; }
   .dashboard-copy .hero-actions { flex-direction: column; }
   .dashboard-copy .button { justify-content: space-between; }
+  .learning-path { grid-template-columns: 1fr; margin-top: -8px; }
+  .foundation-tabs { grid-template-columns: 1fr; margin-bottom: 38px; }
   .progress-card { max-width: none; }
   .next-lesson-card { padding: 22px; }
   .lesson-word-strip { grid-template-columns: repeat(2,1fr); }
@@ -535,6 +736,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   .content-view { padding-top: 42px; }
   .view-intro h1 { font-size: 43px; }
   .sound-lesson-panel { padding: 21px; }
+  .alphabet-story-art figcaption { display: block; }
+  .alphabet-story-art figcaption strong { display: block; margin-top: 5px; line-height: 1.45; }
+  .letter-grid { grid-template-columns: repeat(3,1fr); }
+  .letter-grid > button { min-height: 124px; }
+  .letter-detail { padding: 17px; }
+  .letter-detail-head { grid-template-columns: 1fr auto; }
+  .letter-detail-head > div:nth-child(2) { grid-column: 1 / -1; grid-row: 2; }
+  .letter-detail-head > button { min-width: 94px; }
+  .letter-detail-head > div:first-child > strong { font-size: 50px; }
   .objective-box { grid-template-columns: 1fr; gap: 8px; }
   .library-intro { display: block; }
   .search-box { margin-top: 22px; }
@@ -545,6 +755,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   .lesson-row-action { grid-column: 2; display: flex; justify-content: space-between; align-items: center; }
   .review-card { padding: 22px 15px; }
   .review-card > h2 { font-size: 52px; }
+  .word-picture--full { grid-template-columns: 1fr; }
+  .word-picture--full .word-picture-media { min-height: 180px; }
+  .word-picture--compact { grid-template-columns: 92px 1fr; }
   .grade-row { grid-template-columns: repeat(2,1fr); }
   .app-footer { display: block; }
   .app-footer div { margin-top: 10px; }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0.0",
-    "generated_at": "2026-08-18T11:46:47.487790+00:00",
+    "generated_at": "2026-08-18T13:59:40.915080+00:00",
     "canonical_source": "ogden_pdf_snapshot",
     "lexical_sources": [
       "free_dictionary_api",
@@ -26,7 +26,7 @@
       "source_usage_by_record": {
         "free_dictionary_api": 520,
         "editorial_fallback": 850,
-        "ecdict": 775,
+        "ecdict": 774,
         "cmudict": 340
       }
     },
@@ -46265,8 +46265,8 @@
           "status": "source_backed"
         }
       },
-      "meaning_zh": "白色的；纯洁的；白种的",
-      "definition_en": "Of or relating to Caucasians, people of European descent with light-coloured skin.",
+      "meaning_zh": "白色的",
+      "definition_en": "Having the colour of fresh snow or milk.",
       "example": {
         "en": "It is white.",
         "zh": "它是白色的。"
@@ -46276,7 +46276,6 @@
       "sources": {
         "canonical": "ogden_pdf_snapshot",
         "lexical": [
-          "ecdict",
           "free_dictionary_api"
         ],
         "editorial": [
@@ -46285,8 +46284,8 @@
         "fields": {
           "pronunciation_uk": "free_dictionary_api",
           "pronunciation_us": "free_dictionary_api",
-          "meaning_zh": "ecdict",
-          "definition_en": "free_dictionary_api",
+          "meaning_zh": "editorial_fallback",
+          "definition_en": "editorial_fallback",
           "example": [
             "editorial_fallback"
           ],

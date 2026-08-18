@@ -512,6 +512,7 @@ open	开着的；开放的	Not closed or blocked.
 red	红色的	Having the colour of blood or a ripe tomato.
 waiting	等候的	Staying until someone comes or something happens.
 green	绿色的	Having the colour of grass or leaves.
+white	白色的	Having the colour of fresh snow or milk.
 copper	铜	A reddish-brown metal used especially in electrical wire.
 cough	咳嗽	A sudden push of air from the throat, often because you are ill.
 growth	生长；增长	The process of becoming larger or developing.

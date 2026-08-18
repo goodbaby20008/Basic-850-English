@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-08-18T11:46:47.487790+00:00",
+  "generated_at": "2026-08-18T13:59:40.915080+00:00",
   "passed": true,
   "scope_note": "A passing report verifies structure, count, order and required-field presence. It is not a claim that automated lexical choices have completed human editorial review.",
   "checks": {
@@ -51,13 +51,13 @@
       "cmudict": 340
     },
     "meaning_zh": {
-      "editorial_fallback": 194,
-      "ecdict": 656
+      "editorial_fallback": 195,
+      "ecdict": 655
     },
     "definition_en": {
-      "editorial_fallback": 194,
+      "editorial_fallback": 195,
       "ecdict": 623,
-      "free_dictionary_api": 33
+      "free_dictionary_api": 32
     },
     "example": {
       "editorial_fallback": 850

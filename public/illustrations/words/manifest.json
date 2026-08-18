@@ -1,0 +1,1385 @@
+{
+  "generatedAt": "2026-08-18T14:03:14.783Z",
+  "count": 197,
+  "assets": [
+    {
+      "wordId": "things_picturable-001",
+      "emoji": "📐",
+      "filename": "things_picturable-001.svg",
+      "upstreamCodePoint": "1f4d0",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4d0.svg"
+    },
+    {
+      "wordId": "things_picturable-002",
+      "emoji": "🐜",
+      "filename": "things_picturable-002.svg",
+      "upstreamCodePoint": "1f41c",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f41c.svg"
+    },
+    {
+      "wordId": "things_picturable-003",
+      "emoji": "🍎",
+      "filename": "things_picturable-003.svg",
+      "upstreamCodePoint": "1f34e",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f34e.svg"
+    },
+    {
+      "wordId": "things_picturable-005",
+      "emoji": "💪",
+      "filename": "things_picturable-005.svg",
+      "upstreamCodePoint": "1f4aa",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4aa.svg"
+    },
+    {
+      "wordId": "things_picturable-006",
+      "emoji": "🪖",
+      "filename": "things_picturable-006.svg",
+      "upstreamCodePoint": "1fa96",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fa96.svg"
+    },
+    {
+      "wordId": "things_picturable-007",
+      "emoji": "👶",
+      "filename": "things_picturable-007.svg",
+      "upstreamCodePoint": "1f476",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f476.svg"
+    },
+    {
+      "wordId": "things_picturable-008",
+      "emoji": "👜",
+      "filename": "things_picturable-008.svg",
+      "upstreamCodePoint": "1f45c",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f45c.svg"
+    },
+    {
+      "wordId": "things_picturable-009",
+      "emoji": "⚽",
+      "filename": "things_picturable-009.svg",
+      "upstreamCodePoint": "26bd",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/26bd.svg"
+    },
+    {
+      "wordId": "things_picturable-010",
+      "emoji": "🎸",
+      "filename": "things_picturable-010.svg",
+      "upstreamCodePoint": "1f3b8",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3b8.svg"
+    },
+    {
+      "wordId": "things_picturable-012",
+      "emoji": "🧺",
+      "filename": "things_picturable-012.svg",
+      "upstreamCodePoint": "1f9fa",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9fa.svg"
+    },
+    {
+      "wordId": "things_picturable-013",
+      "emoji": "🛁",
+      "filename": "things_picturable-013.svg",
+      "upstreamCodePoint": "1f6c1",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6c1.svg"
+    },
+    {
+      "wordId": "things_picturable-014",
+      "emoji": "🛏️",
+      "filename": "things_picturable-014.svg",
+      "upstreamCodePoint": "1f6cf",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6cf.svg"
+    },
+    {
+      "wordId": "things_picturable-015",
+      "emoji": "🐝",
+      "filename": "things_picturable-015.svg",
+      "upstreamCodePoint": "1f41d",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f41d.svg"
+    },
+    {
+      "wordId": "things_picturable-016",
+      "emoji": "🔔",
+      "filename": "things_picturable-016.svg",
+      "upstreamCodePoint": "1f514",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f514.svg"
+    },
+    {
+      "wordId": "things_picturable-017",
+      "emoji": "🫐",
+      "filename": "things_picturable-017.svg",
+      "upstreamCodePoint": "1fad0",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fad0.svg"
+    },
+    {
+      "wordId": "things_picturable-018",
+      "emoji": "🐦",
+      "filename": "things_picturable-018.svg",
+      "upstreamCodePoint": "1f426",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f426.svg"
+    },
+    {
+      "wordId": "things_picturable-019",
+      "emoji": "🔪",
+      "filename": "things_picturable-019.svg",
+      "upstreamCodePoint": "1f52a",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f52a.svg"
+    },
+    {
+      "wordId": "things_picturable-021",
+      "emoji": "🚤",
+      "filename": "things_picturable-021.svg",
+      "upstreamCodePoint": "1f6a4",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6a4.svg"
+    },
+    {
+      "wordId": "things_picturable-022",
+      "emoji": "🦴",
+      "filename": "things_picturable-022.svg",
+      "upstreamCodePoint": "1f9b4",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9b4.svg"
+    },
+    {
+      "wordId": "things_picturable-023",
+      "emoji": "📖",
+      "filename": "things_picturable-023.svg",
+      "upstreamCodePoint": "1f4d6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4d6.svg"
+    },
+    {
+      "wordId": "things_picturable-024",
+      "emoji": "👢",
+      "filename": "things_picturable-024.svg",
+      "upstreamCodePoint": "1f462",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f462.svg"
+    },
+    {
+      "wordId": "things_picturable-025",
+      "emoji": "🍾",
+      "filename": "things_picturable-025.svg",
+      "upstreamCodePoint": "1f37e",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f37e.svg"
+    },
+    {
+      "wordId": "things_picturable-026",
+      "emoji": "📦",
+      "filename": "things_picturable-026.svg",
+      "upstreamCodePoint": "1f4e6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4e6.svg"
+    },
+    {
+      "wordId": "things_picturable-027",
+      "emoji": "👦",
+      "filename": "things_picturable-027.svg",
+      "upstreamCodePoint": "1f466",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f466.svg"
+    },
+    {
+      "wordId": "things_picturable-028",
+      "emoji": "🧠",
+      "filename": "things_picturable-028.svg",
+      "upstreamCodePoint": "1f9e0",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9e0.svg"
+    },
+    {
+      "wordId": "things_picturable-030",
+      "emoji": "🌿",
+      "filename": "things_picturable-030.svg",
+      "upstreamCodePoint": "1f33f",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f33f.svg"
+    },
+    {
+      "wordId": "things_picturable-031",
+      "emoji": "🧱",
+      "filename": "things_picturable-031.svg",
+      "upstreamCodePoint": "1f9f1",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9f1.svg"
+    },
+    {
+      "wordId": "things_picturable-032",
+      "emoji": "🌉",
+      "filename": "things_picturable-032.svg",
+      "upstreamCodePoint": "1f309",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f309.svg"
+    },
+    {
+      "wordId": "things_picturable-033",
+      "emoji": "🖌️",
+      "filename": "things_picturable-033.svg",
+      "upstreamCodePoint": "1f58c",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f58c.svg"
+    },
+    {
+      "wordId": "things_picturable-034",
+      "emoji": "🪣",
+      "filename": "things_picturable-034.svg",
+      "upstreamCodePoint": "1faa3",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1faa3.svg"
+    },
+    {
+      "wordId": "things_picturable-035",
+      "emoji": "💡",
+      "filename": "things_picturable-035.svg",
+      "upstreamCodePoint": "1f4a1",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4a1.svg"
+    },
+    {
+      "wordId": "things_picturable-036",
+      "emoji": "🔘",
+      "filename": "things_picturable-036.svg",
+      "upstreamCodePoint": "1f518",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f518.svg"
+    },
+    {
+      "wordId": "things_picturable-037",
+      "emoji": "🍰",
+      "filename": "things_picturable-037.svg",
+      "upstreamCodePoint": "1f370",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f370.svg"
+    },
+    {
+      "wordId": "things_picturable-038",
+      "emoji": "📷",
+      "filename": "things_picturable-038.svg",
+      "upstreamCodePoint": "1f4f7",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4f7.svg"
+    },
+    {
+      "wordId": "things_picturable-039",
+      "emoji": "🃏",
+      "filename": "things_picturable-039.svg",
+      "upstreamCodePoint": "1f0cf",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f0cf.svg"
+    },
+    {
+      "wordId": "things_picturable-040",
+      "emoji": "🛒",
+      "filename": "things_picturable-040.svg",
+      "upstreamCodePoint": "1f6d2",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6d2.svg"
+    },
+    {
+      "wordId": "things_picturable-042",
+      "emoji": "🐈",
+      "filename": "things_picturable-042.svg",
+      "upstreamCodePoint": "1f408",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f408.svg"
+    },
+    {
+      "wordId": "things_picturable-043",
+      "emoji": "⛓️",
+      "filename": "things_picturable-043.svg",
+      "upstreamCodePoint": "26d3",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/26d3.svg"
+    },
+    {
+      "wordId": "things_picturable-044",
+      "emoji": "🧀",
+      "filename": "things_picturable-044.svg",
+      "upstreamCodePoint": "1f9c0",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9c0.svg"
+    },
+    {
+      "wordId": "things_picturable-047",
+      "emoji": "⛪",
+      "filename": "things_picturable-047.svg",
+      "upstreamCodePoint": "26ea",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/26ea.svg"
+    },
+    {
+      "wordId": "things_picturable-048",
+      "emoji": "⭕",
+      "filename": "things_picturable-048.svg",
+      "upstreamCodePoint": "2b55",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2b55.svg"
+    },
+    {
+      "wordId": "things_picturable-049",
+      "emoji": "🕒",
+      "filename": "things_picturable-049.svg",
+      "upstreamCodePoint": "1f552",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f552.svg"
+    },
+    {
+      "wordId": "things_picturable-050",
+      "emoji": "☁️",
+      "filename": "things_picturable-050.svg",
+      "upstreamCodePoint": "2601",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2601.svg"
+    },
+    {
+      "wordId": "things_picturable-051",
+      "emoji": "🧥",
+      "filename": "things_picturable-051.svg",
+      "upstreamCodePoint": "1f9e5",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9e5.svg"
+    },
+    {
+      "wordId": "things_picturable-052",
+      "emoji": "👔",
+      "filename": "things_picturable-052.svg",
+      "upstreamCodePoint": "1f454",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f454.svg"
+    },
+    {
+      "wordId": "things_picturable-053",
+      "emoji": "🪮",
+      "filename": "things_picturable-053.svg",
+      "upstreamCodePoint": "1faae",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1faae.svg"
+    },
+    {
+      "wordId": "things_picturable-054",
+      "emoji": "🪢",
+      "filename": "things_picturable-054.svg",
+      "upstreamCodePoint": "1faa2",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1faa2.svg"
+    },
+    {
+      "wordId": "things_picturable-055",
+      "emoji": "🐄",
+      "filename": "things_picturable-055.svg",
+      "upstreamCodePoint": "1f404",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f404.svg"
+    },
+    {
+      "wordId": "things_picturable-056",
+      "emoji": "☕",
+      "filename": "things_picturable-056.svg",
+      "upstreamCodePoint": "2615",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2615.svg"
+    },
+    {
+      "wordId": "things_picturable-058",
+      "emoji": "🛋️",
+      "filename": "things_picturable-058.svg",
+      "upstreamCodePoint": "1f6cb",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6cb.svg"
+    },
+    {
+      "wordId": "things_picturable-059",
+      "emoji": "🐕",
+      "filename": "things_picturable-059.svg",
+      "upstreamCodePoint": "1f415",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f415.svg"
+    },
+    {
+      "wordId": "things_picturable-060",
+      "emoji": "🚪",
+      "filename": "things_picturable-060.svg",
+      "upstreamCodePoint": "1f6aa",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6aa.svg"
+    },
+    {
+      "wordId": "things_picturable-062",
+      "emoji": "🗄️",
+      "filename": "things_picturable-062.svg",
+      "upstreamCodePoint": "1f5c4",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f5c4.svg"
+    },
+    {
+      "wordId": "things_picturable-063",
+      "emoji": "👗",
+      "filename": "things_picturable-063.svg",
+      "upstreamCodePoint": "1f457",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f457.svg"
+    },
+    {
+      "wordId": "things_picturable-064",
+      "emoji": "💧",
+      "filename": "things_picturable-064.svg",
+      "upstreamCodePoint": "1f4a7",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4a7.svg"
+    },
+    {
+      "wordId": "things_picturable-065",
+      "emoji": "👂",
+      "filename": "things_picturable-065.svg",
+      "upstreamCodePoint": "1f442",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f442.svg"
+    },
+    {
+      "wordId": "things_picturable-066",
+      "emoji": "🥚",
+      "filename": "things_picturable-066.svg",
+      "upstreamCodePoint": "1f95a",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f95a.svg"
+    },
+    {
+      "wordId": "things_picturable-067",
+      "emoji": "⚙️",
+      "filename": "things_picturable-067.svg",
+      "upstreamCodePoint": "2699",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2699.svg"
+    },
+    {
+      "wordId": "things_picturable-068",
+      "emoji": "👁️",
+      "filename": "things_picturable-068.svg",
+      "upstreamCodePoint": "1f441",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f441.svg"
+    },
+    {
+      "wordId": "things_picturable-069",
+      "emoji": "🙂",
+      "filename": "things_picturable-069.svg",
+      "upstreamCodePoint": "1f642",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f642.svg"
+    },
+    {
+      "wordId": "things_picturable-070",
+      "emoji": "🚜",
+      "filename": "things_picturable-070.svg",
+      "upstreamCodePoint": "1f69c",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f69c.svg"
+    },
+    {
+      "wordId": "things_picturable-071",
+      "emoji": "🪶",
+      "filename": "things_picturable-071.svg",
+      "upstreamCodePoint": "1fab6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fab6.svg"
+    },
+    {
+      "wordId": "things_picturable-072",
+      "emoji": "☝️",
+      "filename": "things_picturable-072.svg",
+      "upstreamCodePoint": "261d",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/261d.svg"
+    },
+    {
+      "wordId": "things_picturable-073",
+      "emoji": "🐟",
+      "filename": "things_picturable-073.svg",
+      "upstreamCodePoint": "1f41f",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f41f.svg"
+    },
+    {
+      "wordId": "things_picturable-074",
+      "emoji": "🚩",
+      "filename": "things_picturable-074.svg",
+      "upstreamCodePoint": "1f6a9",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6a9.svg"
+    },
+    {
+      "wordId": "things_picturable-076",
+      "emoji": "🪰",
+      "filename": "things_picturable-076.svg",
+      "upstreamCodePoint": "1fab0",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fab0.svg"
+    },
+    {
+      "wordId": "things_picturable-077",
+      "emoji": "🦶",
+      "filename": "things_picturable-077.svg",
+      "upstreamCodePoint": "1f9b6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9b6.svg"
+    },
+    {
+      "wordId": "things_picturable-078",
+      "emoji": "🍴",
+      "filename": "things_picturable-078.svg",
+      "upstreamCodePoint": "1f374",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f374.svg"
+    },
+    {
+      "wordId": "things_picturable-079",
+      "emoji": "🐔",
+      "filename": "things_picturable-079.svg",
+      "upstreamCodePoint": "1f414",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f414.svg"
+    },
+    {
+      "wordId": "things_picturable-080",
+      "emoji": "🖼️",
+      "filename": "things_picturable-080.svg",
+      "upstreamCodePoint": "1f5bc",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f5bc.svg"
+    },
+    {
+      "wordId": "things_picturable-081",
+      "emoji": "🏡",
+      "filename": "things_picturable-081.svg",
+      "upstreamCodePoint": "1f3e1",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3e1.svg"
+    },
+    {
+      "wordId": "things_picturable-082",
+      "emoji": "👧",
+      "filename": "things_picturable-082.svg",
+      "upstreamCodePoint": "1f467",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f467.svg"
+    },
+    {
+      "wordId": "things_picturable-083",
+      "emoji": "🧤",
+      "filename": "things_picturable-083.svg",
+      "upstreamCodePoint": "1f9e4",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9e4.svg"
+    },
+    {
+      "wordId": "things_picturable-084",
+      "emoji": "🐐",
+      "filename": "things_picturable-084.svg",
+      "upstreamCodePoint": "1f410",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f410.svg"
+    },
+    {
+      "wordId": "things_picturable-085",
+      "emoji": "🔫",
+      "filename": "things_picturable-085.svg",
+      "upstreamCodePoint": "1f52b",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f52b.svg"
+    },
+    {
+      "wordId": "things_picturable-086",
+      "emoji": "💇",
+      "filename": "things_picturable-086.svg",
+      "upstreamCodePoint": "1f487",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f487.svg"
+    },
+    {
+      "wordId": "things_picturable-087",
+      "emoji": "🔨",
+      "filename": "things_picturable-087.svg",
+      "upstreamCodePoint": "1f528",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f528.svg"
+    },
+    {
+      "wordId": "things_picturable-088",
+      "emoji": "✋",
+      "filename": "things_picturable-088.svg",
+      "upstreamCodePoint": "270b",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/270b.svg"
+    },
+    {
+      "wordId": "things_picturable-089",
+      "emoji": "🎩",
+      "filename": "things_picturable-089.svg",
+      "upstreamCodePoint": "1f3a9",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3a9.svg"
+    },
+    {
+      "wordId": "things_picturable-090",
+      "emoji": "🗣️",
+      "filename": "things_picturable-090.svg",
+      "upstreamCodePoint": "1f5e3",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f5e3.svg"
+    },
+    {
+      "wordId": "things_picturable-091",
+      "emoji": "🫀",
+      "filename": "things_picturable-091.svg",
+      "upstreamCodePoint": "1fac0",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fac0.svg"
+    },
+    {
+      "wordId": "things_picturable-092",
+      "emoji": "🪝",
+      "filename": "things_picturable-092.svg",
+      "upstreamCodePoint": "1fa9d",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fa9d.svg"
+    },
+    {
+      "wordId": "things_picturable-093",
+      "emoji": "📯",
+      "filename": "things_picturable-093.svg",
+      "upstreamCodePoint": "1f4ef",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4ef.svg"
+    },
+    {
+      "wordId": "things_picturable-094",
+      "emoji": "🐎",
+      "filename": "things_picturable-094.svg",
+      "upstreamCodePoint": "1f40e",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f40e.svg"
+    },
+    {
+      "wordId": "things_picturable-095",
+      "emoji": "🏥",
+      "filename": "things_picturable-095.svg",
+      "upstreamCodePoint": "1f3e5",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3e5.svg"
+    },
+    {
+      "wordId": "things_picturable-096",
+      "emoji": "🏠",
+      "filename": "things_picturable-096.svg",
+      "upstreamCodePoint": "1f3e0",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3e0.svg"
+    },
+    {
+      "wordId": "things_picturable-097",
+      "emoji": "🏝️",
+      "filename": "things_picturable-097.svg",
+      "upstreamCodePoint": "1f3dd",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3dd.svg"
+    },
+    {
+      "wordId": "things_picturable-098",
+      "emoji": "💎",
+      "filename": "things_picturable-098.svg",
+      "upstreamCodePoint": "1f48e",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f48e.svg"
+    },
+    {
+      "wordId": "things_picturable-100",
+      "emoji": "🔑",
+      "filename": "things_picturable-100.svg",
+      "upstreamCodePoint": "1f511",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f511.svg"
+    },
+    {
+      "wordId": "things_picturable-101",
+      "emoji": "🦵",
+      "filename": "things_picturable-101.svg",
+      "upstreamCodePoint": "1f9b5",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9b5.svg"
+    },
+    {
+      "wordId": "things_picturable-102",
+      "emoji": "🔪",
+      "filename": "things_picturable-102.svg",
+      "upstreamCodePoint": "1f52a",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f52a.svg"
+    },
+    {
+      "wordId": "things_picturable-103",
+      "emoji": "🪢",
+      "filename": "things_picturable-103.svg",
+      "upstreamCodePoint": "1faa2",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1faa2.svg"
+    },
+    {
+      "wordId": "things_picturable-104",
+      "emoji": "🍃",
+      "filename": "things_picturable-104.svg",
+      "upstreamCodePoint": "1f343",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f343.svg"
+    },
+    {
+      "wordId": "things_picturable-105",
+      "emoji": "🦵",
+      "filename": "things_picturable-105.svg",
+      "upstreamCodePoint": "1f9b5",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9b5.svg"
+    },
+    {
+      "wordId": "things_picturable-106",
+      "emoji": "📚",
+      "filename": "things_picturable-106.svg",
+      "upstreamCodePoint": "1f4da",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4da.svg"
+    },
+    {
+      "wordId": "things_picturable-107",
+      "emoji": "➖",
+      "filename": "things_picturable-107.svg",
+      "upstreamCodePoint": "2796",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2796.svg"
+    },
+    {
+      "wordId": "things_picturable-108",
+      "emoji": "👄",
+      "filename": "things_picturable-108.svg",
+      "upstreamCodePoint": "1f444",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f444.svg"
+    },
+    {
+      "wordId": "things_picturable-109",
+      "emoji": "🔒",
+      "filename": "things_picturable-109.svg",
+      "upstreamCodePoint": "1f512",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f512.svg"
+    },
+    {
+      "wordId": "things_picturable-110",
+      "emoji": "🗺️",
+      "filename": "things_picturable-110.svg",
+      "upstreamCodePoint": "1f5fa",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f5fa.svg"
+    },
+    {
+      "wordId": "things_picturable-112",
+      "emoji": "🐒",
+      "filename": "things_picturable-112.svg",
+      "upstreamCodePoint": "1f412",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f412.svg"
+    },
+    {
+      "wordId": "things_picturable-113",
+      "emoji": "🌙",
+      "filename": "things_picturable-113.svg",
+      "upstreamCodePoint": "1f319",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f319.svg"
+    },
+    {
+      "wordId": "things_picturable-114",
+      "emoji": "👄",
+      "filename": "things_picturable-114.svg",
+      "upstreamCodePoint": "1f444",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f444.svg"
+    },
+    {
+      "wordId": "things_picturable-115",
+      "emoji": "💪",
+      "filename": "things_picturable-115.svg",
+      "upstreamCodePoint": "1f4aa",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4aa.svg"
+    },
+    {
+      "wordId": "things_picturable-116",
+      "emoji": "💅",
+      "filename": "things_picturable-116.svg",
+      "upstreamCodePoint": "1f485",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f485.svg"
+    },
+    {
+      "wordId": "things_picturable-118",
+      "emoji": "🪡",
+      "filename": "things_picturable-118.svg",
+      "upstreamCodePoint": "1faa1",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1faa1.svg"
+    },
+    {
+      "wordId": "things_picturable-120",
+      "emoji": "🥅",
+      "filename": "things_picturable-120.svg",
+      "upstreamCodePoint": "1f945",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f945.svg"
+    },
+    {
+      "wordId": "things_picturable-121",
+      "emoji": "👃",
+      "filename": "things_picturable-121.svg",
+      "upstreamCodePoint": "1f443",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f443.svg"
+    },
+    {
+      "wordId": "things_picturable-122",
+      "emoji": "🌰",
+      "filename": "things_picturable-122.svg",
+      "upstreamCodePoint": "1f330",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f330.svg"
+    },
+    {
+      "wordId": "things_picturable-123",
+      "emoji": "🏢",
+      "filename": "things_picturable-123.svg",
+      "upstreamCodePoint": "1f3e2",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3e2.svg"
+    },
+    {
+      "wordId": "things_picturable-124",
+      "emoji": "🍊",
+      "filename": "things_picturable-124.svg",
+      "upstreamCodePoint": "1f34a",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f34a.svg"
+    },
+    {
+      "wordId": "things_picturable-126",
+      "emoji": "📦",
+      "filename": "things_picturable-126.svg",
+      "upstreamCodePoint": "1f4e6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4e6.svg"
+    },
+    {
+      "wordId": "things_picturable-127",
+      "emoji": "🖊️",
+      "filename": "things_picturable-127.svg",
+      "upstreamCodePoint": "1f58a",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f58a.svg"
+    },
+    {
+      "wordId": "things_picturable-128",
+      "emoji": "✏️",
+      "filename": "things_picturable-128.svg",
+      "upstreamCodePoint": "270f",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/270f.svg"
+    },
+    {
+      "wordId": "things_picturable-129",
+      "emoji": "🖼️",
+      "filename": "things_picturable-129.svg",
+      "upstreamCodePoint": "1f5bc",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f5bc.svg"
+    },
+    {
+      "wordId": "things_picturable-130",
+      "emoji": "🐖",
+      "filename": "things_picturable-130.svg",
+      "upstreamCodePoint": "1f416",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f416.svg"
+    },
+    {
+      "wordId": "things_picturable-131",
+      "emoji": "📌",
+      "filename": "things_picturable-131.svg",
+      "upstreamCodePoint": "1f4cc",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4cc.svg"
+    },
+    {
+      "wordId": "things_picturable-133",
+      "emoji": "✈️",
+      "filename": "things_picturable-133.svg",
+      "upstreamCodePoint": "2708",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2708.svg"
+    },
+    {
+      "wordId": "things_picturable-134",
+      "emoji": "🍽️",
+      "filename": "things_picturable-134.svg",
+      "upstreamCodePoint": "1f37d",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f37d.svg"
+    },
+    {
+      "wordId": "things_picturable-136",
+      "emoji": "👖",
+      "filename": "things_picturable-136.svg",
+      "upstreamCodePoint": "1f456",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f456.svg"
+    },
+    {
+      "wordId": "things_picturable-137",
+      "emoji": "🍲",
+      "filename": "things_picturable-137.svg",
+      "upstreamCodePoint": "1f372",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f372.svg"
+    },
+    {
+      "wordId": "things_picturable-138",
+      "emoji": "🥔",
+      "filename": "things_picturable-138.svg",
+      "upstreamCodePoint": "1f954",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f954.svg"
+    },
+    {
+      "wordId": "things_picturable-140",
+      "emoji": "⛽",
+      "filename": "things_picturable-140.svg",
+      "upstreamCodePoint": "26fd",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/26fd.svg"
+    },
+    {
+      "wordId": "things_picturable-141",
+      "emoji": "🛤️",
+      "filename": "things_picturable-141.svg",
+      "upstreamCodePoint": "1f6e4",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6e4.svg"
+    },
+    {
+      "wordId": "things_picturable-142",
+      "emoji": "🐀",
+      "filename": "things_picturable-142.svg",
+      "upstreamCodePoint": "1f400",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f400.svg"
+    },
+    {
+      "wordId": "things_picturable-143",
+      "emoji": "🧾",
+      "filename": "things_picturable-143.svg",
+      "upstreamCodePoint": "1f9fe",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9fe.svg"
+    },
+    {
+      "wordId": "things_picturable-144",
+      "emoji": "💍",
+      "filename": "things_picturable-144.svg",
+      "upstreamCodePoint": "1f48d",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f48d.svg"
+    },
+    {
+      "wordId": "things_picturable-145",
+      "emoji": "🎣",
+      "filename": "things_picturable-145.svg",
+      "upstreamCodePoint": "1f3a3",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3a3.svg"
+    },
+    {
+      "wordId": "things_picturable-146",
+      "emoji": "🏠",
+      "filename": "things_picturable-146.svg",
+      "upstreamCodePoint": "1f3e0",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3e0.svg"
+    },
+    {
+      "wordId": "things_picturable-148",
+      "emoji": "⛵",
+      "filename": "things_picturable-148.svg",
+      "upstreamCodePoint": "26f5",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/26f5.svg"
+    },
+    {
+      "wordId": "things_picturable-149",
+      "emoji": "🏫",
+      "filename": "things_picturable-149.svg",
+      "upstreamCodePoint": "1f3eb",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3eb.svg"
+    },
+    {
+      "wordId": "things_picturable-150",
+      "emoji": "✂️",
+      "filename": "things_picturable-150.svg",
+      "upstreamCodePoint": "2702",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2702.svg"
+    },
+    {
+      "wordId": "things_picturable-152",
+      "emoji": "🌱",
+      "filename": "things_picturable-152.svg",
+      "upstreamCodePoint": "1f331",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f331.svg"
+    },
+    {
+      "wordId": "things_picturable-153",
+      "emoji": "🐑",
+      "filename": "things_picturable-153.svg",
+      "upstreamCodePoint": "1f411",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f411.svg"
+    },
+    {
+      "wordId": "things_picturable-155",
+      "emoji": "🚢",
+      "filename": "things_picturable-155.svg",
+      "upstreamCodePoint": "1f6a2",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6a2.svg"
+    },
+    {
+      "wordId": "things_picturable-156",
+      "emoji": "👕",
+      "filename": "things_picturable-156.svg",
+      "upstreamCodePoint": "1f455",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f455.svg"
+    },
+    {
+      "wordId": "things_picturable-157",
+      "emoji": "👟",
+      "filename": "things_picturable-157.svg",
+      "upstreamCodePoint": "1f45f",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f45f.svg"
+    },
+    {
+      "wordId": "things_picturable-159",
+      "emoji": "👗",
+      "filename": "things_picturable-159.svg",
+      "upstreamCodePoint": "1f457",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f457.svg"
+    },
+    {
+      "wordId": "things_picturable-160",
+      "emoji": "🐍",
+      "filename": "things_picturable-160.svg",
+      "upstreamCodePoint": "1f40d",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f40d.svg"
+    },
+    {
+      "wordId": "things_picturable-161",
+      "emoji": "🧦",
+      "filename": "things_picturable-161.svg",
+      "upstreamCodePoint": "1f9e6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9e6.svg"
+    },
+    {
+      "wordId": "things_picturable-162",
+      "emoji": "🪏",
+      "filename": "things_picturable-162.svg",
+      "upstreamCodePoint": "1fa8f",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fa8f.svg"
+    },
+    {
+      "wordId": "things_picturable-163",
+      "emoji": "🧽",
+      "filename": "things_picturable-163.svg",
+      "upstreamCodePoint": "1f9fd",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9fd.svg"
+    },
+    {
+      "wordId": "things_picturable-164",
+      "emoji": "🥄",
+      "filename": "things_picturable-164.svg",
+      "upstreamCodePoint": "1f944",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f944.svg"
+    },
+    {
+      "wordId": "things_picturable-165",
+      "emoji": "🌸",
+      "filename": "things_picturable-165.svg",
+      "upstreamCodePoint": "1f338",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f338.svg"
+    },
+    {
+      "wordId": "things_picturable-166",
+      "emoji": "⬜",
+      "filename": "things_picturable-166.svg",
+      "upstreamCodePoint": "2b1c",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2b1c.svg"
+    },
+    {
+      "wordId": "things_picturable-168",
+      "emoji": "⭐",
+      "filename": "things_picturable-168.svg",
+      "upstreamCodePoint": "2b50",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2b50.svg"
+    },
+    {
+      "wordId": "things_picturable-169",
+      "emoji": "🚉",
+      "filename": "things_picturable-169.svg",
+      "upstreamCodePoint": "1f689",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f689.svg"
+    },
+    {
+      "wordId": "things_picturable-170",
+      "emoji": "🌷",
+      "filename": "things_picturable-170.svg",
+      "upstreamCodePoint": "1f337",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f337.svg"
+    },
+    {
+      "wordId": "things_picturable-171",
+      "emoji": "🏒",
+      "filename": "things_picturable-171.svg",
+      "upstreamCodePoint": "1f3d2",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3d2.svg"
+    },
+    {
+      "wordId": "things_picturable-172",
+      "emoji": "🧦",
+      "filename": "things_picturable-172.svg",
+      "upstreamCodePoint": "1f9e6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9e6.svg"
+    },
+    {
+      "wordId": "things_picturable-174",
+      "emoji": "🏬",
+      "filename": "things_picturable-174.svg",
+      "upstreamCodePoint": "1f3ec",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3ec.svg"
+    },
+    {
+      "wordId": "things_picturable-175",
+      "emoji": "🛣️",
+      "filename": "things_picturable-175.svg",
+      "upstreamCodePoint": "1f6e3",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6e3.svg"
+    },
+    {
+      "wordId": "things_picturable-176",
+      "emoji": "☀️",
+      "filename": "things_picturable-176.svg",
+      "upstreamCodePoint": "2600",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2600.svg"
+    },
+    {
+      "wordId": "things_picturable-178",
+      "emoji": "🦂",
+      "filename": "things_picturable-178.svg",
+      "upstreamCodePoint": "1f982",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f982.svg"
+    },
+    {
+      "wordId": "things_picturable-179",
+      "emoji": "🧵",
+      "filename": "things_picturable-179.svg",
+      "upstreamCodePoint": "1f9f5",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9f5.svg"
+    },
+    {
+      "wordId": "things_picturable-181",
+      "emoji": "👍",
+      "filename": "things_picturable-181.svg",
+      "upstreamCodePoint": "1f44d",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f44d.svg"
+    },
+    {
+      "wordId": "things_picturable-182",
+      "emoji": "🎫",
+      "filename": "things_picturable-182.svg",
+      "upstreamCodePoint": "1f3ab",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3ab.svg"
+    },
+    {
+      "wordId": "things_picturable-183",
+      "emoji": "🦶",
+      "filename": "things_picturable-183.svg",
+      "upstreamCodePoint": "1f9b6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9b6.svg"
+    },
+    {
+      "wordId": "things_picturable-184",
+      "emoji": "👅",
+      "filename": "things_picturable-184.svg",
+      "upstreamCodePoint": "1f445",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f445.svg"
+    },
+    {
+      "wordId": "things_picturable-185",
+      "emoji": "🦷",
+      "filename": "things_picturable-185.svg",
+      "upstreamCodePoint": "1f9b7",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9b7.svg"
+    },
+    {
+      "wordId": "things_picturable-186",
+      "emoji": "🏘️",
+      "filename": "things_picturable-186.svg",
+      "upstreamCodePoint": "1f3d8",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3d8.svg"
+    },
+    {
+      "wordId": "things_picturable-187",
+      "emoji": "🚆",
+      "filename": "things_picturable-187.svg",
+      "upstreamCodePoint": "1f686",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f686.svg"
+    },
+    {
+      "wordId": "things_picturable-189",
+      "emoji": "🌳",
+      "filename": "things_picturable-189.svg",
+      "upstreamCodePoint": "1f333",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f333.svg"
+    },
+    {
+      "wordId": "things_picturable-190",
+      "emoji": "👖",
+      "filename": "things_picturable-190.svg",
+      "upstreamCodePoint": "1f456",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f456.svg"
+    },
+    {
+      "wordId": "things_picturable-191",
+      "emoji": "☂️",
+      "filename": "things_picturable-191.svg",
+      "upstreamCodePoint": "2602",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/2602.svg"
+    },
+    {
+      "wordId": "things_picturable-192",
+      "emoji": "🧱",
+      "filename": "things_picturable-192.svg",
+      "upstreamCodePoint": "1f9f1",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9f1.svg"
+    },
+    {
+      "wordId": "things_picturable-193",
+      "emoji": "⌚",
+      "filename": "things_picturable-193.svg",
+      "upstreamCodePoint": "231a",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/231a.svg"
+    },
+    {
+      "wordId": "things_picturable-194",
+      "emoji": "🛞",
+      "filename": "things_picturable-194.svg",
+      "upstreamCodePoint": "1f6de",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6de.svg"
+    },
+    {
+      "wordId": "things_picturable-197",
+      "emoji": "🪟",
+      "filename": "things_picturable-197.svg",
+      "upstreamCodePoint": "1fa9f",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fa9f.svg"
+    },
+    {
+      "wordId": "things_picturable-198",
+      "emoji": "🪽",
+      "filename": "things_picturable-198.svg",
+      "upstreamCodePoint": "1fabd",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fabd.svg"
+    },
+    {
+      "wordId": "things_picturable-199",
+      "emoji": "🔌",
+      "filename": "things_picturable-199.svg",
+      "upstreamCodePoint": "1f50c",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f50c.svg"
+    },
+    {
+      "wordId": "things_picturable-200",
+      "emoji": "🪱",
+      "filename": "things_picturable-200.svg",
+      "upstreamCodePoint": "1fab1",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fab1.svg"
+    },
+    {
+      "wordId": "things_general-010",
+      "emoji": "🐾",
+      "filename": "things_general-010.svg",
+      "upstreamCodePoint": "1f43e",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f43e.svg"
+    },
+    {
+      "wordId": "things_general-033",
+      "emoji": "🍞",
+      "filename": "things_general-033.svg",
+      "upstreamCodePoint": "1f35e",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f35e.svg"
+    },
+    {
+      "wordId": "things_general-036",
+      "emoji": "🏢",
+      "filename": "things_general-036.svg",
+      "upstreamCodePoint": "1f3e2",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3e2.svg"
+    },
+    {
+      "wordId": "things_general-040",
+      "emoji": "🧈",
+      "filename": "things_general-040.svg",
+      "upstreamCodePoint": "1f9c8",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9c8.svg"
+    },
+    {
+      "wordId": "things_general-044",
+      "emoji": "🖍️",
+      "filename": "things_general-044.svg",
+      "upstreamCodePoint": "1f58d",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f58d.svg"
+    },
+    {
+      "wordId": "things_general-047",
+      "emoji": "🧣",
+      "filename": "things_general-047.svg",
+      "upstreamCodePoint": "1f9e3",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9e3.svg"
+    },
+    {
+      "wordId": "things_general-124",
+      "emoji": "🌷",
+      "filename": "things_general-124.svg",
+      "upstreamCodePoint": "1f337",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f337.svg"
+    },
+    {
+      "wordId": "things_general-131",
+      "emoji": "🍎",
+      "filename": "things_general-131.svg",
+      "upstreamCodePoint": "1f34e",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f34e.svg"
+    },
+    {
+      "wordId": "things_general-136",
+      "emoji": "🌱",
+      "filename": "things_general-136.svg",
+      "upstreamCodePoint": "1f331",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f331.svg"
+    },
+    {
+      "wordId": "things_general-152",
+      "emoji": "🧊",
+      "filename": "things_general-152.svg",
+      "upstreamCodePoint": "1f9ca",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9ca.svg"
+    },
+    {
+      "wordId": "things_general-158",
+      "emoji": "🐞",
+      "filename": "things_general-158.svg",
+      "upstreamCodePoint": "1f41e",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f41e.svg"
+    },
+    {
+      "wordId": "things_general-198",
+      "emoji": "🥩",
+      "filename": "things_general-198.svg",
+      "upstreamCodePoint": "1f969",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f969.svg"
+    },
+    {
+      "wordId": "things_general-203",
+      "emoji": "🥛",
+      "filename": "things_general-203.svg",
+      "upstreamCodePoint": "1f95b",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f95b.svg"
+    },
+    {
+      "wordId": "things_general-213",
+      "emoji": "🏔️",
+      "filename": "things_general-213.svg",
+      "upstreamCodePoint": "1f3d4",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3d4.svg"
+    },
+    {
+      "wordId": "things_general-236",
+      "emoji": "📄",
+      "filename": "things_general-236.svg",
+      "upstreamCodePoint": "1f4c4",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4c4.svg"
+    },
+    {
+      "wordId": "things_general-243",
+      "emoji": "🪴",
+      "filename": "things_general-243.svg",
+      "upstreamCodePoint": "1fab4",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fab4.svg"
+    },
+    {
+      "wordId": "things_general-267",
+      "emoji": "🌧️",
+      "filename": "things_general-267.svg",
+      "upstreamCodePoint": "1f327",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f327.svg"
+    },
+    {
+      "wordId": "things_general-284",
+      "emoji": "🍚",
+      "filename": "things_general-284.svg",
+      "upstreamCodePoint": "1f35a",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f35a.svg"
+    },
+    {
+      "wordId": "things_general-285",
+      "emoji": "🏞️",
+      "filename": "things_general-285.svg",
+      "upstreamCodePoint": "1f3de",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f3de.svg"
+    },
+    {
+      "wordId": "things_general-286",
+      "emoji": "🛣️",
+      "filename": "things_general-286.svg",
+      "upstreamCodePoint": "1f6e3",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f6e3.svg"
+    },
+    {
+      "wordId": "things_general-296",
+      "emoji": "🌊",
+      "filename": "things_general-296.svg",
+      "upstreamCodePoint": "1f30a",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f30a.svg"
+    },
+    {
+      "wordId": "things_general-324",
+      "emoji": "🧼",
+      "filename": "things_general-324.svg",
+      "upstreamCodePoint": "1f9fc",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9fc.svg"
+    },
+    {
+      "wordId": "things_general-339",
+      "emoji": "🪨",
+      "filename": "things_general-339.svg",
+      "upstreamCodePoint": "1faa8",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1faa8.svg"
+    },
+    {
+      "wordId": "things_general-383",
+      "emoji": "💧",
+      "filename": "things_general-383.svg",
+      "upstreamCodePoint": "1f4a7",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f4a7.svg"
+    },
+    {
+      "wordId": "things_general-394",
+      "emoji": "🪵",
+      "filename": "things_general-394.svg",
+      "upstreamCodePoint": "1fab5",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1fab5.svg"
+    },
+    {
+      "wordId": "things_general-395",
+      "emoji": "🧶",
+      "filename": "things_general-395.svg",
+      "upstreamCodePoint": "1f9f6",
+      "upstreamSource": "https://cdn.jsdelivr.net/gh/jdecked/twemoji@v17.0.2/assets/svg/1f9f6.svg"
+    }
+  ]
+}

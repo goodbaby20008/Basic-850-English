@@ -10,7 +10,7 @@
     "build": "vite build && node scripts/build-static-worker.mjs",
     "preview": "vite preview",
     "start": "npm run preview",
-    "test": "npm run validate:data && npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run validate:data && npm run build && node --test tests/rendered-html.test.mjs tests/alphabet-data.test.mjs tests/word-pictures.test.mjs",
     "lint": "eslint . --ignore-pattern dist",
     "validate:data": "node scripts/validate-data.mjs"
   },

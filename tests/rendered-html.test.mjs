@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access, readFile } from "node:fs/promises";
+import { access, readFile, readdir, stat } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
@@ -30,6 +30,44 @@ test("ships all 850 words and a complete 85-lesson map", async () => {
   assert.equal(lessons.length, 85);
   assert.ok(lessons.every((lesson) => lesson.wordIds.length === 10));
   assert.equal(new Set(lessons.flatMap((lesson) => lesson.wordIds)).size, 850);
+});
+
+test("ships the alphabet illustrations and 48 audible phoneme clips", async () => {
+  const illustrationUrl = new URL("../dist/client/illustrations/alphabet/", import.meta.url);
+  const audioUrl = new URL("../dist/client/audio/phonemes/", import.meta.url);
+  const illustrations = (await readdir(illustrationUrl)).filter((name) => name.endsWith(".webp"));
+  const clips = (await readdir(audioUrl)).filter((name) => name.endsWith(".mp3"));
+
+  assert.equal(illustrations.length, 6);
+  assert.equal(clips.length, 48);
+  for (const name of [...illustrations.map((item) => [illustrationUrl, item]), ...clips.map((item) => [audioUrl, item])]) {
+    const [directory, file] = name;
+    assert.ok((await stat(new URL(file, directory))).size > 1_000, `${file} should contain real media data`);
+  }
+});
+
+test("ships 197 local word-picture SVGs with an attribution manifest", async () => {
+  const pictureUrl = new URL("../dist/client/illustrations/words/", import.meta.url);
+  const pictures = (await readdir(pictureUrl)).filter((name) => name.endsWith(".svg"));
+  const manifest = JSON.parse(await readFile(new URL("manifest.json", pictureUrl), "utf8"));
+
+  assert.equal(pictures.length, 197);
+  assert.equal(manifest.count, 197);
+  assert.equal(new Set(manifest.assets.map((item) => item.wordId)).size, 197);
+  await access(new URL("NOTICE.md", pictureUrl));
+  for (const name of pictures) {
+    const assetUrl = new URL(name, pictureUrl);
+    assert.ok((await stat(assetUrl)).size > 100, `${name} should contain a real SVG graphic`);
+    assert.match(await readFile(assetUrl, "utf8"), /<svg\b/);
+  }
+});
+
+test("pre-caches the built shell while optional learning media fail independently", async () => {
+  const worker = await readFile(new URL("../dist/client/sw.js", import.meta.url), "utf8");
+  assert.match(worker, /cacheBuiltAppShell/);
+  assert.match(worker, /Promise\.allSettled/);
+  assert.match(worker, /WORD_PICTURE_MANIFEST/);
+  assert.match(worker, /optional offline assets will be retried/);
 });
 
 test("keeps starter-only assets out of the final source", async () => {

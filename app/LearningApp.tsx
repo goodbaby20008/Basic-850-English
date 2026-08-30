@@ -27,6 +27,7 @@ type FoundationTab = "letters" | "sounds";
 type Accent = "uk" | "us";
 type Grade = "again" | "hard" | "good" | "easy";
 type TypingSource = "basic850" | "classics";
+type FontScale = "compact" | "balanced" | "large";
 
 type RelatedWord = { word: string; relation: string };
 type WordRecord = {
@@ -110,6 +111,7 @@ const EMPTY_PROGRESS: ProgressState = {
 
 const STORAGE_KEY = "basic850-progress-v1";
 const ACCENT_KEY = "basic850-accent";
+const FONT_SCALE_KEY = "basic850-font-scale";
 const TYPING_STORAGE_KEY = "basic850-typing-v1";
 const INTERVALS = [0, 1, 3, 7, 14, 30, 60];
 
@@ -191,6 +193,12 @@ const LETTER_PICTURES: Record<string, string> = {
   a: "🍎", b: "📚", c: "🐱", d: "🐶", e: "🥚", f: "🐟", g: "🎁", h: "👒", i: "🖋️", j: "🧃",
   k: "🪁", l: "💡", m: "🌙", n: "🪺", o: "🍊", p: "🖊️", q: "👑", r: "🐇", s: "☀️", t: "🌳",
   u: "☂️", v: "🚐", w: "🐋", x: "🎼", y: "🪀", z: "🦓",
+};
+
+const LETTER_NAME_SPEECH: Record<string, string> = {
+  a: "ay", b: "bee", c: "see", d: "dee", e: "ee", f: "eff", g: "gee", h: "aitch", i: "eye",
+  j: "jay", k: "kay", l: "el", m: "em", n: "en", o: "oh", p: "pee", q: "cue", r: "ar",
+  s: "ess", t: "tee", u: "you", v: "vee", w: "double u", x: "ex", y: "why",
 };
 
 function normalizeProgress(value: unknown): ProgressState | null {
@@ -326,6 +334,7 @@ export default function LearningApp() {
   const [progressReady, setProgressReady] = useState(false);
   const [foundationTab, setFoundationTab] = useState<FoundationTab>("letters");
   const [accent, setAccent] = useState<Accent>("uk");
+  const [fontScale, setFontScale] = useState<FontScale>("balanced");
   const [activeWord, setActiveWord] = useState<WordRecord | null>(null);
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null);
   const [lessonIndex, setLessonIndex] = useState(0);
@@ -382,6 +391,8 @@ export default function LearningApp() {
         }
         const savedAccent = window.localStorage.getItem(ACCENT_KEY);
         if (savedAccent === "uk" || savedAccent === "us") setAccent(savedAccent);
+        const savedFontScale = window.localStorage.getItem(FONT_SCALE_KEY);
+        if (savedFontScale === "compact" || savedFontScale === "balanced" || savedFontScale === "large") setFontScale(savedFontScale);
       } catch {
         setToast("本机进度读取失败，已从空白进度开始。可稍后导入备份。");
       } finally {
@@ -482,6 +493,11 @@ export default function LearningApp() {
   function changeAccent(next: Accent) {
     setAccent(next);
     window.localStorage.setItem(ACCENT_KEY, next);
+  }
+
+  function changeFontScale(next: FontScale) {
+    setFontScale(next);
+    window.localStorage.setItem(FONT_SCALE_KEY, next);
   }
 
   function speak(text: string, nextAccent = accent) {
@@ -646,7 +662,7 @@ export default function LearningApp() {
   }
 
   return (
-    <div className="learning-shell">
+    <div className={`learning-shell font-scale-${fontScale}`}>
       <header className="app-header">
         <button className="brand app-brand" type="button" onClick={() => navigate("home")}>
           <img className="ideal-city-logo" src="/branding/ideal-city-club-logo.png" alt="理想城俱乐部" />
@@ -660,6 +676,11 @@ export default function LearningApp() {
           ))}
         </nav>
         <div className="header-tools">
+          <div className="font-size-switch" role="group" aria-label="页面字号">
+            <button type="button" aria-label="缩小字号" aria-pressed={fontScale === "compact"} className={fontScale === "compact" ? "active" : ""} onClick={() => changeFontScale("compact")}>A−</button>
+            <button type="button" aria-label="恢复协调字号" aria-pressed={fontScale === "balanced"} className={fontScale === "balanced" ? "active" : ""} onClick={() => changeFontScale("balanced")}>A</button>
+            <button type="button" aria-label="放大字号" aria-pressed={fontScale === "large"} className={fontScale === "large" ? "active" : ""} onClick={() => changeFontScale("large")}>A+</button>
+          </div>
           <div className="accent-switch" role="group" aria-label="发音口音">
             <button type="button" aria-pressed={accent === "uk"} className={accent === "uk" ? "active" : ""} onClick={() => changeAccent("uk")}>UK</button>
             <button type="button" aria-pressed={accent === "us"} className={accent === "us" ? "active" : ""} onClick={() => changeAccent("us")}>US</button>
@@ -729,7 +750,11 @@ export default function LearningApp() {
 
       <footer className="app-footer">
         <div className="app-footer-credit">
-          <p>为了人人的智慧，为了人人的理想！同频请联系<a href="mailto:lx.city@qq.com">lx.city@qq.com</a>. 理想城二师兄出品.</p>
+          <p><strong>理想城：一次链接一生同行。</strong>追求理想、追求智慧，让世界因我更美好！</p>
+          <p>【愿景】 实现共同智慧共同富裕</p>
+          <p>【使命】 为了人人的智慧，为了人人的理想</p>
+          <p>【价值观】爱国 敬业 诚信 友善；开放 分享 成长 有爱</p>
+          <p className="app-footer-contact"><strong>同频请联系<a href="mailto:lx.city@qq.com">lx.city@qq.com</a>.<br />理想城二师兄出品.</strong></p>
           <small><strong>Basic 850</strong> · 一套可离线使用、进度留在本机的零基础英语教材</small>
         </div>
         <div className="app-footer-actions">
@@ -970,7 +995,7 @@ function AlphabetView({ completed, speak, accent, complete }: { completed: strin
 
   function sayLetterName(id: string, uppercase: string) {
     if (id === "z") speak(accent === "uk" ? "zed" : "zee");
-    else speak(uppercase);
+    else speak(LETTER_NAME_SPEECH[id] ?? uppercase.toLowerCase());
   }
 
   return (

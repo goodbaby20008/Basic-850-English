@@ -101,7 +101,11 @@ test("the shared shell carries Ideal City branding and keeps typing translations
   ]);
 
   assert.match(source, /ideal-city-club-logo\.png/);
-  assert.match(source, /为了人人的智慧，为了人人的理想！同频请联系/);
+  assert.match(source, /理想城：一次链接一生同行/);
+  assert.match(source, /追求理想、追求智慧，让世界因我更美好/);
+  assert.match(source, /【愿景】 实现共同智慧共同富裕/);
+  assert.match(source, /【使命】 为了人人的智慧，为了人人的理想/);
+  assert.match(source, /【价值观】爱国 敬业 诚信 友善；开放 分享 成长 有爱/);
   assert.match(source, /mailto:lx\.city@qq\.com/);
   assert.match(source, /理想城二师兄出品\./);
   assert.match(source, /从850个词，重新把英语学深一点/);
@@ -114,4 +118,9 @@ test("the shared shell carries Ideal City branding and keeps typing translations
   assert.match(source, /爱国 · 敬业 · 诚信 · 友善/);
   assert.match(css, /\.typing-hint\s*\{[^}]*font-size:\s*clamp\(17px,1\.8vw,21px\)/s);
   assert.match(css, /\.ideal-city-logo\s*\{[^}]*width:\s*52px/s);
+  assert.match(source, /aria-label="缩小字号"/);
+  assert.match(source, /aria-label="放大字号"/);
+  assert.match(source, /basic850-font-scale/);
+  assert.match(css, /grid-template-columns:\s*repeat\(6,minmax\(0,1fr\)\)/);
+  assert.match(css, /--page-title-min:\s*34px/);
 });

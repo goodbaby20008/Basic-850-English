@@ -149,3 +149,11 @@ test("six lessons cover all 26 letters exactly once and contain executable tasks
     "lesson coverage should match the complete alphabet",
   );
 });
+
+test("letter-name playback uses pronunciation-only prompts", async () => {
+  const source = await readFile(new URL("../app/LearningApp.tsx", import.meta.url), "utf8");
+  assert.match(source, /a: "ay", b: "bee", c: "see"/);
+  assert.match(source, /w: "double u", x: "ex", y: "why"/);
+  assert.match(source, /speak\(LETTER_NAME_SPEECH\[id\]/);
+  assert.doesNotMatch(source, /else speak\(uppercase\)/);
+});

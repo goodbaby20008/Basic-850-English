@@ -4,6 +4,7 @@ import path from "node:path";
 const root = path.resolve(import.meta.dirname, "..");
 const wordsData = JSON.parse(fs.readFileSync(path.join(root, "public/data/words.json"), "utf8"));
 const courseData = JSON.parse(fs.readFileSync(path.join(root, "public/data/course.json"), "utf8"));
+const classicsData = JSON.parse(fs.readFileSync(path.join(root, "public/data/classics.json"), "utf8"));
 const errors = [];
 const expectedCategories = {
   operations: 100,
@@ -61,6 +62,44 @@ if (mappedIds.length !== 850 || new Set(mappedIds).size !== 850) {
 const unknown = mappedIds.filter((id) => !new Set(ids).has(id));
 if (unknown.length) errors.push(`course mapping: ${unknown.length} unknown ids`);
 
+const classicVolumes = classicsData.volumes ?? [];
+const classicSections = classicVolumes.flatMap((volume) => volume.sections ?? []);
+const classicPrompts = classicsData.prompts ?? [];
+const classicIds = classicPrompts.map((item) => item.id);
+const classicMappedIds = classicSections.flatMap((section) => section.promptIds ?? []);
+if (classicVolumes.length !== 10) errors.push(`classics: expected 10 volumes, got ${classicVolumes.length}`);
+if (classicSections.length !== 61) errors.push(`classics: expected 61 practice sections, got ${classicSections.length}`);
+if (classicPrompts.length !== 825) errors.push(`classics: expected 825 prompts, got ${classicPrompts.length}`);
+if (new Set(classicIds).size !== classicPrompts.length) errors.push("classics: prompt ids must be unique");
+if (classicMappedIds.length !== classicPrompts.length || new Set(classicMappedIds).size !== classicPrompts.length) {
+  errors.push(`classics mapping: expected ${classicPrompts.length} placements/unique, got ${classicMappedIds.length}/${new Set(classicMappedIds).size}`);
+}
+for (const item of classicPrompts) {
+  const hanCount = Array.from(item.text ?? "").filter((character) => /\p{Script=Han}/u.test(character)).length;
+  const toneSyllables = (item.pinyinTone ?? "").split(/\s+/).filter(Boolean);
+  const plainSyllables = (item.pinyinPlain ?? "").split(/\s+/).filter(Boolean);
+  if (!item.text || !hanCount || !item.pinyinTone || !item.pinyinPlain) errors.push(`${item.id}: missing classics text or pinyin`);
+  if (toneSyllables.length !== hanCount || plainSyllables.length !== hanCount) {
+    errors.push(`${item.id}: expected ${hanCount} pinyin syllables, got ${toneSyllables.length}/${plainSyllables.length}`);
+  }
+  if (!/^[a-zv ]+$/.test(item.pinyinPlain ?? "")) errors.push(`${item.id}: pinyinPlain is not lowercase keyboard ASCII`);
+  if (!Array.isArray(item.sourceParagraphs) || !item.sourceParagraphs.length) errors.push(`${item.id}: missing DOCX paragraph trace`);
+}
+
+const classicByText = new Map(classicPrompts.map((item) => [item.text, item]));
+const expectedClassicalReadings = [
+  ["知者不惑，仁者不忧，勇者不惧。", "zhì zhě bù huò rén zhě bù yōu yǒng zhě bú jù"],
+  ["读书百遍，其义自见。", "dú shū bǎi biàn qí yì zì xiàn"],
+  ["日省其身。", "rì xǐng qí shēn"],
+  ["安时而处顺，哀乐不能入。", "ān shí ér chǔ shùn āi lè bù néng rù"],
+  ["为政以德，譬如北辰，居其所，而众星共之。", "wéi zhèng yǐ dé pì rú běi chén jū qí suǒ ér zhòng xīng gǒng zhī"],
+];
+for (const [text, expected] of expectedClassicalReadings) {
+  const item = classicByText.get(text);
+  if (!item) errors.push(`classics: missing audited passage ${text}`);
+  else if (item.pinyinTone !== expected) errors.push(`classics: reading drift for ${text}: ${item.pinyinTone}`);
+}
+
 if (errors.length) {
   console.error(`Data validation failed with ${errors.length} error(s):`);
   for (const error of errors.slice(0, 40)) console.error(`- ${error}`);
@@ -75,4 +114,7 @@ console.log(JSON.stringify({
   units: units.length,
   lessons: lessons.length,
   mappedWordIds: mappedIds.length,
+  classicVolumes: classicVolumes.length,
+  classicSections: classicSections.length,
+  classicPrompts: classicPrompts.length,
 }, null, 2));

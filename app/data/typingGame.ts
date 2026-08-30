@@ -2,6 +2,24 @@ export type TypingLanguageMode = "english" | "bilingual" | "chinese";
 export type TypingContentMode = "words" | "sentences" | "mixed";
 export type TypingScope = "lesson" | "learned" | "all";
 
+export type ClassicsRecord = {
+  id: string;
+  order: number;
+  volumeId: string;
+  volumeOrder: number;
+  volumeTitle: string;
+  sectionId: string;
+  sectionOrder: number;
+  sectionTitle: string;
+  text: string;
+  pinyinTone: string;
+  pinyinPlain: string;
+  sourceParagraphs: number[];
+  pinyinReview: "context-reviewed" | "dictionary-generated";
+};
+
+export type ClassicsPrompt = ClassicsRecord & { sessionId: string };
+
 export type TypingWordLike = {
   id: string;
   word: string;
@@ -59,6 +77,27 @@ export function createTypingSession(
     const kind = content === "mixed" ? (index % 2 === 0 ? "word" : "sentence") : content === "words" ? "word" : "sentence";
     return { id: `${word.id}-${kind}-${index}`, kind, word };
   });
+}
+
+export function createClassicsTypingSession(
+  records: ClassicsRecord[],
+  count: number,
+  random: () => number = Math.random,
+) {
+  if (!records.length || count <= 0) return [];
+  const order = shuffled(records, random);
+  return Array.from({ length: count }, (_, index): ClassicsPrompt => {
+    const record = order[index % order.length];
+    return { ...record, sessionId: `${record.id}-classic-${index}` };
+  });
+}
+
+export function classicsTypingTarget(prompt: ClassicsRecord, language: TypingLanguageMode) {
+  return language === "chinese" ? prompt.text : prompt.pinyinPlain;
+}
+
+export function classicsTypingHint(prompt: ClassicsRecord, language: TypingLanguageMode) {
+  return language === "bilingual" ? prompt.text : "";
 }
 
 export function compareTyping(target: string, typed: string): TypingComparison {

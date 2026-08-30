@@ -45,6 +45,25 @@ test("mixed sessions alternate words and sentences and fill the requested length
   assert.equal(new Set(prompts.map((prompt) => prompt.id)).size, 5);
 });
 
+test("classics sessions use keyboard-friendly pinyin while retaining Chinese hints", async () => {
+  const { classicsTypingHint, classicsTypingTarget, createClassicsTypingSession } = await loadTypingModule();
+  const classic = {
+    id: "classic-1",
+    text: "学而时习之，不亦说乎。",
+    pinyinTone: "xué ér shí xí zhī bú yì yuè hū",
+    pinyinPlain: "xue er shi xi zhi bu yi yue hu",
+  };
+  const prompts = createClassicsTypingSession([classic], 2, () => 0.5);
+
+  assert.equal(prompts.length, 2);
+  assert.notEqual(prompts[0].sessionId, prompts[1].sessionId);
+  assert.equal(classicsTypingTarget(prompts[0], "english"), classic.pinyinPlain);
+  assert.equal(classicsTypingTarget(prompts[0], "bilingual"), classic.pinyinPlain);
+  assert.equal(classicsTypingTarget(prompts[0], "chinese"), classic.text);
+  assert.equal(classicsTypingHint(prompts[0], "bilingual"), classic.text);
+  assert.equal(classicsTypingHint(prompts[0], "english"), "");
+});
+
 test("comparison marks characters and counts overflow as errors", async () => {
   const { compareTyping } = await loadTypingModule();
   const result = compareTyping("cat", "cot!");
@@ -69,5 +88,8 @@ test("typing view restores input focus for every prompt and supports automatic r
   assert.match(source, /speakRef\.current\(currentSpeech\)/);
   assert.match(source, /role="switch" aria-checked=\{settings\.autoRead\}/);
   assert.match(source, /aria-busy=\{locked\}/);
+  assert.match(source, /中华经典/);
+  assert.match(source, /speakChineseRef\.current\(currentSpeech\)/);
+  assert.match(source, /在这里输入无声调拼音/);
   assert.doesNotMatch(source, /disabled=\{locked\} spellCheck/);
 });

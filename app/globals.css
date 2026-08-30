@@ -524,6 +524,7 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .typing-settings fieldset + fieldset { padding-top: 23px; border-top: 1px solid var(--line); }
 .typing-settings legend { width: 100%; margin-bottom: 12px; padding: 0; color: var(--muted); font-size: 13px; font-weight: 800; }
 .typing-option-grid { display: grid; gap: 8px; }
+.typing-option-grid.two { grid-template-columns: repeat(2,1fr); }
 .typing-option-grid.three { grid-template-columns: repeat(3,1fr); }
 .typing-option-grid.counts { grid-template-columns: repeat(3,minmax(90px,150px)); }
 .typing-option-grid button { min-height: 58px; border: 1px solid var(--line); border-radius: 11px; padding: 11px 13px; background: rgba(245,242,233,.48); color: var(--ink); text-align: left; cursor: pointer; }
@@ -540,6 +541,10 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .typing-auto-read small { margin-top: 4px; color: var(--muted); font-size: 12px; }
 .typing-auto-read i { flex: 0 0 auto; min-width: 65px; border-radius: 999px; padding: 8px 10px; background: rgba(23,43,53,.09); color: var(--muted); font-size: 12px; font-style: normal; font-weight: 800; text-align: center; }
 .typing-auto-read.active i { background: var(--teal); color: white; }
+.typing-select { display: grid; gap: 8px; }
+.typing-select > span { color: var(--ink); font-size: 15px; font-weight: 750; }
+.typing-select select { width: 100%; min-height: 52px; border: 1px solid var(--line); border-radius: 11px; padding: 0 14px; background: #fff; color: var(--ink); font-size: 16px; }
+.typing-select small { color: var(--muted); font-size: 13px; }
 .typing-start { width: 100%; min-height: 55px; display: flex; justify-content: space-between; align-items: center; border: 0; border-radius: 12px; padding: 0 18px; background: var(--coral); color: #211f1d; font-size: 16px; font-weight: 850; cursor: pointer; }
 .typing-start:disabled { opacity: .45; cursor: not-allowed; }
 .typing-empty-note { margin: 11px 0 0; color: #9a382f; font-size: 13px; }
@@ -566,8 +571,11 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .typing-card-body { max-width: 930px; min-height: 470px; margin: 0 auto; padding: 31px 35px 34px; }
 .typing-card-body > .word-picture { width: min(440px,100%); margin: 0 auto 20px; }
 .typing-hint { margin: 8px 0 4px; color: var(--muted); font-size: 14px; font-weight: 500; line-height: 1.6; text-align: center; }
+.typing-pinyin-guide { margin: 3px auto 8px; color: var(--indigo); font-size: clamp(18px,2vw,24px); font-weight: 650; line-height: 1.65; text-align: center; }
+.typing-pinyin-guide span { display: block; margin-bottom: 2px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .08em; }
 .typing-target { min-height: 92px; margin: 16px 0 22px; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; font-family: Georgia, "Times New Roman", serif; font-size: clamp(32px,4.2vw,57px); line-height: 1.45; letter-spacing: .012em; text-align: center; }
 .typing-target.chinese { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: clamp(29px,3.7vw,48px); }
+.typing-target.pinyin { font-family: "Segoe UI", Arial, sans-serif; font-size: clamp(25px,3.1vw,42px); line-height: 1.6; }
 .typing-char { border-bottom: 3px solid transparent; border-radius: 3px; }
 .typing-char.correct { color: var(--teal); background: rgba(32,143,135,.08); }
 .typing-char.wrong { color: #b82e22; background: rgba(201,71,58,.14); border-color: #c9473a; }
@@ -702,7 +710,7 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 
 .toast { position: fixed; left: 50%; bottom: 28px; z-index: 120; transform: translateX(-50%); max-width: min(520px,calc(100% - 30px)); padding: 11px 16px; border-radius: 999px; background: var(--ink); color: white; box-shadow: 0 12px 36px rgba(8,20,25,.28); font-size: 10px; }
 .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
-button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid rgba(86,103,216,.35); outline-offset: 2px; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid rgba(86,103,216,.35); outline-offset: 2px; }
 
 /* Final type and touch baseline. Keep child-facing copy readable after all component rules. */
 .brand small, .app-nav button small { font-size: 11px; }
@@ -848,6 +856,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   .typing-best { margin-top: 18px; text-align: left; }
   .typing-settings { padding: 20px 17px; }
   .typing-option-grid.three { grid-template-columns: 1fr; }
+  .typing-option-grid.two { grid-template-columns: 1fr; }
   .typing-option-grid.counts { grid-template-columns: repeat(3,1fr); }
   .typing-live-stats { grid-template-columns: repeat(2,1fr); }
   .typing-live-stats > span:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
@@ -859,6 +868,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   .typing-target { min-height: 78px; font-size: 34px; }
   .typing-target.chinese { font-size: 30px; }
   .typing-hint { font-size: 13px; }
+  .typing-pinyin-guide { font-size: 18px; }
   .typing-feedback { align-items: flex-start; }
   .typing-feedback > span { padding-top: 12px; }
   .typing-result { padding: 32px 18px; }

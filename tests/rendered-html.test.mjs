@@ -67,6 +67,7 @@ test("pre-caches the built shell while optional learning media fail independentl
   assert.match(worker, /cacheBuiltAppShell/);
   assert.match(worker, /Promise\.allSettled/);
   assert.match(worker, /WORD_PICTURE_MANIFEST/);
+  assert.match(worker, /\/data\/classics\.json/);
   assert.match(worker, /optional offline assets will be retried/);
 });
 

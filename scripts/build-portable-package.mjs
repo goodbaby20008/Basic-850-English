@@ -8,8 +8,14 @@ await mkdir(packageRoot, { recursive: true });
 await cp(new URL("../deploy/portable/", import.meta.url), packageRoot, { recursive: true });
 await cp(new URL("../dist/client/", import.meta.url), new URL("./www/", packageRoot), { recursive: true });
 
+// cmd.exe may treat a UTF-8 BOM as part of the first command. Keep the launcher
+// BOM-free and use CRLF, then switch to code page 65001 on its first lines.
+const launcherUrl = new URL("./启动英语学习教材.cmd", packageRoot);
+const launcherText = (await readFile(launcherUrl, "utf8")).replace(/^\uFEFF/, "").replace(/\r?\n/g, "\r\n");
+await writeFile(launcherUrl, launcherText, "utf8");
+
 // Windows PowerShell 5.1 needs a BOM to decode Chinese UTF-8 source reliably.
-for (const relativePath of ["./启动英语学习教材.cmd", "./server/Basic850Server.ps1", "./使用说明.txt"]) {
+for (const relativePath of ["./server/Basic850Server.ps1", "./使用说明.txt"]) {
   const fileUrl = new URL(relativePath, packageRoot);
   const content = await readFile(fileUrl);
   const hasBom = content[0] === 0xef && content[1] === 0xbb && content[2] === 0xbf;

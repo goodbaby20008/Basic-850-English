@@ -29,3 +29,23 @@ are labelled `draft`; fully source-backed automatic selections are labelled
 
 The unlicensed reference repository named by the project owner is not ingested.
 Its table content is intentionally absent from the pipeline.
+
+## Chinese classics pinyin pipeline
+
+`extract-classics-docx.py` reads `../中华智慧启蒙经典诵读1.docx` and writes
+the original non-empty paragraphs, with Word paragraph indexes, to
+`content/classics-source.json`. `build-classics-data.mjs` then groups complete
+passages, applies the pinyin-pro complete dictionary plus contextual classical
+phrase overrides, and writes `public/data/classics.json`.
+
+Run from the `site` directory:
+
+```powershell
+python scripts/extract-classics-docx.py
+npm run generate:classics
+npm run validate:data
+```
+
+The ignored `work/classics-pinyin-audit.json` lists every generated passage
+that contains a polyphonic candidate. Contextual decisions belong in
+`CLASSICAL_PINYIN_OVERRIDES`; add a regression assertion for important changes.

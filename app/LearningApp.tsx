@@ -7,10 +7,15 @@ import { usageContrasts } from "./data/usageContrasts";
 import { wordPictures, wordPictureStats } from "./data/wordPictures";
 import {
   calculateTypingSpeed,
+  classicsTypingHint,
+  classicsTypingTarget,
   compareTyping,
+  createClassicsTypingSession,
   createTypingSession,
   typingHint,
   typingTarget,
+  type ClassicsPrompt,
+  type ClassicsRecord,
   type TypingContentMode,
   type TypingLanguageMode,
   type TypingPrompt,
@@ -21,6 +26,7 @@ type View = "home" | "sounds" | "course" | "typing" | "library" | "review" | "ab
 type FoundationTab = "letters" | "sounds";
 type Accent = "uk" | "us";
 type Grade = "again" | "hard" | "good" | "easy";
+type TypingSource = "basic850" | "classics";
 
 type RelatedWord = { word: string; relation: string };
 type WordRecord = {
@@ -63,6 +69,21 @@ type Unit = {
   lessons: Lesson[];
 };
 
+type ClassicsSection = {
+  id: string;
+  order: number;
+  title: string;
+  promptIds: string[];
+};
+
+type ClassicsVolume = {
+  id: string;
+  order: number;
+  title: string;
+  name: string;
+  sections: ClassicsSection[];
+};
+
 type WordProgress = {
   seen: boolean;
   stage: number;
@@ -93,21 +114,25 @@ const TYPING_STORAGE_KEY = "basic850-typing-v1";
 const INTERVALS = [0, 1, 3, 7, 14, 30, 60];
 
 type TypingSettings = {
+  source: TypingSource;
   language: TypingLanguageMode;
   content: TypingContentMode;
   scope: TypingScope;
   count: 10 | 20 | 50;
   autoRead: boolean;
+  classicsVolume: string;
   bestAccuracy: number;
   bestSpeed: number;
 };
 
 const DEFAULT_TYPING_SETTINGS: TypingSettings = {
+  source: "basic850",
   language: "bilingual",
   content: "mixed",
   scope: "lesson",
   count: 10,
   autoRead: true,
+  classicsVolume: "classic-volume-01",
   bestAccuracy: 0,
   bestSpeed: 0,
 };
@@ -118,11 +143,13 @@ function readTypingSettings(): TypingSettings {
     const saved = JSON.parse(window.localStorage.getItem(TYPING_STORAGE_KEY) ?? "null") as Partial<TypingSettings> | null;
     if (!saved) return DEFAULT_TYPING_SETTINGS;
     return {
+      source: ["basic850", "classics"].includes(saved.source ?? "") ? saved.source as TypingSource : DEFAULT_TYPING_SETTINGS.source,
       language: ["english", "bilingual", "chinese"].includes(saved.language ?? "") ? saved.language as TypingLanguageMode : DEFAULT_TYPING_SETTINGS.language,
       content: ["words", "sentences", "mixed"].includes(saved.content ?? "") ? saved.content as TypingContentMode : DEFAULT_TYPING_SETTINGS.content,
       scope: ["lesson", "learned", "all"].includes(saved.scope ?? "") ? saved.scope as TypingScope : DEFAULT_TYPING_SETTINGS.scope,
       count: [10, 20, 50].includes(saved.count ?? 0) ? saved.count as 10 | 20 | 50 : DEFAULT_TYPING_SETTINGS.count,
       autoRead: typeof saved.autoRead === "boolean" ? saved.autoRead : DEFAULT_TYPING_SETTINGS.autoRead,
+      classicsVolume: typeof saved.classicsVolume === "string" && saved.classicsVolume ? saved.classicsVolume : DEFAULT_TYPING_SETTINGS.classicsVolume,
       bestAccuracy: Number.isFinite(saved.bestAccuracy) ? Math.max(0, Number(saved.bestAccuracy)) : 0,
       bestSpeed: Number.isFinite(saved.bestSpeed) ? Math.max(0, Number(saved.bestSpeed)) : 0,
     };
@@ -292,6 +319,8 @@ export default function LearningApp() {
   const [view, setView] = useState<View>("home");
   const [words, setWords] = useState<WordRecord[]>([]);
   const [units, setUnits] = useState<Unit[]>([]);
+  const [classics, setClassics] = useState<ClassicsRecord[]>([]);
+  const [classicVolumes, setClassicVolumes] = useState<ClassicsVolume[]>([]);
   const [dataError, setDataError] = useState("");
   const [progress, setProgress] = useState<ProgressState>(EMPTY_PROGRESS);
   const [progressReady, setProgressReady] = useState(false);
@@ -329,10 +358,16 @@ export default function LearningApp() {
         if (!response.ok) throw new Error("课程地图未能载入");
         return response.json() as Promise<{ units: Unit[] }>;
       }),
+      fetch("/data/classics.json").then((response) => {
+        if (!response.ok) throw new Error("中华经典拼音数据未能载入");
+        return response.json() as Promise<{ volumes: ClassicsVolume[]; prompts: ClassicsRecord[] }>;
+      }),
     ])
-      .then(([wordData, courseData]) => {
+      .then(([wordData, courseData, classicsData]) => {
         setWords(wordData.words as WordRecord[]);
         setUnits(courseData.units as Unit[]);
+        setClassics(classicsData.prompts);
+        setClassicVolumes(classicsData.volumes);
       })
       .catch((error: Error) => setDataError(error.message));
   }, []);
@@ -462,6 +497,22 @@ export default function LearningApp() {
     utterance.rate = 0.78;
     const voice = voices.find((item) => item.lang.toLowerCase() === wanted.toLowerCase())
       ?? voices.find((item) => item.lang.toLowerCase().startsWith(wanted.toLowerCase().slice(0, 2)));
+    if (voice) utterance.voice = voice;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function speakChinese(text: string) {
+    if (!("speechSynthesis" in window)) {
+      setToast("当前浏览器不支持合成语音。");
+      return;
+    }
+    clipRef.current?.pause();
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "zh-CN";
+    utterance.rate = 0.74;
+    const voice = voices.find((item) => item.lang.toLowerCase() === "zh-cn")
+      ?? voices.find((item) => item.lang.toLowerCase().startsWith("zh"));
     if (voice) utterance.voice = voice;
     window.speechSynthesis.speak(utterance);
   }
@@ -657,11 +708,14 @@ export default function LearningApp() {
         {view === "typing" && (
           <TypingView
             words={words}
+            classics={classics}
+            classicVolumes={classicVolumes}
             wordMap={wordMap}
             nextLesson={nextLesson}
             progress={progress.words}
             accent={accent}
             speak={speak}
+            speakChinese={speakChinese}
           />
         )}
         {view === "library" && (
@@ -1068,24 +1122,36 @@ function LibraryView({ words, progress, accent, speak, openWord }: { words: Word
   );
 }
 
+type PracticePrompt = TypingPrompt | ClassicsPrompt;
+
+function isClassicsPrompt(prompt: PracticePrompt): prompt is ClassicsPrompt {
+  return "pinyinPlain" in prompt;
+}
+
 function TypingView({
   words,
+  classics,
+  classicVolumes,
   wordMap,
   nextLesson,
   progress,
   accent,
   speak,
+  speakChinese,
 }: {
   words: WordRecord[];
+  classics: ClassicsRecord[];
+  classicVolumes: ClassicsVolume[];
   wordMap: Map<string, WordRecord>;
   nextLesson?: Lesson;
   progress: Record<string, WordProgress>;
   accent: Accent;
   speak: (text: string) => void;
+  speakChinese: (text: string) => void;
 }) {
   const [settings, setSettings] = useState<TypingSettings>(readTypingSettings);
   const [status, setStatus] = useState<"setup" | "running" | "complete">("setup");
-  const [queue, setQueue] = useState<TypingPrompt[]>([]);
+  const [queue, setQueue] = useState<PracticePrompt[]>([]);
   const [index, setIndex] = useState(0);
   const [typed, setTyped] = useState("");
   const [startedAt, setStartedAt] = useState(0);
@@ -1103,26 +1169,36 @@ function TypingView({
   const transitionRef = useRef<number | null>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const speakRef = useRef(speak);
+  const speakChineseRef = useRef(speakChinese);
 
-  const pool = useMemo(() => {
+  const basicPool = useMemo(() => {
     if (settings.scope === "all") return words;
     if (settings.scope === "learned") return words.filter((word) => progress[word.id]?.seen);
     return nextLesson?.wordIds.map((id) => wordMap.get(id)).filter(Boolean) as WordRecord[] ?? [];
   }, [nextLesson, progress, settings.scope, wordMap, words]);
+  const classicsPool = useMemo(
+    () => settings.classicsVolume === "all" ? classics : classics.filter((item) => item.volumeId === settings.classicsVolume),
+    [classics, settings.classicsVolume],
+  );
+  const poolSize = settings.source === "classics" ? classicsPool.length : basicPool.length;
+  const selectedClassicVolume = classicVolumes.find((volume) => volume.id === settings.classicsVolume);
 
   const current = queue[index];
-  const target = current ? typingTarget(current, settings.language) : "";
-  const hint = current ? typingHint(current, settings.language) : "";
+  const currentIsClassics = Boolean(current && isClassicsPrompt(current));
+  const target = current ? (isClassicsPrompt(current) ? classicsTypingTarget(current, settings.language) : typingTarget(current, settings.language)) : "";
+  const hint = current ? (isClassicsPrompt(current) ? classicsTypingHint(current, settings.language) : typingHint(current, settings.language)) : "";
+  const pinyinGuide = current && isClassicsPrompt(current) && settings.language !== "chinese" ? current.pinyinTone : "";
   const comparison = useMemo(() => compareTyping(target, typed), [target, typed]);
   const accuracy = totalKeystrokes ? Math.round((correctKeystrokes / totalKeystrokes) * 100) : 100;
   const measuredElapsed = status === "complete" ? Math.max(1, finishedAt - startedAt) : Math.max(1, elapsedMs);
   const speed = calculateTypingSpeed(completedCharacters + (status === "running" ? comparison.correct : 0), measuredElapsed, settings.language);
   const speedUnit = settings.language === "chinese" ? "字/分" : "WPM";
-  const currentSpeech = current ? (current.kind === "word" ? current.word.word : current.word.example.en) : "";
+  const currentSpeech = current ? (isClassicsPrompt(current) ? current.text : current.kind === "word" ? current.word.word : current.word.example.en) : "";
 
   useEffect(() => {
     speakRef.current = speak;
-  }, [speak]);
+    speakChineseRef.current = speakChinese;
+  }, [speak, speakChinese]);
 
   useEffect(() => {
     window.localStorage.setItem(TYPING_STORAGE_KEY, JSON.stringify(settings));
@@ -1150,9 +1226,12 @@ function TypingView({
 
   useEffect(() => {
     if (status !== "running" || !settings.autoRead || !currentSpeech) return;
-    const timer = window.setTimeout(() => speakRef.current(currentSpeech), 120);
+    const timer = window.setTimeout(() => {
+      if (currentIsClassics) speakChineseRef.current(currentSpeech);
+      else speakRef.current(currentSpeech);
+    }, 120);
     return () => window.clearTimeout(timer);
-  }, [currentSpeech, settings.autoRead, status]);
+  }, [currentIsClassics, currentSpeech, settings.autoRead, status]);
 
   useEffect(() => () => {
     if (transitionRef.current !== null) window.clearTimeout(transitionRef.current);
@@ -1173,7 +1252,7 @@ function TypingView({
     return () => window.clearTimeout(timer);
   }, [accuracy, speed, status]);
 
-  function updateSetting<K extends keyof Pick<TypingSettings, "language" | "content" | "scope" | "count" | "autoRead">>(key: K, value: TypingSettings[K]) {
+  function updateSetting<K extends keyof Pick<TypingSettings, "source" | "language" | "content" | "scope" | "count" | "autoRead" | "classicsVolume">>(key: K, value: TypingSettings[K]) {
     setSettings((currentSettings) => ({ ...currentSettings, [key]: value }));
   }
 
@@ -1183,7 +1262,8 @@ function TypingView({
 
   function playCurrentSpeech() {
     if (!currentSpeech) return;
-    speakRef.current(currentSpeech);
+    if (currentIsClassics) speakChineseRef.current(currentSpeech);
+    else speakRef.current(currentSpeech);
     returnFocusToInput();
   }
 
@@ -1193,7 +1273,9 @@ function TypingView({
   }
 
   function startSession() {
-    const prompts = createTypingSession(pool, settings.content, settings.count);
+    const prompts: PracticePrompt[] = settings.source === "classics"
+      ? createClassicsTypingSession(classicsPool, settings.count)
+      : createTypingSession(basicPool, settings.content, settings.count);
     if (!prompts.length) return;
     if (transitionRef.current !== null) window.clearTimeout(transitionRef.current);
     const now = Date.now();
@@ -1272,7 +1354,15 @@ function TypingView({
     if (value === target) advance(true);
   }
 
-  const languageOptions: { id: TypingLanguageMode; label: string; note: string }[] = [
+  const sourceOptions: { id: TypingSource; label: string; note: string }[] = [
+    { id: "basic850", label: "Basic 850", note: "英语单词与例句" },
+    { id: "classics", label: "中华经典", note: "中文原文与拼音" },
+  ];
+  const languageOptions: { id: TypingLanguageMode; label: string; note: string }[] = settings.source === "classics" ? [
+    { id: "english", label: "纯拼音", note: "输入无声调字母" },
+    { id: "bilingual", label: "拼音＋中文", note: "输入拼音，显示原文" },
+    { id: "chinese", label: "纯中文", note: "使用中文输入法" },
+  ] : [
     { id: "english", label: "纯英文", note: "英文显示与输入" },
     { id: "bilingual", label: "中英结合", note: "输入英文，显示中文" },
     { id: "chinese", label: "纯中文", note: "使用中文输入法" },
@@ -1291,36 +1381,42 @@ function TypingView({
   return (
     <section className="content-view typing-view">
       <div className="view-intro typing-intro">
-        <div><p className="eyebrow">TYPE · SEE · REMEMBER</p><h1>把常用词打进手指记忆。</h1><p>照着目标输入，不限时；系统逐字标出正确与错误。练习沿用850词卡中的单词和教学例句，不会改动你的记忆复习等级。</p></div>
+        <div><p className="eyebrow">TYPE · SEE · REMEMBER</p><h1>把英语与经典打进手指记忆。</h1><p>可练 Basic 850 单词与例句，也可练《中华智慧启蒙·经典诵读》的中文和拼音。系统逐字标出正误，不会改动英语词卡的复习等级。</p></div>
         <div className="typing-best"><span>本机最佳</span><strong>{Math.round(settings.bestAccuracy)}%</strong><small>{settings.bestSpeed} {settings.language === "chinese" ? "字/分" : "WPM"}</small></div>
       </div>
 
       {status === "setup" ? (
         <div className="typing-setup-layout">
           <div className="typing-settings">
-            <fieldset><legend>1 · 语言模式</legend><div className="typing-option-grid three">{languageOptions.map((option) => <button key={option.id} type="button" className={settings.language === option.id ? "active" : ""} onClick={() => updateSetting("language", option.id)}><strong>{option.label}</strong><span>{option.note}</span></button>)}</div></fieldset>
-            <fieldset><legend>2 · 练习内容</legend><div className="typing-option-grid three">{contentOptions.map((option) => <button key={option.id} type="button" className={settings.content === option.id ? "active" : ""} onClick={() => updateSetting("content", option.id)}>{option.label}</button>)}</div></fieldset>
-            <fieldset><legend>3 · 词汇范围</legend><div className="typing-option-grid three">{scopeOptions.map((option) => <button key={option.id} type="button" className={settings.scope === option.id ? "active" : ""} onClick={() => updateSetting("scope", option.id)}><strong>{option.label}</strong><span>{option.count} 词可用</span></button>)}</div></fieldset>
-            <fieldset><legend>4 · 朗读设置</legend><button className={`typing-auto-read ${settings.autoRead ? "active" : ""}`} type="button" role="switch" aria-checked={settings.autoRead} onClick={() => updateSetting("autoRead", !settings.autoRead)}><span><strong>自动朗读英文</strong><small>每个新单词或例句出现时播放一次</small></span><i>{settings.autoRead ? "已开启" : "已关闭"}</i></button></fieldset>
-            <fieldset><legend>5 · 本轮题数</legend><div className="typing-option-grid counts">{([10, 20, 50] as const).map((count) => <button key={count} type="button" className={settings.count === count ? "active" : ""} onClick={() => updateSetting("count", count)}>{count} 题</button>)}</div></fieldset>
-            <button className="typing-start" type="button" onClick={startSession} disabled={!pool.length}>开始键盘练习 <span>→</span></button>
-            {!pool.length ? <p className="typing-empty-note">这个范围还没有可用内容。请先完成一节词汇课，或选择“完整850词”。</p> : null}
+            <fieldset><legend>1 · 练习教材</legend><div className="typing-option-grid two">{sourceOptions.map((option) => <button key={option.id} type="button" className={settings.source === option.id ? "active" : ""} onClick={() => updateSetting("source", option.id)}><strong>{option.label}</strong><span>{option.note}</span></button>)}</div></fieldset>
+            <fieldset><legend>2 · 语言模式</legend><div className="typing-option-grid three">{languageOptions.map((option) => <button key={option.id} type="button" className={settings.language === option.id ? "active" : ""} onClick={() => updateSetting("language", option.id)}><strong>{option.label}</strong><span>{option.note}</span></button>)}</div></fieldset>
+            {settings.source === "basic850" ? <>
+              <fieldset><legend>3 · 练习内容</legend><div className="typing-option-grid three">{contentOptions.map((option) => <button key={option.id} type="button" className={settings.content === option.id ? "active" : ""} onClick={() => updateSetting("content", option.id)}>{option.label}</button>)}</div></fieldset>
+              <fieldset><legend>4 · 词汇范围</legend><div className="typing-option-grid three">{scopeOptions.map((option) => <button key={option.id} type="button" className={settings.scope === option.id ? "active" : ""} onClick={() => updateSetting("scope", option.id)}><strong>{option.label}</strong><span>{option.count} 词可用</span></button>)}</div></fieldset>
+            </> : (
+              <fieldset><legend>3 · 经典卷目</legend><label className="typing-select"><span>选择练习范围</span><select value={settings.classicsVolume} onChange={(event) => updateSetting("classicsVolume", event.target.value)}><option value="all">全部十卷</option>{classicVolumes.map((volume) => <option key={volume.id} value={volume.id}>{volume.title}</option>)}</select><small>{selectedClassicVolume ? `${selectedClassicVolume.sections.length} 个小节` : `${classicVolumes.length} 卷`} · {classicsPool.length} 条句段可用</small></label></fieldset>
+            )}
+            <fieldset><legend>{settings.source === "basic850" ? "5" : "4"} · 朗读设置</legend><button className={`typing-auto-read ${settings.autoRead ? "active" : ""}`} type="button" role="switch" aria-checked={settings.autoRead} onClick={() => updateSetting("autoRead", !settings.autoRead)}><span><strong>自动朗读{settings.source === "classics" ? "中文原文" : "英文"}</strong><small>每个新{settings.source === "classics" ? "句段" : "单词或例句"}出现时播放一次</small></span><i>{settings.autoRead ? "已开启" : "已关闭"}</i></button></fieldset>
+            <fieldset><legend>{settings.source === "basic850" ? "6" : "5"} · 本轮题数</legend><div className="typing-option-grid counts">{([10, 20, 50] as const).map((count) => <button key={count} type="button" className={settings.count === count ? "active" : ""} onClick={() => updateSetting("count", count)}>{count} 题</button>)}</div></fieldset>
+            <button className="typing-start" type="button" onClick={startSession} disabled={!poolSize}>开始键盘练习 <span>→</span></button>
+            {!poolSize ? <p className="typing-empty-note">这个范围还没有可用内容。请更换范围，或确认数据文件已完整复制。</p> : null}
           </div>
-          <aside className="typing-guide"><span className="keyboard-art" aria-hidden="true">A S D F&nbsp;&nbsp; J K L ;</span><h2>怎么练最有效？</h2><ol><li>先求准确，再求速度。</li><li>英文句首大写、空格和标点都要照着输入。</li><li>纯中文模式请切换系统中文输入法。</li><li>听一遍英文，再跟读一遍，手、眼、耳一起参与。</li></ol></aside>
+          <aside className="typing-guide"><span className="keyboard-art" aria-hidden="true">A S D F&nbsp;&nbsp; J K L ;</span><h2>怎么练最有效？</h2><ol>{settings.source === "classics" ? <><li>先看带声调拼音，再输入普通字母。</li><li>输入拼音时不用声调，ü 统一键入 v。</li><li>纯中文模式请切换系统中文输入法。</li><li>听一遍原文，再跟读一遍。</li></> : <><li>先求准确，再求速度。</li><li>英文句首大写、空格和标点都要照着输入。</li><li>纯中文模式请切换系统中文输入法。</li><li>听一遍英文，再跟读一遍。</li></>}</ol></aside>
         </div>
       ) : status === "running" && current ? (
         <div className="typing-session">
           <div className="typing-live-stats"><span><small>进度</small><strong>{index + 1} / {queue.length}</strong></span><span><small>准确率</small><strong>{accuracy}%</strong></span><span><small>速度</small><strong>{speed} {speedUnit}</strong></span><span><small>连续完成</small><strong>{streak}</strong></span></div>
           <div className="typing-progress-line"><i style={{ width: `${((index + (locked ? 1 : 0)) / queue.length) * 100}%` }} /></div>
           <article className={`typing-card ${locked ? "is-correct" : ""}`}>
-            <div className="typing-card-meta"><span>{current.kind === "word" ? "WORD · 单词" : "SENTENCE · 例句"}</span><div className="typing-card-actions"><button type="button" onClick={playCurrentSpeech}>▶ 播放英语 · {accent.toUpperCase()}</button><button className={`typing-mini-toggle ${settings.autoRead ? "active" : ""}`} type="button" role="switch" aria-checked={settings.autoRead} onClick={toggleAutoRead}>自动朗读 {settings.autoRead ? "开" : "关"}</button></div></div>
+            <div className="typing-card-meta"><span>{isClassicsPrompt(current) ? `CLASSIC · ${current.volumeTitle} · ${current.sectionTitle}` : current.kind === "word" ? "WORD · 单词" : "SENTENCE · 例句"}</span><div className="typing-card-actions"><button type="button" onClick={playCurrentSpeech}>▶ {isClassicsPrompt(current) ? "播放中文" : `播放英语 · ${accent.toUpperCase()}`}</button><button className={`typing-mini-toggle ${settings.autoRead ? "active" : ""}`} type="button" role="switch" aria-checked={settings.autoRead} onClick={toggleAutoRead}>自动朗读 {settings.autoRead ? "开" : "关"}</button></div></div>
             <div className="typing-card-body">
-              <WordPicture wordId={current.word.id} variant="compact" />
+              {!isClassicsPrompt(current) ? <WordPicture wordId={current.word.id} variant="compact" /> : null}
+              {pinyinGuide ? <p className="typing-pinyin-guide"><span>带声调参考</span>{pinyinGuide}</p> : null}
               {hint ? <p className="typing-hint">{hint}</p> : null}
-              <p className={`typing-target ${settings.language === "chinese" ? "chinese" : ""}`} lang={settings.language === "chinese" ? "zh-CN" : "en"} aria-label={`输入目标：${target}`}>
+              <p className={`typing-target ${settings.language === "chinese" ? "chinese" : ""} ${currentIsClassics && settings.language !== "chinese" ? "pinyin" : ""}`} lang={settings.language === "chinese" ? "zh-CN" : "en"} aria-label={`输入目标：${target}`}>
                 {comparison.characters.map((character, characterIndex) => <span key={`${characterIndex}-${character.value}`} className={`typing-char ${character.state} ${characterIndex === Array.from(typed).length ? "current" : ""}`}>{character.value === " " ? "\u00a0" : character.value}</span>)}
               </p>
-              <label className="typing-input-label"><span>{settings.language === "chinese" ? "在这里输入中文" : "Type here · 在这里输入"}</span><textarea ref={inputRef} lang={settings.language === "chinese" ? "zh-CN" : "en"} rows={current.kind === "sentence" ? 3 : 1} value={typed} aria-busy={locked} spellCheck={false} autoCapitalize="off" autoCorrect="off" onCompositionStart={() => { composingRef.current = true; }} onCompositionEnd={(event) => handleCompositionEnd(event.currentTarget.value)} onChange={(event) => handleTyping(event.currentTarget.value)} placeholder={settings.language === "chinese" ? "切换中文输入法后开始…" : "Start typing…"} /></label>
+              <label className="typing-input-label"><span>{settings.language === "chinese" ? "在这里输入中文" : currentIsClassics ? "在这里输入无声调拼音（ü 用 v）" : "Type here · 在这里输入"}</span><textarea ref={inputRef} lang={settings.language === "chinese" ? "zh-CN" : "en"} rows={isClassicsPrompt(current) || (!isClassicsPrompt(current) && current.kind === "sentence") ? 3 : 1} value={typed} aria-busy={locked} spellCheck={false} autoCapitalize="off" autoCorrect="off" onCompositionStart={() => { composingRef.current = true; }} onCompositionEnd={(event) => handleCompositionEnd(event.currentTarget.value)} onChange={(event) => handleTyping(event.currentTarget.value)} placeholder={settings.language === "chinese" ? "切换中文输入法后开始…" : currentIsClassics ? "例如：xue er shi xi zhi" : "Start typing…"} /></label>
               <div className="typing-feedback" aria-live="polite"><span className={comparison.wrong ? "has-error" : ""}>{comparison.wrong ? `有 ${comparison.wrong} 个字符不一致，请退格修改。` : locked ? "完全正确！准备下一题…" : "逐字输入，红色字符需要修正。"}</span><button type="button" onClick={() => advance(false)} disabled={locked}>跳过此题</button></div>
             </div>
           </article>
@@ -1330,7 +1426,7 @@ function TypingView({
         <div className="typing-result">
           <p className="eyebrow">SESSION COMPLETE · 本轮完成</p><h2>{completedCount === queue.length ? "练习完成，手指又熟了一点。" : "本轮已结束，结果已保存在本机。"}</h2>
           <div><span><small>完成</small><strong>{completedCount} / {queue.length}</strong></span><span><small>准确率</small><strong>{accuracy}%</strong></span><span><small>速度</small><strong>{speed} {speedUnit}</strong></span><span><small>最长连续</small><strong>{bestStreak}</strong></span></div>
-          <p>速度只用于观察自己的变化：英文按每5个字符折算1词，中文按每分钟字符数计算。先保持准确，再慢慢加速。</p>
+          <p>速度只用于观察自己的变化：英文和拼音按每5个字符折算1词，中文按每分钟字符数计算。先保持准确，再慢慢加速。</p>
           <div className="typing-result-actions"><button className="button primary" type="button" onClick={startSession}>再练一轮 <span>→</span></button><button className="button secondary" type="button" onClick={() => setStatus("setup")}>调整练习设置</button></div>
         </div>
       )}

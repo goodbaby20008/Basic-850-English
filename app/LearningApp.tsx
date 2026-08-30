@@ -5,8 +5,19 @@ import { alphabetEvidence, alphabetLessons, alphabetLetters } from "./data/alpha
 import { phonemes, phoneticLessons, phoneticsEvidence } from "./data/phonetics";
 import { usageContrasts } from "./data/usageContrasts";
 import { wordPictures, wordPictureStats } from "./data/wordPictures";
+import {
+  calculateTypingSpeed,
+  compareTyping,
+  createTypingSession,
+  typingHint,
+  typingTarget,
+  type TypingContentMode,
+  type TypingLanguageMode,
+  type TypingPrompt,
+  type TypingScope,
+} from "./data/typingGame";
 
-type View = "home" | "sounds" | "course" | "library" | "review" | "about";
+type View = "home" | "sounds" | "course" | "typing" | "library" | "review" | "about";
 type FoundationTab = "letters" | "sounds";
 type Accent = "uk" | "us";
 type Grade = "again" | "hard" | "good" | "easy";
@@ -78,7 +89,44 @@ const EMPTY_PROGRESS: ProgressState = {
 
 const STORAGE_KEY = "basic850-progress-v1";
 const ACCENT_KEY = "basic850-accent";
+const TYPING_STORAGE_KEY = "basic850-typing-v1";
 const INTERVALS = [0, 1, 3, 7, 14, 30, 60];
+
+type TypingSettings = {
+  language: TypingLanguageMode;
+  content: TypingContentMode;
+  scope: TypingScope;
+  count: 10 | 20 | 50;
+  bestAccuracy: number;
+  bestSpeed: number;
+};
+
+const DEFAULT_TYPING_SETTINGS: TypingSettings = {
+  language: "bilingual",
+  content: "mixed",
+  scope: "lesson",
+  count: 10,
+  bestAccuracy: 0,
+  bestSpeed: 0,
+};
+
+function readTypingSettings(): TypingSettings {
+  if (typeof window === "undefined") return DEFAULT_TYPING_SETTINGS;
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(TYPING_STORAGE_KEY) ?? "null") as Partial<TypingSettings> | null;
+    if (!saved) return DEFAULT_TYPING_SETTINGS;
+    return {
+      language: ["english", "bilingual", "chinese"].includes(saved.language ?? "") ? saved.language as TypingLanguageMode : DEFAULT_TYPING_SETTINGS.language,
+      content: ["words", "sentences", "mixed"].includes(saved.content ?? "") ? saved.content as TypingContentMode : DEFAULT_TYPING_SETTINGS.content,
+      scope: ["lesson", "learned", "all"].includes(saved.scope ?? "") ? saved.scope as TypingScope : DEFAULT_TYPING_SETTINGS.scope,
+      count: [10, 20, 50].includes(saved.count ?? 0) ? saved.count as 10 | 20 | 50 : DEFAULT_TYPING_SETTINGS.count,
+      bestAccuracy: Number.isFinite(saved.bestAccuracy) ? Math.max(0, Number(saved.bestAccuracy)) : 0,
+      bestSpeed: Number.isFinite(saved.bestSpeed) ? Math.max(0, Number(saved.bestSpeed)) : 0,
+    };
+  } catch {
+    return DEFAULT_TYPING_SETTINGS;
+  }
+}
 
 const CATEGORY_META: Record<string, { label: string; short: string; tone: string; count: number }> = {
   operations: { label: "操作及功能词", short: "Operations", tone: "indigo", count: 100 },
@@ -92,12 +140,13 @@ const NAV_ITEMS: { id: View; zh: string; en: string }[] = [
   { id: "home", zh: "今日", en: "Today" },
   { id: "sounds", zh: "入门", en: "Basics" },
   { id: "course", zh: "课程", en: "Course" },
+  { id: "typing", zh: "键盘", en: "Typing" },
   { id: "library", zh: "词库", en: "Words" },
   { id: "review", zh: "复习", en: "Review" },
   { id: "about", zh: "说明", en: "About" },
 ];
 
-const MOBILE_NAV_IDS: View[] = ["home", "sounds", "course", "library", "review"];
+const MOBILE_NAV_IDS: View[] = ["home", "sounds", "course", "typing", "library", "review"];
 
 const ALPHABET_STORY_ART = [
   { ids: ["a", "b", "c", "d", "e"], src: "/illustrations/alphabet/alphabet-01-a-e.webp", alt: "苹果、球、猫、狗和鸟巢里的鸡蛋", caption: "A-E · apple, ball, cat, dog, egg" },
@@ -602,6 +651,16 @@ export default function LearningApp() {
         {view === "course" && (
           <CourseView units={units} progress={progress.words} startLesson={startLesson} wordMap={wordMap} />
         )}
+        {view === "typing" && (
+          <TypingView
+            words={words}
+            wordMap={wordMap}
+            nextLesson={nextLesson}
+            progress={progress.words}
+            accent={accent}
+            speak={speak}
+          />
+        )}
         {view === "library" && (
           <LibraryView words={words} progress={progress.words} accent={accent} speak={speak} openWord={openWord} />
         )}
@@ -737,6 +796,9 @@ function HomeView({
         </button>
         <button type="button" onClick={() => navigate("course")}>
           <span>03</span><div><strong>核心词 Basic 850</strong><small>{seenCount} / 850 词已见</small></div><i>→</i>
+        </button>
+        <button type="button" onClick={() => navigate("typing")}>
+          <span>04</span><div><strong>键盘练习 Typing</strong><small>单词与例句 · 三种语言模式</small></div><i>→</i>
         </button>
       </section>
 
@@ -1003,6 +1065,241 @@ function LibraryView({ words, progress, accent, speak, openWord }: { words: Word
   );
 }
 
+function TypingView({
+  words,
+  wordMap,
+  nextLesson,
+  progress,
+  accent,
+  speak,
+}: {
+  words: WordRecord[];
+  wordMap: Map<string, WordRecord>;
+  nextLesson?: Lesson;
+  progress: Record<string, WordProgress>;
+  accent: Accent;
+  speak: (text: string) => void;
+}) {
+  const [settings, setSettings] = useState<TypingSettings>(readTypingSettings);
+  const [status, setStatus] = useState<"setup" | "running" | "complete">("setup");
+  const [queue, setQueue] = useState<TypingPrompt[]>([]);
+  const [index, setIndex] = useState(0);
+  const [typed, setTyped] = useState("");
+  const [startedAt, setStartedAt] = useState(0);
+  const [finishedAt, setFinishedAt] = useState(0);
+  const [elapsedMs, setElapsedMs] = useState(0);
+  const [correctKeystrokes, setCorrectKeystrokes] = useState(0);
+  const [totalKeystrokes, setTotalKeystrokes] = useState(0);
+  const [completedCharacters, setCompletedCharacters] = useState(0);
+  const [completedCount, setCompletedCount] = useState(0);
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(0);
+  const [locked, setLocked] = useState(false);
+  const lockedRef = useRef(false);
+  const composingRef = useRef(false);
+  const transitionRef = useRef<number | null>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const pool = useMemo(() => {
+    if (settings.scope === "all") return words;
+    if (settings.scope === "learned") return words.filter((word) => progress[word.id]?.seen);
+    return nextLesson?.wordIds.map((id) => wordMap.get(id)).filter(Boolean) as WordRecord[] ?? [];
+  }, [nextLesson, progress, settings.scope, wordMap, words]);
+
+  const current = queue[index];
+  const target = current ? typingTarget(current, settings.language) : "";
+  const hint = current ? typingHint(current, settings.language) : "";
+  const comparison = useMemo(() => compareTyping(target, typed), [target, typed]);
+  const accuracy = totalKeystrokes ? Math.round((correctKeystrokes / totalKeystrokes) * 100) : 100;
+  const measuredElapsed = status === "complete" ? Math.max(1, finishedAt - startedAt) : Math.max(1, elapsedMs);
+  const speed = calculateTypingSpeed(completedCharacters + (status === "running" ? comparison.correct : 0), measuredElapsed, settings.language);
+  const speedUnit = settings.language === "chinese" ? "字/分" : "WPM";
+
+  useEffect(() => {
+    window.localStorage.setItem(TYPING_STORAGE_KEY, JSON.stringify(settings));
+  }, [settings]);
+
+  useEffect(() => {
+    if (status !== "running") return;
+    const update = () => setElapsedMs(Date.now() - startedAt);
+    update();
+    const timer = window.setInterval(update, 500);
+    return () => window.clearInterval(timer);
+  }, [startedAt, status]);
+
+  useEffect(() => () => {
+    if (transitionRef.current !== null) window.clearTimeout(transitionRef.current);
+  }, []);
+
+  useEffect(() => {
+    if (status !== "complete") return;
+    const timer = window.setTimeout(() => {
+      setSettings((currentSettings) => {
+        const next = {
+          ...currentSettings,
+          bestAccuracy: Math.max(currentSettings.bestAccuracy, accuracy),
+          bestSpeed: Math.max(currentSettings.bestSpeed, speed),
+        };
+        return next.bestAccuracy === currentSettings.bestAccuracy && next.bestSpeed === currentSettings.bestSpeed ? currentSettings : next;
+      });
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [accuracy, speed, status]);
+
+  function updateSetting<K extends keyof Pick<TypingSettings, "language" | "content" | "scope" | "count">>(key: K, value: TypingSettings[K]) {
+    setSettings((currentSettings) => ({ ...currentSettings, [key]: value }));
+  }
+
+  function focusInput() {
+    window.requestAnimationFrame(() => inputRef.current?.focus());
+  }
+
+  function startSession() {
+    const prompts = createTypingSession(pool, settings.content, settings.count);
+    if (!prompts.length) return;
+    if (transitionRef.current !== null) window.clearTimeout(transitionRef.current);
+    const now = Date.now();
+    setQueue(prompts);
+    setIndex(0);
+    setTyped("");
+    setStartedAt(now);
+    setFinishedAt(0);
+    setElapsedMs(1);
+    setCorrectKeystrokes(0);
+    setTotalKeystrokes(0);
+    setCompletedCharacters(0);
+    setCompletedCount(0);
+    setStreak(0);
+    setBestStreak(0);
+    lockedRef.current = false;
+    setLocked(false);
+    setStatus("running");
+    focusInput();
+  }
+
+  function finishSession() {
+    setFinishedAt(Date.now());
+    setStatus("complete");
+    lockedRef.current = false;
+    setLocked(false);
+  }
+
+  function advance(success: boolean) {
+    if (!current || lockedRef.current) return;
+    lockedRef.current = true;
+    if (success) {
+      setCompletedCharacters((value) => value + Array.from(target).length);
+      setCompletedCount((value) => value + 1);
+      setStreak((value) => {
+        const next = value + 1;
+        setBestStreak((best) => Math.max(best, next));
+        return next;
+      });
+    } else {
+      setStreak(0);
+    }
+    setLocked(true);
+    transitionRef.current = window.setTimeout(() => {
+      if (index + 1 >= queue.length) {
+        finishSession();
+        return;
+      }
+      setIndex((value) => value + 1);
+      setTyped("");
+      lockedRef.current = false;
+      setLocked(false);
+      focusInput();
+    }, success ? 620 : 0);
+  }
+
+  function handleTyping(nextValue: string) {
+    if (!current || locked) return;
+    const previousCharacters = Array.from(typed);
+    const nextCharacters = Array.from(nextValue);
+    const targetCharacters = Array.from(target);
+    if (nextCharacters.length > previousCharacters.length) {
+      let newlyCorrect = 0;
+      const start = previousCharacters.length;
+      for (let position = start; position < nextCharacters.length; position += 1) {
+        if (nextCharacters[position] === targetCharacters[position]) newlyCorrect += 1;
+      }
+      setCorrectKeystrokes((value) => value + newlyCorrect);
+      setTotalKeystrokes((value) => value + nextCharacters.length - start);
+    }
+    setTyped(nextValue);
+    if (!composingRef.current && nextValue === target) advance(true);
+  }
+
+  function handleCompositionEnd(value: string) {
+    composingRef.current = false;
+    if (value === target) advance(true);
+  }
+
+  const languageOptions: { id: TypingLanguageMode; label: string; note: string }[] = [
+    { id: "english", label: "纯英文", note: "英文显示与输入" },
+    { id: "bilingual", label: "中英结合", note: "输入英文，显示中文" },
+    { id: "chinese", label: "纯中文", note: "使用中文输入法" },
+  ];
+  const contentOptions: { id: TypingContentMode; label: string }[] = [
+    { id: "words", label: "只练单词" },
+    { id: "sentences", label: "只练例句" },
+    { id: "mixed", label: "单词 + 例句" },
+  ];
+  const scopeOptions: { id: TypingScope; label: string; count: number }[] = [
+    { id: "lesson", label: "当前10词课", count: nextLesson?.wordIds.length ?? 0 },
+    { id: "learned", label: "学过的词", count: words.filter((word) => progress[word.id]?.seen).length },
+    { id: "all", label: "完整850词", count: words.length },
+  ];
+
+  return (
+    <section className="content-view typing-view">
+      <div className="view-intro typing-intro">
+        <div><p className="eyebrow">TYPE · SEE · REMEMBER</p><h1>把常用词打进手指记忆。</h1><p>照着目标输入，不限时；系统逐字标出正确与错误。练习沿用850词卡中的单词和教学例句，不会改动你的记忆复习等级。</p></div>
+        <div className="typing-best"><span>本机最佳</span><strong>{Math.round(settings.bestAccuracy)}%</strong><small>{settings.bestSpeed} {settings.language === "chinese" ? "字/分" : "WPM"}</small></div>
+      </div>
+
+      {status === "setup" ? (
+        <div className="typing-setup-layout">
+          <div className="typing-settings">
+            <fieldset><legend>1 · 语言模式</legend><div className="typing-option-grid three">{languageOptions.map((option) => <button key={option.id} type="button" className={settings.language === option.id ? "active" : ""} onClick={() => updateSetting("language", option.id)}><strong>{option.label}</strong><span>{option.note}</span></button>)}</div></fieldset>
+            <fieldset><legend>2 · 练习内容</legend><div className="typing-option-grid three">{contentOptions.map((option) => <button key={option.id} type="button" className={settings.content === option.id ? "active" : ""} onClick={() => updateSetting("content", option.id)}>{option.label}</button>)}</div></fieldset>
+            <fieldset><legend>3 · 词汇范围</legend><div className="typing-option-grid three">{scopeOptions.map((option) => <button key={option.id} type="button" className={settings.scope === option.id ? "active" : ""} onClick={() => updateSetting("scope", option.id)}><strong>{option.label}</strong><span>{option.count} 词可用</span></button>)}</div></fieldset>
+            <fieldset><legend>4 · 本轮题数</legend><div className="typing-option-grid counts">{([10, 20, 50] as const).map((count) => <button key={count} type="button" className={settings.count === count ? "active" : ""} onClick={() => updateSetting("count", count)}>{count} 题</button>)}</div></fieldset>
+            <button className="typing-start" type="button" onClick={startSession} disabled={!pool.length}>开始键盘练习 <span>→</span></button>
+            {!pool.length ? <p className="typing-empty-note">这个范围还没有可用内容。请先完成一节词汇课，或选择“完整850词”。</p> : null}
+          </div>
+          <aside className="typing-guide"><span className="keyboard-art" aria-hidden="true">A S D F&nbsp;&nbsp; J K L ;</span><h2>怎么练最有效？</h2><ol><li>先求准确，再求速度。</li><li>英文句首大写、空格和标点都要照着输入。</li><li>纯中文模式请切换系统中文输入法。</li><li>听一遍英文，再跟读一遍，手、眼、耳一起参与。</li></ol></aside>
+        </div>
+      ) : status === "running" && current ? (
+        <div className="typing-session">
+          <div className="typing-live-stats"><span><small>进度</small><strong>{index + 1} / {queue.length}</strong></span><span><small>准确率</small><strong>{accuracy}%</strong></span><span><small>速度</small><strong>{speed} {speedUnit}</strong></span><span><small>连续完成</small><strong>{streak}</strong></span></div>
+          <div className="typing-progress-line"><i style={{ width: `${((index + (locked ? 1 : 0)) / queue.length) * 100}%` }} /></div>
+          <article className={`typing-card ${locked ? "is-correct" : ""}`}>
+            <div className="typing-card-meta"><span>{current.kind === "word" ? "WORD · 单词" : "SENTENCE · 例句"}</span><button type="button" onClick={() => speak(current.kind === "word" ? current.word.word : current.word.example.en)}>▶ 播放英语 · {accent.toUpperCase()}</button></div>
+            <div className="typing-card-body">
+              <WordPicture wordId={current.word.id} variant="compact" />
+              {hint ? <p className="typing-hint">{hint}</p> : null}
+              <p className={`typing-target ${settings.language === "chinese" ? "chinese" : ""}`} lang={settings.language === "chinese" ? "zh-CN" : "en"} aria-label={`输入目标：${target}`}>
+                {comparison.characters.map((character, characterIndex) => <span key={`${characterIndex}-${character.value}`} className={`typing-char ${character.state} ${characterIndex === Array.from(typed).length ? "current" : ""}`}>{character.value === " " ? "\u00a0" : character.value}</span>)}
+              </p>
+              <label className="typing-input-label"><span>{settings.language === "chinese" ? "在这里输入中文" : "Type here · 在这里输入"}</span><textarea ref={inputRef} lang={settings.language === "chinese" ? "zh-CN" : "en"} rows={current.kind === "sentence" ? 3 : 1} value={typed} disabled={locked} spellCheck={false} autoCapitalize="off" autoCorrect="off" onCompositionStart={() => { composingRef.current = true; }} onCompositionEnd={(event) => handleCompositionEnd(event.currentTarget.value)} onChange={(event) => handleTyping(event.currentTarget.value)} placeholder={settings.language === "chinese" ? "切换中文输入法后开始…" : "Start typing…"} /></label>
+              <div className="typing-feedback" aria-live="polite"><span className={comparison.wrong ? "has-error" : ""}>{comparison.wrong ? `有 ${comparison.wrong} 个字符不一致，请退格修改。` : locked ? "完全正确！准备下一题…" : "逐字输入，红色字符需要修正。"}</span><button type="button" onClick={() => advance(false)} disabled={locked}>跳过此题</button></div>
+            </div>
+          </article>
+          <button className="typing-end" type="button" onClick={finishSession}>结束本轮并查看结果</button>
+        </div>
+      ) : (
+        <div className="typing-result">
+          <p className="eyebrow">SESSION COMPLETE · 本轮完成</p><h2>{completedCount === queue.length ? "练习完成，手指又熟了一点。" : "本轮已结束，结果已保存在本机。"}</h2>
+          <div><span><small>完成</small><strong>{completedCount} / {queue.length}</strong></span><span><small>准确率</small><strong>{accuracy}%</strong></span><span><small>速度</small><strong>{speed} {speedUnit}</strong></span><span><small>最长连续</small><strong>{bestStreak}</strong></span></div>
+          <p>速度只用于观察自己的变化：英文按每5个字符折算1词，中文按每分钟字符数计算。先保持准确，再慢慢加速。</p>
+          <div className="typing-result-actions"><button className="button primary" type="button" onClick={startSession}>再练一轮 <span>→</span></button><button className="button secondary" type="button" onClick={() => setStatus("setup")}>调整练习设置</button></div>
+        </div>
+      )}
+    </section>
+  );
+}
+
 function ReviewView({ words, dueWords, progress, accent, speak, grade, exportProgress, importRef }: { words: WordRecord[]; dueWords: WordRecord[]; progress: Record<string, WordProgress>; accent: Accent; speak: (text: string) => void; grade: (id: string, grade: Grade, mode?: string) => void; exportProgress: () => void; importRef: React.RefObject<HTMLInputElement | null> }) {
   const queue = dueWords.length ? dueWords : words.filter((word) => progress[word.id]?.seen).slice(0, 10);
   const [index, setIndex] = useState(0);
@@ -1058,7 +1355,7 @@ function AboutView() {
         <article><span className="about-index">01</span><h2>可以确认的历史</h2><p>1930年，英国语言学者与语义学者 C. K. Ogden 出版了 Basic English 方案，试图用受控词汇与规则承担大量日常交流。核心表由100个操作及功能词、600个事物词和150个性质词组成。</p><p>丘吉尔后来公开支持研究与推广这套方案；H. G. Wells 也把它写入对未来世界语言的想象。</p></article>
         <article><span className="about-index">02</span><h2>需要纠正的流行说法</h2><p>最后一栏是50个“反向性质词”，不是50对词，也不能说“学一个等于学两个”。Wells 的《The Shape of Things to Come》也不是《世界大战》的续集。</p><p>奥威尔确实接触并讨论过 Basic English；学界常将 Newspeak 看作对受控语言与政治宣传的回应之一，但它不是唯一且经作者确认的灵感来源。</p></article>
         <article><span className="about-index">03</span><h2>这份词表的真实身份</h2><p>项目中的 PDF 不是 Ogden 1930年原著扫描件，而是2015年打印的福岛大学网页词表。它能可靠确认850词及五类排布，但不能证明每个词的现代频率，也不包含字母课、音标、释义、例句或音频。</p><p>网站将“原始词表层”和“现代教学增补层”分开保存。字母课程、儿童插图、独立合成单音与词卡内容都属于现代教学层，不冒充 Ogden 原作。</p><p>首批为 {wordPictureStats.totalMappedCount} 个适合看图理解的词加入本地配图；精确图标为“词义图解”，只能帮助联想的图会明确标成“联想图”。没有可靠图形对应的词宁可留白。</p></article>
-        <article><span className="about-index">04</span><h2>学习目标的边界</h2><p>850词是课程骨架，不是“学完即达到A2”的证书。CEFR 衡量的是学习者能完成的语言任务和控制能力，不是单纯词数。</p><p>本教材的诚实目标是：从26个字母起步，帮助零基础学习者建立早期 A1–A2 所需的听、说、读、写基础，并在熟悉场景中主动使用核心词。</p></article>
+        <article><span className="about-index">04</span><h2>学习目标的边界</h2><p>850词是课程骨架，不是“学完即达到A2”的证书。CEFR 衡量的是学习者能完成的语言任务和控制能力，不是单纯词数。</p><p>本教材的诚实目标是：从26个字母起步，帮助零基础学习者建立早期 A1–A2 所需的听、说、读、写基础，并在熟悉场景中主动使用核心词。</p><p>键盘练习复用现代教学层中的例句；照着目标打字有助于熟悉拼写，但不等于已经能主动回忆，因此不会直接提高词卡复习等级。</p></article>
       </div>
       <div className="source-panel"><h2>主要依据</h2><a href="https://www.mpi.nl/publications/item2366945/basic-english-general-introduction-rules-and-grammar" target="_blank" rel="noreferrer">Max Planck Institute：Ogden 1930年书目记录 ↗</a><a href="https://winstonchurchill.org/resources/speeches/1941-1945-war-leader/the-gift-of-a-common-tongue/" target="_blank" rel="noreferrer">Churchill 1943年哈佛演讲全文 ↗</a><a href="https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-companion-volume-and-its-language-versions" target="_blank" rel="noreferrer">Council of Europe：CEFR Companion Volume ↗</a><a href="https://learnenglish.britishcouncil.org/apps/learnenglish-sounds-right" target="_blank" rel="noreferrer">British Council：Sounds Right 音位表 ↗</a><a href="https://github.com/espeak-ng/espeak-ng" target="_blank" rel="noreferrer">eSpeak NG：独立合成单音的可复现生成器 ↗</a><a href="https://github.com/jdecked/twemoji/tree/v17.0.2" target="_blank" rel="noreferrer">Twemoji：词卡配图（CC BY 4.0）↗</a></div>
     </section>

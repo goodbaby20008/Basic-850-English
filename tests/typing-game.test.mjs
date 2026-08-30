@@ -93,3 +93,25 @@ test("typing view restores input focus for every prompt and supports automatic r
   assert.match(source, /在这里输入无声调拼音/);
   assert.doesNotMatch(source, /disabled=\{locked\} spellCheck/);
 });
+
+test("the shared shell carries Ideal City branding and keeps typing translations readable", async () => {
+  const [source, css] = await Promise.all([
+    readFile(new URL("../app/LearningApp.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(source, /ideal-city-club-logo\.png/);
+  assert.match(source, /为了人人的智慧，为了人人的理想！同频请联系/);
+  assert.match(source, /mailto:lx\.city@qq\.com/);
+  assert.match(source, /理想城二师兄出品\./);
+  assert.match(source, /从850个词，重新把英语学深一点/);
+  assert.match(source, /AI 能让执行更快，却替代不了/);
+  assert.match(source, /理念/);
+  assert.match(source, /使命/);
+  assert.match(source, /愿景/);
+  assert.match(source, /一次链接一生同行/);
+  assert.match(source, /实现共同智慧共同富裕/);
+  assert.match(source, /爱国 · 敬业 · 诚信 · 友善/);
+  assert.match(css, /\.typing-hint\s*\{[^}]*font-size:\s*clamp\(17px,1\.8vw,21px\)/s);
+  assert.match(css, /\.ideal-city-logo\s*\{[^}]*width:\s*52px/s);
+});

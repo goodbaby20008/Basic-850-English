@@ -649,7 +649,7 @@ export default function LearningApp() {
     <div className="learning-shell">
       <header className="app-header">
         <button className="brand app-brand" type="button" onClick={() => navigate("home")}>
-          <span className="brand-mark">B</span>
+          <img className="ideal-city-logo" src="/branding/ideal-city-club-logo.png" alt="理想城俱乐部" />
           <span><strong>Basic 850</strong><small>English from the roots</small></span>
         </button>
         <nav className="app-nav" aria-label="学习栏目">
@@ -728,8 +728,11 @@ export default function LearningApp() {
       </main>
 
       <footer className="app-footer">
-        <p><strong>Basic 850</strong> · 一套可离线使用、进度留在本机的零基础英语教材</p>
-        <div>
+        <div className="app-footer-credit">
+          <p>为了人人的智慧，为了人人的理想！同频请联系<a href="mailto:lx.city@qq.com">lx.city@qq.com</a>. 理想城二师兄出品.</p>
+          <small><strong>Basic 850</strong> · 一套可离线使用、进度留在本机的零基础英语教材</small>
+        </div>
+        <div className="app-footer-actions">
           <button type="button" onClick={() => navigate("about")}>教材说明</button>
           <button type="button" onClick={exportProgress}>导出进度</button>
           <button type="button" onClick={() => importRef.current?.click()}>导入进度</button>
@@ -1484,14 +1487,59 @@ function ReviewView({ words, dueWords, progress, accent, speak, grade, exportPro
 function AboutView() {
   return (
     <section className="content-view about-view">
-      <div className="view-intro"><p className="eyebrow">FACTS · INFERENCE · BOUNDARIES</p><h1>关于这850词，也关于我们不该夸大的事。</h1><p>这套教材尊重 Ogden 的核心词表，但不会把历史故事、产品主张或自动生成内容伪装成已经证实的事实。</p></div>
+      <div className="view-intro"><p className="eyebrow">WHY BASIC 850 · 项目缘起</p><h1>从850个词，重新把英语学深一点。</h1><p>这不只是一份词表，也是一场关于学习方法的实验：先把根扎稳，再让表达自然生长。</p></div>
+
+      <article className="about-story">
+        <p className="about-story-kicker">先讲一个你可能从未听说过的人。</p>
+        <h2>C. K. Ogden 与一场“只留下语言骨架”的实验</h2>
+        <p>1930年，英国语言学者、语义学者 C. K. Ogden 提出 Basic English。他追问的是一个近乎偏执的问题：如果只保留最核心的词汇和规则，英语还能不能承担日常交流？他的方案给出了一个醒目的答案——<strong>850个词</strong>。</p>
+        <p>这850词不是现代考试的高频词排名，而是一套经过设计的受控英语词表。Ogden 把它们组织成五个区域，让少量词通过组合承担尽可能多的表达任务：</p>
+        <div className="about-category-list" aria-label="Basic English 五类词汇">
+          <div><strong>100</strong><span>操作及功能词</span><small>Operations · 让句子运转的基础词</small></div>
+          <div><strong>400</strong><span>普通事物</span><small>General things · 广泛使用的事物词</small></div>
+          <div><strong>200</strong><span>可描绘事物</span><small>Picturable things · door、fire、river 等</small></div>
+          <div><strong>100</strong><span>普通性质</span><small>Qualities · clear、simple 等</small></div>
+          <div><strong>50</strong><span>反向性质词</span><small>Opposite qualities · 补足性质表达</small></div>
+        </div>
+        <p>这套方案很快超出了语言学的小圈子。丘吉尔在1943年的哈佛演讲中公开倡议研究和推广 Basic English，希望它帮助更多人共享一种交流工具；H. G. Wells 在《The Shape of Things to Come》中，把它写进对未来共同语言的想象。乔治·奥威尔对 Basic English 的态度则经历过变化；研究者常把《1984》的 Newspeak 视为对受控语言和政治宣传的警惕之一，但不能把它说成唯一且由作者亲自确认的灵感来源。</p>
+
+        <section>
+          <h3>对今天的学习者，它真正有价值的地方是“先深，再广”</h3>
+          <p>许多人学英语，长期被厚词汇书和考试大纲推着走：背了忘，忘了再背，认识很多中文释义，却很少把词真正用进句子。Basic 850 提供了另一条路——先掌握一组能反复组合的核心材料，再逐步扩展。</p>
+          <p>真正的“学会”不只是看到英文能想起中文，还包括听得出、读得准、拼得对、能放进句子，也知道相近词在不同语境里为什么不能随意互换。<strong>根扎得够深，枝才能生得够远。</strong></p>
+        </section>
+
+        <section>
+          <h3>于是，我和 AI 一起把一份黑白词表做成了这套教材</h3>
+          <p>项目里的 PDF 只提供了850词的骨架，信息简洁，排版也带着上个世纪的样子。我想做的，是把这副骨架变成零基础学习者今天真的能用、孩子也愿意打开的学习工具。</p>
+          <p>现在，每个词都有中文释义、简单英文定义、双语例句、英美音标和点读功能；五类词使用不同颜色，适合形象理解的词配有本地插图。对容易混淆的常用词，词卡还会解释近义词和易混词的使用差别；不适合硬凑的内容则宁可留白。</p>
+          <p>网站还从26个英文字母和基础音标开始，加入分课学习、间隔复习、单词与例句键盘练习，以及《中华智慧启蒙·经典诵读》的中文和拼音练习。无需注册，学习进度只保存在当前浏览器，也可以随时导出备份。</p>
+          <p>这件事确实花了不少时间，也花了不少 Token。准确地说，是我提出方向、持续做出取舍和校正，再让 AI 参与资料整理、内容生成与网站开发。AI 能让执行更快，却替代不了“为什么要做、为谁而做、哪些地方不能将就”的判断。</p>
+        </section>
+
+        <blockquote>如果你学了很多年英语，却仍然觉得自己“会认、不会用”，也许这850个词，正是一个值得重新开始的起点。</blockquote>
+      </article>
+
+      <section className="ideal-city-section" aria-labelledby="ideal-city-title">
+        <p className="eyebrow">IDEAL CITY · 理想城理念</p>
+        <h2 id="ideal-city-title">一次链接一生同行。</h2>
+        <p className="ideal-city-intro">追求理想、追求智慧，让世界因我更美好！</p>
+        <p className="ideal-city-definition"><strong>【理想城】</strong>是激发每个人追求理想、智慧的集体所有制大学校、大家庭。倡导每个人共同自学成为全面发展的通识人才。包含学习、生活、工作、娱乐、创业的线上到线下的学校大家庭。</p>
+        <dl className="ideal-city-profile">
+          <div><dt>愿景</dt><dd>实现共同智慧共同富裕</dd></div>
+          <div><dt>使命</dt><dd>为了人人的智慧，为了人人的理想</dd></div>
+          <div><dt>价值观</dt><dd>爱国 · 敬业 · 诚信 · 友善<br />开放 · 分享 · 成长 · 有爱</dd></div>
+        </dl>
+      </section>
+
+      <div className="about-facts-heading"><p className="eyebrow">FACTS · INFERENCE · BOUNDARIES</p><h2>事实与边界</h2><p>尊重 Ogden 的核心词表，也不把历史故事、产品主张或自动生成内容伪装成已经证实的事实。</p></div>
       <div className="about-grid">
         <article><span className="about-index">01</span><h2>可以确认的历史</h2><p>1930年，英国语言学者与语义学者 C. K. Ogden 出版了 Basic English 方案，试图用受控词汇与规则承担大量日常交流。核心表由100个操作及功能词、600个事物词和150个性质词组成。</p><p>丘吉尔后来公开支持研究与推广这套方案；H. G. Wells 也把它写入对未来世界语言的想象。</p></article>
         <article><span className="about-index">02</span><h2>需要纠正的流行说法</h2><p>最后一栏是50个“反向性质词”，不是50对词，也不能说“学一个等于学两个”。Wells 的《The Shape of Things to Come》也不是《世界大战》的续集。</p><p>奥威尔确实接触并讨论过 Basic English；学界常将 Newspeak 看作对受控语言与政治宣传的回应之一，但它不是唯一且经作者确认的灵感来源。</p></article>
         <article><span className="about-index">03</span><h2>这份词表的真实身份</h2><p>项目中的 PDF 不是 Ogden 1930年原著扫描件，而是2015年打印的福岛大学网页词表。它能可靠确认850词及五类排布，但不能证明每个词的现代频率，也不包含字母课、音标、释义、例句或音频。</p><p>网站将“原始词表层”和“现代教学增补层”分开保存。字母课程、儿童插图、独立合成单音与词卡内容都属于现代教学层，不冒充 Ogden 原作。</p><p>首批为 {wordPictureStats.totalMappedCount} 个适合看图理解的词加入本地配图；精确图标为“词义图解”，只能帮助联想的图会明确标成“联想图”。没有可靠图形对应的词宁可留白。</p></article>
         <article><span className="about-index">04</span><h2>学习目标的边界</h2><p>850词是课程骨架，不是“学完即达到A2”的证书。CEFR 衡量的是学习者能完成的语言任务和控制能力，不是单纯词数。</p><p>本教材的诚实目标是：从26个字母起步，帮助零基础学习者建立早期 A1–A2 所需的听、说、读、写基础，并在熟悉场景中主动使用核心词。</p><p>键盘练习复用现代教学层中的例句；照着目标打字有助于熟悉拼写，但不等于已经能主动回忆，因此不会直接提高词卡复习等级。</p></article>
       </div>
-      <div className="source-panel"><h2>主要依据</h2><a href="https://www.mpi.nl/publications/item2366945/basic-english-general-introduction-rules-and-grammar" target="_blank" rel="noreferrer">Max Planck Institute：Ogden 1930年书目记录 ↗</a><a href="https://winstonchurchill.org/resources/speeches/1941-1945-war-leader/the-gift-of-a-common-tongue/" target="_blank" rel="noreferrer">Churchill 1943年哈佛演讲全文 ↗</a><a href="https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-companion-volume-and-its-language-versions" target="_blank" rel="noreferrer">Council of Europe：CEFR Companion Volume ↗</a><a href="https://learnenglish.britishcouncil.org/apps/learnenglish-sounds-right" target="_blank" rel="noreferrer">British Council：Sounds Right 音位表 ↗</a><a href="https://github.com/espeak-ng/espeak-ng" target="_blank" rel="noreferrer">eSpeak NG：独立合成单音的可复现生成器 ↗</a><a href="https://github.com/jdecked/twemoji/tree/v17.0.2" target="_blank" rel="noreferrer">Twemoji：词卡配图（CC BY 4.0）↗</a></div>
+      <div className="source-panel"><h2>主要依据</h2><a href="https://www.mpi.nl/publications/item2366945/basic-english-general-introduction-rules-and-grammar" target="_blank" rel="noreferrer">Max Planck Institute：Ogden 1930年书目记录 ↗</a><a href="https://winstonchurchill.org/resources/speeches/1941-1945-war-leader/the-gift-of-a-common-tongue/" target="_blank" rel="noreferrer">Churchill 1943年哈佛演讲全文 ↗</a><a href="https://www.telelib.com/authors/W/WellsHerbertGeorge/prose/thingstocome/thingstocome50.html" target="_blank" rel="noreferrer">H. G. Wells：《The Shape of Things to Come》相关章节 ↗</a><a href="https://www.thebritishacademy.ac.uk/blog/how-language-fake-news-echoes-20th-century-propaganda/" target="_blank" rel="noreferrer">British Academy：Orwell 对 Basic English 的态度变化 ↗</a><a href="https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-companion-volume-and-its-language-versions" target="_blank" rel="noreferrer">Council of Europe：CEFR Companion Volume ↗</a><a href="https://learnenglish.britishcouncil.org/apps/learnenglish-sounds-right" target="_blank" rel="noreferrer">British Council：Sounds Right 音位表 ↗</a><a href="https://github.com/espeak-ng/espeak-ng" target="_blank" rel="noreferrer">eSpeak NG：独立合成单音的可复现生成器 ↗</a><a href="https://github.com/jdecked/twemoji/tree/v17.0.2" target="_blank" rel="noreferrer">Twemoji：词卡配图（CC BY 4.0）↗</a></div>
     </section>
   );
 }

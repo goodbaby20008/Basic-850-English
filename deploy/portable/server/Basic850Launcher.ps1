@@ -10,7 +10,7 @@ $guidePath = Join-Path $PackageRoot "使用说明.txt"
 if (-not (Test-Path -LiteralPath (Join-Path $siteRoot "index.html")) -or -not (Test-Path -LiteralPath $serverScript)) {
     Write-Host ""
     Write-Host "启动文件不完整：没有找到 www\index.html 或服务器脚本。" -ForegroundColor Red
-    Write-Host "请重新复制整个 Basic850-便携版 文件夹，不要只复制启动文件。"
+    Write-Host "请重新复制整个 理想城Basic850-便携版 文件夹，不要只复制启动文件。"
     [void](Read-Host "按 Enter 键退出")
     exit 1
 }

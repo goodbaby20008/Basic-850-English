@@ -22,7 +22,7 @@ npm run preview
 
 构建产物位于 `dist/client/`，预览地址为 `http://localhost:4173/`。整个目录可直接放到 Nginx、对象存储或其他静态网站服务中。
 
-构建还会生成 `dist/portable/Basic850-便携版/`。把这个文件夹完整复制到另一台 Windows 10/11 电脑后，只需双击 `启动英语学习教材.cmd`，即可选择“仅本机使用”或“局域网共享”，服务启动后会自动打开浏览器。目标电脑不需要安装 Node.js、Python 或 Nginx。
+构建还会生成 `dist/portable/理想城Basic850-便携版/` 和可直接分发的 `dist/portable/理想城Basic850-便携版.zip`。解压后，把整个文件夹复制到另一台 Windows 10/11 电脑，只需双击 `启动英语学习教材.cmd`，即可选择“仅本机使用”或“局域网共享”，服务启动后会自动打开浏览器。目标电脑不需要安装 Node.js、Python 或 Nginx。
 
 当前资源路径按域名根目录生成；部署时请将站点放在域名根路径。正式服务器建议启用 HTTPS，否则浏览器不会启用离线 Service Worker。
 

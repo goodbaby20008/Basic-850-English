@@ -97,6 +97,7 @@ type TypingSettings = {
   content: TypingContentMode;
   scope: TypingScope;
   count: 10 | 20 | 50;
+  autoRead: boolean;
   bestAccuracy: number;
   bestSpeed: number;
 };
@@ -106,6 +107,7 @@ const DEFAULT_TYPING_SETTINGS: TypingSettings = {
   content: "mixed",
   scope: "lesson",
   count: 10,
+  autoRead: true,
   bestAccuracy: 0,
   bestSpeed: 0,
 };
@@ -120,6 +122,7 @@ function readTypingSettings(): TypingSettings {
       content: ["words", "sentences", "mixed"].includes(saved.content ?? "") ? saved.content as TypingContentMode : DEFAULT_TYPING_SETTINGS.content,
       scope: ["lesson", "learned", "all"].includes(saved.scope ?? "") ? saved.scope as TypingScope : DEFAULT_TYPING_SETTINGS.scope,
       count: [10, 20, 50].includes(saved.count ?? 0) ? saved.count as 10 | 20 | 50 : DEFAULT_TYPING_SETTINGS.count,
+      autoRead: typeof saved.autoRead === "boolean" ? saved.autoRead : DEFAULT_TYPING_SETTINGS.autoRead,
       bestAccuracy: Number.isFinite(saved.bestAccuracy) ? Math.max(0, Number(saved.bestAccuracy)) : 0,
       bestSpeed: Number.isFinite(saved.bestSpeed) ? Math.max(0, Number(saved.bestSpeed)) : 0,
     };
@@ -1099,6 +1102,7 @@ function TypingView({
   const composingRef = useRef(false);
   const transitionRef = useRef<number | null>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const speakRef = useRef(speak);
 
   const pool = useMemo(() => {
     if (settings.scope === "all") return words;
@@ -1114,6 +1118,11 @@ function TypingView({
   const measuredElapsed = status === "complete" ? Math.max(1, finishedAt - startedAt) : Math.max(1, elapsedMs);
   const speed = calculateTypingSpeed(completedCharacters + (status === "running" ? comparison.correct : 0), measuredElapsed, settings.language);
   const speedUnit = settings.language === "chinese" ? "字/分" : "WPM";
+  const currentSpeech = current ? (current.kind === "word" ? current.word.word : current.word.example.en) : "";
+
+  useEffect(() => {
+    speakRef.current = speak;
+  }, [speak]);
 
   useEffect(() => {
     window.localStorage.setItem(TYPING_STORAGE_KEY, JSON.stringify(settings));
@@ -1126,6 +1135,24 @@ function TypingView({
     const timer = window.setInterval(update, 500);
     return () => window.clearInterval(timer);
   }, [startedAt, status]);
+
+  useEffect(() => {
+    if (status !== "running" || locked) return;
+    const frame = window.requestAnimationFrame(() => {
+      const input = inputRef.current;
+      if (!input) return;
+      input.focus({ preventScroll: true });
+      const end = input.value.length;
+      input.setSelectionRange(end, end);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [index, locked, status]);
+
+  useEffect(() => {
+    if (status !== "running" || !settings.autoRead || !currentSpeech) return;
+    const timer = window.setTimeout(() => speakRef.current(currentSpeech), 120);
+    return () => window.clearTimeout(timer);
+  }, [currentSpeech, settings.autoRead, status]);
 
   useEffect(() => () => {
     if (transitionRef.current !== null) window.clearTimeout(transitionRef.current);
@@ -1146,12 +1173,23 @@ function TypingView({
     return () => window.clearTimeout(timer);
   }, [accuracy, speed, status]);
 
-  function updateSetting<K extends keyof Pick<TypingSettings, "language" | "content" | "scope" | "count">>(key: K, value: TypingSettings[K]) {
+  function updateSetting<K extends keyof Pick<TypingSettings, "language" | "content" | "scope" | "count" | "autoRead">>(key: K, value: TypingSettings[K]) {
     setSettings((currentSettings) => ({ ...currentSettings, [key]: value }));
   }
 
-  function focusInput() {
-    window.requestAnimationFrame(() => inputRef.current?.focus());
+  function returnFocusToInput() {
+    window.requestAnimationFrame(() => inputRef.current?.focus({ preventScroll: true }));
+  }
+
+  function playCurrentSpeech() {
+    if (!currentSpeech) return;
+    speakRef.current(currentSpeech);
+    returnFocusToInput();
+  }
+
+  function toggleAutoRead() {
+    updateSetting("autoRead", !settings.autoRead);
+    returnFocusToInput();
   }
 
   function startSession() {
@@ -1174,7 +1212,6 @@ function TypingView({
     lockedRef.current = false;
     setLocked(false);
     setStatus("running");
-    focusInput();
   }
 
   function finishSession() {
@@ -1182,6 +1219,7 @@ function TypingView({
     setStatus("complete");
     lockedRef.current = false;
     setLocked(false);
+    window.speechSynthesis?.cancel();
   }
 
   function advance(success: boolean) {
@@ -1208,7 +1246,6 @@ function TypingView({
       setTyped("");
       lockedRef.current = false;
       setLocked(false);
-      focusInput();
     }, success ? 620 : 0);
   }
 
@@ -1264,7 +1301,8 @@ function TypingView({
             <fieldset><legend>1 · 语言模式</legend><div className="typing-option-grid three">{languageOptions.map((option) => <button key={option.id} type="button" className={settings.language === option.id ? "active" : ""} onClick={() => updateSetting("language", option.id)}><strong>{option.label}</strong><span>{option.note}</span></button>)}</div></fieldset>
             <fieldset><legend>2 · 练习内容</legend><div className="typing-option-grid three">{contentOptions.map((option) => <button key={option.id} type="button" className={settings.content === option.id ? "active" : ""} onClick={() => updateSetting("content", option.id)}>{option.label}</button>)}</div></fieldset>
             <fieldset><legend>3 · 词汇范围</legend><div className="typing-option-grid three">{scopeOptions.map((option) => <button key={option.id} type="button" className={settings.scope === option.id ? "active" : ""} onClick={() => updateSetting("scope", option.id)}><strong>{option.label}</strong><span>{option.count} 词可用</span></button>)}</div></fieldset>
-            <fieldset><legend>4 · 本轮题数</legend><div className="typing-option-grid counts">{([10, 20, 50] as const).map((count) => <button key={count} type="button" className={settings.count === count ? "active" : ""} onClick={() => updateSetting("count", count)}>{count} 题</button>)}</div></fieldset>
+            <fieldset><legend>4 · 朗读设置</legend><button className={`typing-auto-read ${settings.autoRead ? "active" : ""}`} type="button" role="switch" aria-checked={settings.autoRead} onClick={() => updateSetting("autoRead", !settings.autoRead)}><span><strong>自动朗读英文</strong><small>每个新单词或例句出现时播放一次</small></span><i>{settings.autoRead ? "已开启" : "已关闭"}</i></button></fieldset>
+            <fieldset><legend>5 · 本轮题数</legend><div className="typing-option-grid counts">{([10, 20, 50] as const).map((count) => <button key={count} type="button" className={settings.count === count ? "active" : ""} onClick={() => updateSetting("count", count)}>{count} 题</button>)}</div></fieldset>
             <button className="typing-start" type="button" onClick={startSession} disabled={!pool.length}>开始键盘练习 <span>→</span></button>
             {!pool.length ? <p className="typing-empty-note">这个范围还没有可用内容。请先完成一节词汇课，或选择“完整850词”。</p> : null}
           </div>
@@ -1275,14 +1313,14 @@ function TypingView({
           <div className="typing-live-stats"><span><small>进度</small><strong>{index + 1} / {queue.length}</strong></span><span><small>准确率</small><strong>{accuracy}%</strong></span><span><small>速度</small><strong>{speed} {speedUnit}</strong></span><span><small>连续完成</small><strong>{streak}</strong></span></div>
           <div className="typing-progress-line"><i style={{ width: `${((index + (locked ? 1 : 0)) / queue.length) * 100}%` }} /></div>
           <article className={`typing-card ${locked ? "is-correct" : ""}`}>
-            <div className="typing-card-meta"><span>{current.kind === "word" ? "WORD · 单词" : "SENTENCE · 例句"}</span><button type="button" onClick={() => speak(current.kind === "word" ? current.word.word : current.word.example.en)}>▶ 播放英语 · {accent.toUpperCase()}</button></div>
+            <div className="typing-card-meta"><span>{current.kind === "word" ? "WORD · 单词" : "SENTENCE · 例句"}</span><div className="typing-card-actions"><button type="button" onClick={playCurrentSpeech}>▶ 播放英语 · {accent.toUpperCase()}</button><button className={`typing-mini-toggle ${settings.autoRead ? "active" : ""}`} type="button" role="switch" aria-checked={settings.autoRead} onClick={toggleAutoRead}>自动朗读 {settings.autoRead ? "开" : "关"}</button></div></div>
             <div className="typing-card-body">
               <WordPicture wordId={current.word.id} variant="compact" />
               {hint ? <p className="typing-hint">{hint}</p> : null}
               <p className={`typing-target ${settings.language === "chinese" ? "chinese" : ""}`} lang={settings.language === "chinese" ? "zh-CN" : "en"} aria-label={`输入目标：${target}`}>
                 {comparison.characters.map((character, characterIndex) => <span key={`${characterIndex}-${character.value}`} className={`typing-char ${character.state} ${characterIndex === Array.from(typed).length ? "current" : ""}`}>{character.value === " " ? "\u00a0" : character.value}</span>)}
               </p>
-              <label className="typing-input-label"><span>{settings.language === "chinese" ? "在这里输入中文" : "Type here · 在这里输入"}</span><textarea ref={inputRef} lang={settings.language === "chinese" ? "zh-CN" : "en"} rows={current.kind === "sentence" ? 3 : 1} value={typed} disabled={locked} spellCheck={false} autoCapitalize="off" autoCorrect="off" onCompositionStart={() => { composingRef.current = true; }} onCompositionEnd={(event) => handleCompositionEnd(event.currentTarget.value)} onChange={(event) => handleTyping(event.currentTarget.value)} placeholder={settings.language === "chinese" ? "切换中文输入法后开始…" : "Start typing…"} /></label>
+              <label className="typing-input-label"><span>{settings.language === "chinese" ? "在这里输入中文" : "Type here · 在这里输入"}</span><textarea ref={inputRef} lang={settings.language === "chinese" ? "zh-CN" : "en"} rows={current.kind === "sentence" ? 3 : 1} value={typed} aria-busy={locked} spellCheck={false} autoCapitalize="off" autoCorrect="off" onCompositionStart={() => { composingRef.current = true; }} onCompositionEnd={(event) => handleCompositionEnd(event.currentTarget.value)} onChange={(event) => handleTyping(event.currentTarget.value)} placeholder={settings.language === "chinese" ? "切换中文输入法后开始…" : "Start typing…"} /></label>
               <div className="typing-feedback" aria-live="polite"><span className={comparison.wrong ? "has-error" : ""}>{comparison.wrong ? `有 ${comparison.wrong} 个字符不一致，请退格修改。` : locked ? "完全正确！准备下一题…" : "逐字输入，红色字符需要修正。"}</span><button type="button" onClick={() => advance(false)} disabled={locked}>跳过此题</button></div>
             </div>
           </article>

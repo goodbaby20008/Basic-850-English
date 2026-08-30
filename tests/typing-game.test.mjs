@@ -60,3 +60,14 @@ test("speed uses standard five-character English words and Chinese characters pe
   assert.equal(calculateTypingSpeed(50, 60_000, "chinese"), 50);
   assert.equal(calculateTypingSpeed(0, 60_000, "english"), 0);
 });
+
+test("typing view restores input focus for every prompt and supports automatic reading", async () => {
+  const source = await readFile(new URL("../app/LearningApp.tsx", import.meta.url), "utf8");
+  assert.match(source, /autoRead: true/);
+  assert.match(source, /input\.focus\(\{ preventScroll: true \}\)/);
+  assert.match(source, /\[index, locked, status\]/);
+  assert.match(source, /speakRef\.current\(currentSpeech\)/);
+  assert.match(source, /role="switch" aria-checked=\{settings\.autoRead\}/);
+  assert.match(source, /aria-busy=\{locked\}/);
+  assert.doesNotMatch(source, /disabled=\{locked\} spellCheck/);
+});

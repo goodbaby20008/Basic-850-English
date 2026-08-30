@@ -533,6 +533,13 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .typing-option-grid strong { font-size: 15px; }
 .typing-option-grid span { margin-top: 4px; color: var(--muted); font-size: 12px; }
 .typing-option-grid.counts button { min-height: 48px; text-align: center; font-weight: 750; }
+.typing-auto-read { width: 100%; min-height: 68px; display: flex; justify-content: space-between; align-items: center; gap: 18px; border: 1px solid var(--line); border-radius: 12px; padding: 12px 15px; background: rgba(245,242,233,.48); color: var(--ink); text-align: left; cursor: pointer; }
+.typing-auto-read.active { border-color: var(--teal); background: rgba(32,143,135,.09); box-shadow: inset 0 0 0 2px rgba(32,143,135,.1); }
+.typing-auto-read span, .typing-auto-read strong, .typing-auto-read small { display: block; }
+.typing-auto-read strong { font-size: 15px; }
+.typing-auto-read small { margin-top: 4px; color: var(--muted); font-size: 12px; }
+.typing-auto-read i { flex: 0 0 auto; min-width: 65px; border-radius: 999px; padding: 8px 10px; background: rgba(23,43,53,.09); color: var(--muted); font-size: 12px; font-style: normal; font-weight: 800; text-align: center; }
+.typing-auto-read.active i { background: var(--teal); color: white; }
 .typing-start { width: 100%; min-height: 55px; display: flex; justify-content: space-between; align-items: center; border: 0; border-radius: 12px; padding: 0 18px; background: var(--coral); color: #211f1d; font-size: 16px; font-weight: 850; cursor: pointer; }
 .typing-start:disabled { opacity: .45; cursor: not-allowed; }
 .typing-empty-note { margin: 11px 0 0; color: #9a382f; font-size: 13px; }
@@ -553,9 +560,12 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .typing-card-meta { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 17px 24px; border-bottom: 1px solid var(--line); }
 .typing-card-meta > span { color: var(--plum); font-size: 12px; font-weight: 850; letter-spacing: .08em; }
 .typing-card-meta button { min-height: 44px; border: 0; border-radius: 999px; padding: 0 14px; background: var(--ink); color: white; font-size: 12px; cursor: pointer; }
+.typing-card-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+.typing-card-actions button.typing-mini-toggle { border: 1px solid var(--line); background: transparent; color: var(--muted); }
+.typing-card-actions button.typing-mini-toggle.active { border-color: rgba(32,143,135,.35); background: rgba(32,143,135,.1); color: var(--teal); }
 .typing-card-body { max-width: 930px; min-height: 470px; margin: 0 auto; padding: 31px 35px 34px; }
 .typing-card-body > .word-picture { width: min(440px,100%); margin: 0 auto 20px; }
-.typing-hint { margin: 8px 0 4px; color: var(--muted); font-size: 17px; font-weight: 700; text-align: center; }
+.typing-hint { margin: 8px 0 4px; color: var(--muted); font-size: 14px; font-weight: 500; line-height: 1.6; text-align: center; }
 .typing-target { min-height: 92px; margin: 16px 0 22px; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; font-family: Georgia, "Times New Roman", serif; font-size: clamp(32px,4.2vw,57px); line-height: 1.45; letter-spacing: .012em; text-align: center; }
 .typing-target.chinese { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: clamp(29px,3.7vw,48px); }
 .typing-char { border-bottom: 3px solid transparent; border-radius: 3px; }
@@ -566,7 +576,7 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .typing-input-label > span { display: block; margin-bottom: 8px; color: var(--muted); font-size: 13px; font-weight: 750; }
 .typing-input-label textarea { width: 100%; min-height: 64px; resize: vertical; border: 2px solid rgba(23,43,53,.16); border-radius: 12px; padding: 14px 16px; background: white; color: var(--ink); font-family: Georgia, "Times New Roman", "Microsoft YaHei", serif; font-size: 21px; line-height: 1.55; }
 .typing-input-label textarea:focus { border-color: var(--indigo); outline: 4px solid rgba(86,103,216,.1); }
-.typing-input-label textarea:disabled { border-color: rgba(32,143,135,.36); background: rgba(32,143,135,.06); }
+.typing-input-label textarea[aria-busy="true"] { border-color: rgba(32,143,135,.36); background: rgba(32,143,135,.06); }
 .typing-feedback { min-height: 44px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
 .typing-feedback > span { color: var(--muted); font-size: 13px; }
 .typing-feedback > span.has-error { color: #a5362c; }
@@ -844,9 +854,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, summary:focus-visibl
   .typing-live-stats > span:nth-child(4) { border-top: 1px solid var(--line); }
   .typing-card-meta { align-items: flex-start; padding: 14px 16px; }
   .typing-card-meta > span { padding-top: 12px; }
+  .typing-card-actions { max-width: 220px; }
   .typing-card-body { min-height: 430px; padding: 25px 17px 28px; }
   .typing-target { min-height: 78px; font-size: 34px; }
   .typing-target.chinese { font-size: 30px; }
+  .typing-hint { font-size: 13px; }
   .typing-feedback { align-items: flex-start; }
   .typing-feedback > span { padding-top: 12px; }
   .typing-result { padding: 32px 18px; }

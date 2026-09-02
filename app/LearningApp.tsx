@@ -178,7 +178,7 @@ const NAV_ITEMS: { id: View; zh: string; en: string }[] = [
   { id: "about", zh: "说明", en: "About" },
 ];
 
-const MOBILE_NAV_IDS: View[] = ["home", "sounds", "course", "typing", "library", "review"];
+const MOBILE_NAV_IDS: View[] = ["home", "sounds", "course", "typing", "library", "review", "about"];
 
 const ALPHABET_STORY_ART = [
   { ids: ["a", "b", "c", "d", "e"], src: "/illustrations/alphabet/alphabet-01-a-e.webp", alt: "苹果、球、猫、狗和鸟巢里的鸡蛋", caption: "A-E · apple, ball, cat, dog, egg" },
@@ -481,8 +481,11 @@ export default function LearningApp() {
   function navigate(next: View) {
     window.location.hash = next;
     setView(next);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    window.requestAnimationFrame(() => mainRef.current?.focus());
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      mainRef.current?.focus({ preventScroll: true });
+    });
   }
 
   function openFoundation(tab: FoundationTab) {

@@ -127,6 +127,9 @@ test("the shared shell carries Ideal City branding and keeps typing translations
   assert.match(source, /basic850-font-scale/);
   assert.match(source, /updateViaCache:\s*"none"/);
   assert.doesNotMatch(source, /controllerchange|window\.location\.reload/);
+  assert.match(source, /MOBILE_NAV_IDS:[^=]*=\s*\[[^\]]*"about"/s);
+  assert.match(source, /window\.scrollTo\(\{\s*top:\s*0,\s*left:\s*0,\s*behavior:\s*"auto"\s*\}\)/s);
+  assert.match(source, /focus\(\{\s*preventScroll:\s*true\s*\}\)/s);
   assert.match(css, /\.mobile-nav\s*\{[^}]*overflow-x:\s*auto/s);
   assert.match(css, /\.mobile-nav\s*\{[^}]*display:\s*flex/s);
   assert.match(css, /\.mobile-nav button\s*\{[^}]*flex:\s*1 0 74px/s);

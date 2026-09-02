@@ -757,6 +757,16 @@ export default function LearningApp() {
           <p className="app-footer-contact"><strong>同频请联系<a href="mailto:lx.city@qq.com">lx.city@qq.com</a>.<br />理想城二师兄出品.</strong></p>
           <small><strong>Basic 850</strong> · 一套可离线使用、进度留在本机的零基础英语教材</small>
         </div>
+        <figure className="app-footer-wechat">
+          <img
+            src="/branding/ideal-city-wechat-qr.jpg"
+            alt="理想城俱乐部微信公众号二维码"
+            width="242"
+            height="280"
+            loading="lazy"
+          />
+          <figcaption>微信扫码关注</figcaption>
+        </figure>
         <div className="app-footer-actions">
           <button type="button" onClick={() => navigate("about")}>教材说明</button>
           <button type="button" onClick={exportProgress}>导出进度</button>

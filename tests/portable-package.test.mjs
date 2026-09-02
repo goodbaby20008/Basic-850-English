@@ -14,9 +14,10 @@ test("build emits one-click Windows launcher with a complete static site", async
   const wordsUrl = new URL("./www/data/words.json", packageRoot);
   const classicsUrl = new URL("./www/data/classics.json", packageRoot);
   const logoUrl = new URL("./www/branding/ideal-city-club-logo.png", packageRoot);
+  const qrUrl = new URL("./www/branding/ideal-city-wechat-qr.jpg", packageRoot);
 
-  await Promise.all([launcherUrl, menuUrl, serverUrl, guideUrl, siteIndexUrl, wordsUrl, classicsUrl, logoUrl, archiveUrl].map((url) => access(url)));
-  const [launcher, menu, server, guide, html, wordsStat, logoStat, archiveStat, archive] = await Promise.all([
+  await Promise.all([launcherUrl, menuUrl, serverUrl, guideUrl, siteIndexUrl, wordsUrl, classicsUrl, logoUrl, qrUrl, archiveUrl].map((url) => access(url)));
+  const [launcher, menu, server, guide, html, wordsStat, logoStat, qrStat, archiveStat, archive] = await Promise.all([
     readFile(launcherUrl, "utf8"),
     readFile(menuUrl, "utf8"),
     readFile(serverUrl, "utf8"),
@@ -24,6 +25,7 @@ test("build emits one-click Windows launcher with a complete static site", async
     readFile(siteIndexUrl, "utf8"),
     stat(wordsUrl),
     stat(logoUrl),
+    stat(qrUrl),
     stat(archiveUrl),
     readFile(archiveUrl),
   ]);
@@ -44,6 +46,7 @@ test("build emits one-click Windows launcher with a complete static site", async
   assert.match(html, /Basic 850/);
   assert.ok(wordsStat.size > 1_000_000, "the complete 850-word dataset should be packaged");
   assert.ok(logoStat.size > 50_000, "the Ideal City Club logo should be packaged");
+  assert.ok(qrStat.size > 40_000, "the Ideal City Club WeChat QR code should be packaged");
   assert.ok(archiveStat.size > 1_000_000, "the downloadable ZIP should contain the complete portable package");
   assert.equal(archive.subarray(0, 4).toString("hex"), "504b0304", "the downloadable file should be a ZIP archive");
   assert.ok(archive.includes(Buffer.from("理想城Basic850-便携版/", "utf8")), "the ZIP should extract into the branded folder");

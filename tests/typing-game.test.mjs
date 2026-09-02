@@ -101,6 +101,8 @@ test("the shared shell carries Ideal City branding and keeps typing translations
   ]);
 
   assert.match(source, /ideal-city-club-logo\.png/);
+  assert.match(source, /ideal-city-wechat-qr\.jpg/);
+  assert.match(source, /理想城俱乐部微信公众号二维码/);
   assert.match(source, /理想城：一次链接一生同行/);
   assert.match(source, /追求理想、追求智慧，让世界因我更美好/);
   assert.match(source, /【愿景】 实现共同智慧共同富裕/);
@@ -117,6 +119,7 @@ test("the shared shell carries Ideal City branding and keeps typing translations
   assert.match(source, /实现共同智慧共同富裕/);
   assert.match(source, /爱国 · 敬业 · 诚信 · 友善/);
   assert.match(css, /\.typing-hint\s*\{[^}]*font-size:\s*clamp\(17px,1\.8vw,21px\)/s);
+  assert.match(css, /\.app-footer-wechat img\s*\{[^}]*width:\s*132px/s);
   assert.match(css, /\.ideal-city-logo\s*\{[^}]*width:\s*52px/s);
   assert.match(source, /aria-label="缩小字号"/);
   assert.match(source, /aria-label="放大字号"/);

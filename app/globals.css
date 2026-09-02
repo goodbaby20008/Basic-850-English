@@ -694,13 +694,17 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .source-panel a { display: block; padding: 10px 0; border-top: 1px solid rgba(255,255,255,.12); color: #d0d8db; font-size: 11px; }
 
 .app-footer { width: min(1240px, calc(100% - 36px)); margin: 0 auto; padding: 25px 0 32px; display: flex; justify-content: space-between; align-items: flex-end; gap: 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: var(--type-caption); }
-.app-footer-credit { max-width: 780px; }
+.app-footer-credit { flex: 1 1 560px; max-width: 780px; }
 .app-footer-credit p { margin: 0; color: var(--ink); font-size: var(--type-small); font-weight: 500; line-height: 1.65; }
 .app-footer-credit p + p { margin-top: 2px; }
 .app-footer-credit p:first-child strong { font-weight: 800; }
 .app-footer-credit p a { color: var(--indigo); text-decoration: underline; text-underline-offset: 2px; }
 .app-footer-credit .app-footer-contact { margin-top: 8px; }
 .app-footer-credit small { display: block; margin-top: 8px; color: var(--muted); font-size: var(--type-micro); line-height: 1.55; }
+.app-footer-wechat { flex: 0 0 132px; width: 132px; margin: 0; text-align: center; }
+.app-footer-wechat img { display: block; width: 132px; height: auto; border: 1px solid rgba(23,43,53,.12); border-radius: 10px; background: #fff; box-shadow: 0 8px 24px rgba(23,43,53,.08); }
+.app-footer-wechat figcaption { margin-top: 7px; color: var(--muted); font-size: var(--type-micro); line-height: 1.4; }
+.app-footer-actions { flex: 0 0 auto; white-space: nowrap; }
 .app-footer button { border: 0; padding: 0; background: transparent; color: var(--muted); font-size: var(--type-caption); cursor: pointer; }
 .app-footer button + button { margin-left: 15px; }
 .mobile-nav { display: none; }
@@ -870,7 +874,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .typing-guide { order: -1; }
   .ideal-city-profile { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
-  .app-footer { padding-bottom: 15px; }
+  .app-footer { flex-wrap: wrap; align-items: flex-end; padding-bottom: 15px; }
+  .app-footer-credit { flex-basis: 100%; max-width: none; }
+  .app-footer-actions { margin-left: auto; }
   .mobile-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; width: 100%; max-width: 100vw; height: calc(62px + env(safe-area-inset-bottom)); overflow: hidden; gap: 0; padding-bottom: env(safe-area-inset-bottom); display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); border-top: 1px solid var(--line); background: rgba(255,253,248,.96); backdrop-filter: blur(15px); }
   .mobile-nav button { min-width: 0; overflow: hidden; border: 0; padding: 0 2px; background: transparent; color: var(--muted); cursor: pointer; touch-action: manipulation; }
   .mobile-nav span, .mobile-nav small { display: block; }
@@ -953,7 +959,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .word-picture--compact { grid-template-columns: 92px 1fr; }
   .grade-row { grid-template-columns: repeat(2,1fr); }
   .app-footer { display: block; }
-  .app-footer > div + div { margin-top: 12px; }
+  .app-footer > * + * { margin-top: 18px; }
+  .app-footer-wechat { margin-right: auto; margin-left: auto; }
+  .app-footer-actions { margin-left: 0; text-align: center; }
   .drawer-title h2 { font-size: 54px; }
   .related-list { grid-template-columns: 1fr; }
   .player-body { padding-inline: 20px; }

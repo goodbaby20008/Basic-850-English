@@ -70,7 +70,7 @@ test("pre-caches the built shell while optional learning media fail independentl
   assert.match(worker, /\/data\/classics\.json/);
   assert.match(worker, /optional offline assets will be retried/);
   assert.match(worker, /event\.request\.mode === "navigate"/);
-  assert.match(worker, /basic850-v6/);
+  assert.match(worker, /basic850-v7/);
 });
 
 test("keeps starter-only assets out of the final source", async () => {

@@ -1,4 +1,4 @@
-const CACHE_NAME = "basic850-v6";
+const CACHE_NAME = "basic850-v7";
 const WORD_PICTURE_MANIFEST = "/illustrations/words/manifest.json";
 const PHONEME_IDS = [
   "i-long", "i-short", "e", "ae", "uh", "a-long", "o-short", "aw-long", "u-short", "u-long", "er-long", "schwa",

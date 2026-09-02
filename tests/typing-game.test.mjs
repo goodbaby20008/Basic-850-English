@@ -125,6 +125,8 @@ test("the shared shell carries Ideal City branding and keeps typing translations
   assert.match(source, /aria-label="缩小字号"/);
   assert.match(source, /aria-label="放大字号"/);
   assert.match(source, /basic850-font-scale/);
+  assert.match(source, /updateViaCache:\s*"none"/);
+  assert.doesNotMatch(source, /controllerchange|window\.location\.reload/);
   assert.match(css, /grid-template-columns:\s*repeat\(6,minmax\(0,1fr\)\)/);
   assert.match(css, /--page-title-min:\s*34px/);
 });

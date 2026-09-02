@@ -438,21 +438,10 @@ export default function LearningApp() {
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
     if (import.meta.env.PROD) {
-      let refreshing = false;
-      const refreshForUpdate = () => {
-        if (refreshing) return;
-        refreshing = true;
-        window.location.reload();
-      };
-
-      navigator.serviceWorker.addEventListener("controllerchange", refreshForUpdate);
-      navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).then((registration) => {
-        void registration.update();
-      }).catch(() => {
+      navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).catch(() => {
         setToast("离线功能暂未安装成功；在线学习不受影响，请确认服务器已启用 HTTPS 后再刷新。");
       });
-
-      return () => navigator.serviceWorker.removeEventListener("controllerchange", refreshForUpdate);
+      return;
     }
 
     // Never let a previously installed production worker cache Vite's HMR

@@ -119,7 +119,8 @@ test("the shared shell carries Ideal City branding and keeps typing translations
   assert.match(source, /实现共同智慧共同富裕/);
   assert.match(source, /爱国 · 敬业 · 诚信 · 友善/);
   assert.match(css, /\.typing-hint\s*\{[^}]*font-size:\s*clamp\(17px,1\.8vw,21px\)/s);
-  assert.match(css, /\.app-footer-wechat img\s*\{[^}]*width:\s*132px/s);
+  assert.match(css, /\.app-footer-wechat\s*\{[^}]*width:\s*176px/s);
+  assert.match(css, /\.app-footer-wechat img\s*\{[^}]*width:\s*154px/s);
   assert.match(css, /\.ideal-city-logo\s*\{[^}]*width:\s*52px/s);
   assert.match(source, /aria-label="缩小字号"/);
   assert.match(source, /aria-label="放大字号"/);

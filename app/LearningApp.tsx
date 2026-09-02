@@ -438,10 +438,21 @@ export default function LearningApp() {
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
     if (import.meta.env.PROD) {
-      navigator.serviceWorker.register("/sw.js").catch(() => {
+      let refreshing = false;
+      const refreshForUpdate = () => {
+        if (refreshing) return;
+        refreshing = true;
+        window.location.reload();
+      };
+
+      navigator.serviceWorker.addEventListener("controllerchange", refreshForUpdate);
+      navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).then((registration) => {
+        void registration.update();
+      }).catch(() => {
         setToast("离线功能暂未安装成功；在线学习不受影响，请确认服务器已启用 HTTPS 后再刷新。");
       });
-      return;
+
+      return () => navigator.serviceWorker.removeEventListener("controllerchange", refreshForUpdate);
     }
 
     // Never let a previously installed production worker cache Vite's HMR
@@ -765,7 +776,7 @@ export default function LearningApp() {
             height="280"
             loading="lazy"
           />
-          <figcaption>微信扫码关注</figcaption>
+          <figcaption><strong>关注理想城俱乐部</strong><span>微信扫一扫</span></figcaption>
         </figure>
         <div className="app-footer-actions">
           <button type="button" onClick={() => navigate("about")}>教材说明</button>

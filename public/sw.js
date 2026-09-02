@@ -1,4 +1,4 @@
-const CACHE_NAME = "basic850-v5";
+const CACHE_NAME = "basic850-v6";
 const WORD_PICTURE_MANIFEST = "/illustrations/words/manifest.json";
 const PHONEME_IDS = [
   "i-long", "i-short", "e", "ae", "uh", "a-long", "o-short", "aw-long", "u-short", "u-long", "er-long", "schwa",
@@ -16,6 +16,8 @@ const ALPHABET_ART = [
 const REQUIRED_CORE = [
   "/",
   "/manifest.webmanifest",
+  "/branding/ideal-city-club-logo.png",
+  "/branding/ideal-city-wechat-qr.jpg",
   "/data/words.json",
   "/data/course.json",
   "/data/classics.json",
@@ -103,13 +105,33 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))),
+    Promise.all([
+      caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))),
+      self.clients.claim(),
+    ]),
   );
-  self.clients.claim();
 });
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET" || new URL(event.request.url).origin !== self.location.origin) return;
+
+  // Always check the network for page navigations so a newly deployed app shell
+  // cannot be hidden indefinitely behind an older offline cache.
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          if (response && response.status === 200) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put("/", copy));
+          }
+          return response;
+        })
+        .catch(async () => (await caches.match(event.request)) || (await caches.match("/"))),
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;

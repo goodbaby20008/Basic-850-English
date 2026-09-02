@@ -701,9 +701,11 @@ blockquote span { display: block; color: var(--muted); font-family: "Segoe UI", 
 .app-footer-credit p a { color: var(--indigo); text-decoration: underline; text-underline-offset: 2px; }
 .app-footer-credit .app-footer-contact { margin-top: 8px; }
 .app-footer-credit small { display: block; margin-top: 8px; color: var(--muted); font-size: var(--type-micro); line-height: 1.55; }
-.app-footer-wechat { flex: 0 0 132px; width: 132px; margin: 0; text-align: center; }
-.app-footer-wechat img { display: block; width: 132px; height: auto; border: 1px solid rgba(23,43,53,.12); border-radius: 10px; background: #fff; box-shadow: 0 8px 24px rgba(23,43,53,.08); }
-.app-footer-wechat figcaption { margin-top: 7px; color: var(--muted); font-size: var(--type-micro); line-height: 1.4; }
+.app-footer-wechat { flex: 0 0 176px; width: 176px; margin: 0; padding: 10px 10px 9px; border: 1px solid rgba(23,43,53,.12); border-radius: 14px; background: rgba(255,255,255,.72); text-align: center; box-shadow: 0 10px 28px rgba(23,43,53,.07); }
+.app-footer-wechat img { display: block; width: 154px; height: auto; border-radius: 9px; background: #fff; }
+.app-footer-wechat figcaption { margin-top: 8px; color: var(--muted); font-size: var(--type-micro); line-height: 1.4; }
+.app-footer-wechat figcaption strong, .app-footer-wechat figcaption span { display: block; }
+.app-footer-wechat figcaption strong { color: var(--ink); font-size: var(--type-caption); }
 .app-footer-actions { flex: 0 0 auto; white-space: nowrap; }
 .app-footer button { border: 0; padding: 0; background: transparent; color: var(--muted); font-size: var(--type-caption); cursor: pointer; }
 .app-footer button + button { margin-left: 15px; }

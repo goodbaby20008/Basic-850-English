@@ -15,12 +15,14 @@ await cp(fileURLToPath(new URL("../dist/client/", import.meta.url)), join(packag
 
 // Keep the batch bootstrap BOM-free, ASCII-only and CRLF. The Chinese menu lives
 // in a BOM-marked PowerShell script so cmd.exe never has to decode Chinese text.
-const launcherPath = join(packageRoot, "启动英语学习教材.cmd");
-const launcherText = (await readFile(launcherPath, "utf8")).replace(/^\uFEFF/, "").replace(/\r?\n/g, "\r\n");
-await writeFile(launcherPath, launcherText, "utf8");
+for (const launcherName of ["启动英语学习教材.cmd", "修复英语发音.cmd"]) {
+  const launcherPath = join(packageRoot, launcherName);
+  const launcherText = (await readFile(launcherPath, "utf8")).replace(/^\uFEFF/, "").replace(/\r?\n/g, "\r\n");
+  await writeFile(launcherPath, launcherText, "utf8");
+}
 
 // Windows PowerShell 5.1 needs a BOM to decode Chinese UTF-8 source reliably.
-for (const relativePath of ["./server/Basic850Launcher.ps1", "./server/Basic850Server.ps1", "./使用说明.txt"]) {
+for (const relativePath of ["./server/Basic850Launcher.ps1", "./server/Basic850Server.ps1", "./server/FixEnglishSpeech.ps1", "./使用说明.txt"]) {
   const filePath = join(packageRoot, relativePath);
   const content = await readFile(filePath);
   const hasBom = content[0] === 0xef && content[1] === 0xbb && content[2] === 0xbf;

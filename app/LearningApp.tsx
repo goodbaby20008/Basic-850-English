@@ -28,6 +28,7 @@ type Accent = "uk" | "us";
 type Grade = "again" | "hard" | "good" | "easy";
 type TypingSource = "basic850" | "classics";
 type FontScale = "compact" | "balanced" | "large";
+type SpeechCheckStatus = "idle" | "checking" | "ready" | "missing" | "unavailable" | "error";
 
 type RelatedWord = { word: string; relation: string };
 type WordRecord = {
@@ -340,6 +341,9 @@ export default function LearningApp() {
   const [lessonIndex, setLessonIndex] = useState(0);
   const [toast, setToast] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [soundHelpOpen, setSoundHelpOpen] = useState(false);
+  const [speechCheckStatus, setSpeechCheckStatus] = useState<SpeechCheckStatus>("idle");
+  const [speechCheckMessage, setSpeechCheckMessage] = useState("");
   const [clock, setClock] = useState(0);
   const importRef = useRef<HTMLInputElement>(null);
   const mainRef = useRef<HTMLElement>(null);
@@ -503,9 +507,81 @@ export default function LearningApp() {
     window.localStorage.setItem(FONT_SCALE_KEY, next);
   }
 
+  function selectEnglishVoice(available: SpeechSynthesisVoice[], nextAccent: Accent) {
+    const wanted = nextAccent === "uk" ? "en-GB" : "en-US";
+    return available.find((item) => item.lang.toLowerCase() === wanted.toLowerCase())
+      ?? available.find((item) => item.lang.toLowerCase().startsWith(wanted.toLowerCase().slice(0, 2)));
+  }
+
+  function showMissingEnglishVoice() {
+    const message = "未检测到可用的英语系统语音。音标单音能播放，是因为它使用网站自带 MP3；字母、单词和例句需要 Windows 英语语音。请点“声音检测”查看修复方法。";
+    setToast(message);
+    setSpeechCheckStatus("missing");
+    setSpeechCheckMessage(message);
+  }
+
+  async function waitForVoices() {
+    if (!("speechSynthesis" in window)) return [] as SpeechSynthesisVoice[];
+    const first = window.speechSynthesis.getVoices();
+    if (first.length) return first;
+    return new Promise<SpeechSynthesisVoice[]>((resolve) => {
+      const finish = () => {
+        window.clearTimeout(timeout);
+        window.speechSynthesis.removeEventListener("voiceschanged", finish);
+        resolve(window.speechSynthesis.getVoices());
+      };
+      const timeout = window.setTimeout(finish, 1200);
+      window.speechSynthesis.addEventListener("voiceschanged", finish, { once: true });
+    });
+  }
+
+  async function runSoundCheck() {
+    setSoundHelpOpen(true);
+    setSpeechCheckStatus("checking");
+    setSpeechCheckMessage("正在检查浏览器和 Windows 提供的英语语音…");
+    if (!("speechSynthesis" in window)) {
+      const message = "此浏览器没有提供合成语音接口。请用最新版 Chrome 或 Edge 打开网站，再重新检测。";
+      setSpeechCheckStatus("unavailable");
+      setSpeechCheckMessage(message);
+      return;
+    }
+
+    const available = await waitForVoices();
+    setVoices(available);
+    const voice = selectEnglishVoice(available, accent);
+    if (!voice) {
+      const message = "没有检测到英语系统语音。请运行便携版根目录的“修复英语发音.cmd”，完成后彻底关闭并重新打开 Chrome，再回来检测。";
+      setSpeechCheckStatus("missing");
+      setSpeechCheckMessage(message);
+      return;
+    }
+
+    clipRef.current?.pause();
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance("Basic 850 sound check.");
+    utterance.lang = accent === "uk" ? "en-GB" : "en-US";
+    utterance.voice = voice;
+    utterance.rate = 0.78;
+    utterance.onerror = () => {
+      setSpeechCheckStatus("error");
+      setSpeechCheckMessage("浏览器找到了英语语音，但播放请求失败。请关闭并重新打开 Chrome；若仍失败，请在 Windows 设置中安装英语“文本转语音”后再试。");
+    };
+    utterance.onstart = () => {
+      setSpeechCheckStatus("ready");
+      setSpeechCheckMessage(`已检测到英语语音“${voice.name}”，并已播放测试句。若仍听不到，请检查 Chrome 标签页是否静音、Windows 音量合成器和当前输出设备。`);
+    };
+    window.speechSynthesis.speak(utterance);
+  }
+
   function speak(text: string, nextAccent = accent) {
     if (!("speechSynthesis" in window)) {
-      setToast("当前浏览器不支持合成语音。");
+      setToast("当前浏览器不支持合成语音。请点“声音检测”查看可用浏览器和修复方法。");
+      return;
+    }
+    const available = window.speechSynthesis.getVoices();
+    const voice = selectEnglishVoice(available, nextAccent);
+    if (!voice) {
+      showMissingEnglishVoice();
       return;
     }
     clipRef.current?.pause();
@@ -514,9 +590,8 @@ export default function LearningApp() {
     const wanted = nextAccent === "uk" ? "en-GB" : "en-US";
     utterance.lang = wanted;
     utterance.rate = 0.78;
-    const voice = voices.find((item) => item.lang.toLowerCase() === wanted.toLowerCase())
-      ?? voices.find((item) => item.lang.toLowerCase().startsWith(wanted.toLowerCase().slice(0, 2)));
-    if (voice) utterance.voice = voice;
+    utterance.voice = voice;
+    utterance.onerror = () => setToast("英语语音播放失败。请点“声音检测”查看修复方法。");
     window.speechSynthesis.speak(utterance);
   }
 
@@ -688,6 +763,7 @@ export default function LearningApp() {
             <button type="button" aria-pressed={accent === "uk"} className={accent === "uk" ? "active" : ""} onClick={() => changeAccent("uk")}>UK</button>
             <button type="button" aria-pressed={accent === "us"} className={accent === "us" ? "active" : ""} onClick={() => changeAccent("us")}>US</button>
           </div>
+          <button className="sound-check-button" type="button" onClick={() => void runSoundCheck()}>声音检测</button>
           <span className="local-status"><i /> 本机保存</span>
         </div>
       </header>
@@ -748,7 +824,7 @@ export default function LearningApp() {
         {view === "review" && (
           <ReviewView words={words} dueWords={dueWords} progress={progress.words} accent={accent} speak={speak} grade={gradeWord} exportProgress={exportProgress} importRef={importRef} />
         )}
-        {view === "about" && <AboutView />}
+        {view === "about" && <AboutView openSoundCheck={() => void runSoundCheck()} />}
       </main>
 
       <footer className="app-footer">
@@ -810,6 +886,7 @@ export default function LearningApp() {
           close={closeLesson}
         />
       ) : null}
+      {soundHelpOpen ? <SoundHelpDialog status={speechCheckStatus} message={speechCheckMessage} close={() => setSoundHelpOpen(false)} check={() => void runSoundCheck()} /> : null}
       {toast ? <div className="toast" role="status">{toast}</div> : null}
     </div>
   );
@@ -1522,7 +1599,7 @@ function ReviewView({ words, dueWords, progress, accent, speak, grade, exportPro
   );
 }
 
-function AboutView() {
+function AboutView({ openSoundCheck }: { openSoundCheck: () => void }) {
   return (
     <section className="content-view about-view">
       <div className="view-intro"><p className="eyebrow">WHY BASIC 850 · 项目缘起</p><h1>从850个词，重新把英语学深一点。</h1><p>这不只是一份词表，也是一场关于学习方法的实验：先把根扎稳，再让表达自然生长。</p></div>
@@ -1570,6 +1647,15 @@ function AboutView() {
         </dl>
       </section>
 
+      <section className="sound-help-inline" aria-labelledby="sound-help-title">
+        <div>
+          <p className="eyebrow">SOUND · 声音支持</p>
+          <h2 id="sound-help-title">音标有声，字母和单词没声音？</h2>
+          <p>音标“单音”是网站自带的 MP3；字母、单词和例句使用 Windows 与浏览器提供的英语合成语音。两者是不同来源。</p>
+        </div>
+        <button type="button" onClick={openSoundCheck}>运行声音检测</button>
+      </section>
+
       <div className="about-facts-heading"><p className="eyebrow">FACTS · INFERENCE · BOUNDARIES</p><h2>事实与边界</h2><p>尊重 Ogden 的核心词表，也不把历史故事、产品主张或自动生成内容伪装成已经证实的事实。</p></div>
       <div className="about-grid">
         <article><span className="about-index">01</span><h2>可以确认的历史</h2><p>1930年，英国语言学者与语义学者 C. K. Ogden 出版了 Basic English 方案，试图用受控词汇与规则承担大量日常交流。核心表由100个操作及功能词、600个事物词和150个性质词组成。</p><p>丘吉尔后来公开支持研究与推广这套方案；H. G. Wells 也把它写入对未来世界语言的想象。</p></article>
@@ -1579,6 +1665,39 @@ function AboutView() {
       </div>
       <div className="source-panel"><h2>主要依据</h2><a href="https://www.mpi.nl/publications/item2366945/basic-english-general-introduction-rules-and-grammar" target="_blank" rel="noreferrer">Max Planck Institute：Ogden 1930年书目记录 ↗</a><a href="https://winstonchurchill.org/resources/speeches/1941-1945-war-leader/the-gift-of-a-common-tongue/" target="_blank" rel="noreferrer">Churchill 1943年哈佛演讲全文 ↗</a><a href="https://www.telelib.com/authors/W/WellsHerbertGeorge/prose/thingstocome/thingstocome50.html" target="_blank" rel="noreferrer">H. G. Wells：《The Shape of Things to Come》相关章节 ↗</a><a href="https://www.thebritishacademy.ac.uk/blog/how-language-fake-news-echoes-20th-century-propaganda/" target="_blank" rel="noreferrer">British Academy：Orwell 对 Basic English 的态度变化 ↗</a><a href="https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-companion-volume-and-its-language-versions" target="_blank" rel="noreferrer">Council of Europe：CEFR Companion Volume ↗</a><a href="https://learnenglish.britishcouncil.org/apps/learnenglish-sounds-right" target="_blank" rel="noreferrer">British Council：Sounds Right 音位表 ↗</a><a href="https://github.com/espeak-ng/espeak-ng" target="_blank" rel="noreferrer">eSpeak NG：独立合成单音的可复现生成器 ↗</a><a href="https://github.com/jdecked/twemoji/tree/v17.0.2" target="_blank" rel="noreferrer">Twemoji：词卡配图（CC BY 4.0）↗</a></div>
     </section>
+  );
+}
+
+function SoundHelpDialog({ status, message, close, check }: { status: SpeechCheckStatus; message: string; close: () => void; check: () => void }) {
+  const dialogRef = useRef<HTMLElement>(null);
+  useModalAccessibility(dialogRef, close);
+  const title = status === "ready" ? "英语语音已检测到" : status === "checking" ? "正在检测声音" : "英语语音检测与修复";
+
+  return (
+    <div className="overlay sound-help-overlay" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) close(); }}>
+      <section ref={dialogRef} className="sound-help-dialog" role="dialog" aria-modal="true" aria-labelledby="sound-help-dialog-title" tabIndex={-1}>
+        <header>
+          <div><span>VOICE CHECK · WINDOWS / CHROME</span><h2 id="sound-help-dialog-title">{title}</h2></div>
+          <button type="button" onClick={close} aria-label="关闭声音检测">×</button>
+        </header>
+        <div className={`sound-check-result ${status}`} role="status" aria-live="polite">
+          <strong>{status === "checking" ? "检查中" : status === "ready" ? "可以播放" : status === "missing" ? "缺少英语语音" : status === "unavailable" ? "浏览器不支持" : status === "error" ? "播放失败" : "尚未检测"}</strong>
+          <p>{message || "点击下方按钮，检测当前浏览器能否调用英语语音。"}</p>
+          <button type="button" onClick={check} disabled={status === "checking"}>{status === "checking" ? "正在检测…" : "重新检测并播放"}</button>
+        </div>
+        <div className="sound-help-steps">
+          <h3>自助修复（Windows 10 / 11）</h3>
+          <ol>
+            <li>若使用便携版，双击根目录的 <strong>修复英语发音.cmd</strong>，在 Windows 的管理员确认框中选择“是”。</li>
+            <li>脚本只补充英语（英国、美国）的基础组件和“文本转语音”，不会更改 Windows 显示语言；下载过程需要可用网络与 Windows Update。</li>
+            <li>完成后彻底关闭再打开 Chrome，回到这里点“重新检测并播放”。</li>
+          </ol>
+          <p className="sound-help-note"><strong>脚本失败或电脑受单位策略管理：</strong>打开 Windows“设置 → 时间和语言 → 语言和区域”，添加“英语（英国）”或“英语（美国）”，在语言选项中安装“文本转语音”。</p>
+          <p className="sound-help-note"><strong>已检测到语音仍听不到：</strong>检查 Chrome 标签页是否静音、Windows 音量合成器中 Chrome 的音量，以及耳机/扬声器是否为当前输出设备。</p>
+          <p className="sound-help-boundary">本检测能确认浏览器是否找到英语语音并已发出播放请求，不能直接读取您的扬声器实际是否出声。</p>
+        </div>
+      </section>
+    </div>
   );
 }
 

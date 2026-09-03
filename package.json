@@ -12,7 +12,7 @@
     "build": "npm run generate:classics && vite build && node scripts/build-static-worker.mjs && node scripts/build-portable-package.mjs",
     "preview": "vite preview",
     "start": "npm run preview",
-    "test": "npm run validate:data && npm run build && node --test tests/rendered-html.test.mjs tests/alphabet-data.test.mjs tests/word-pictures.test.mjs tests/typing-game.test.mjs tests/classics-data.test.mjs tests/portable-package.test.mjs",
+    "test": "npm run validate:data && npm run build && node --test tests/rendered-html.test.mjs tests/alphabet-data.test.mjs tests/word-pictures.test.mjs tests/typing-game.test.mjs tests/classics-data.test.mjs tests/portable-package.test.mjs tests/windows-speech-repair.test.mjs",
     "lint": "eslint . --ignore-pattern dist",
     "validate:data": "node scripts/validate-data.mjs"
   },
